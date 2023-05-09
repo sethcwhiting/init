@@ -5,3 +5,13 @@ html {
     max-width: 800px;
     margin: auto;
 }
+a {
+    color:white;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+
+}
