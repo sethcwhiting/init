@@ -1,17 +1,23 @@
+:root {
+    --bg: rgb(25,25,25);
+    --txt: rgb(255, 255, 245);
+}  
+
 html {
-    background-color: black;
-    color: rgb(255, 255, 245);
+    background-color: var(--bg);
+    color: var(--txt);
     font-family: Helvetica, Arial, sans-serif;
     max-width: 800px;
     margin: auto;
 }
+
 a {
-    color:white;
+    color: var(--txt);
     text-decoration: none;
 }
+
 ul {
     list-style: none;
     padding: 0;
     margin-top: 50px;
-
 }
