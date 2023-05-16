@@ -17,8 +17,8 @@ const parser = new XMLParser({
     const ep = item['itunes:episode'];
     const li = /* html */ `         <li>
             <a href="episode/${ep}">
+                <label>Episode ${ep} - ${item.pubDate}</label>
                 <h3>${item.title}</h3>
-                <p>Episode ${ep} - ${item.pubDate}</p>
             </a>
         </li>`;
     const indexString = await readFile('index.html', 'utf8');

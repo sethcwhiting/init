@@ -1,6 +1,8 @@
 :root {
     --bg: rgb(25,25,25);
     --txt: rgb(255, 255, 245);
+    --txt-secondary: rgba(255, 255, 245, 0.667);
+    --txt-tertiary: rgba(255, 255, 245, 0.333);
 }  
 
 html {
@@ -12,16 +14,26 @@ html {
 }
 
 a {
-    color: var(--txt);
+    color: var(--txt-secondary);
     text-decoration: none;
+    transition: 0.1s;
 }
 
-p a {
-    color: rgb(235, 235, 225)
+a:hover {
+    color: var(--txt-tertiary);
 }
+
+li a {
+    color: var(--txt);
+    display: block;
+}    
 
 ul {
     list-style: none;
     padding: 0;
     margin-top: 50px;
+}
+
+li {
+    margin-bottom: 40px;
 }
