@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+p a {
+    color: rgb(235, 235, 225)
+}
+
 ul {
     list-style: none;
     padding: 0;

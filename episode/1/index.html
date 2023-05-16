@@ -28,13 +28,246 @@
     <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
     <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
     <audio controls>
-      <source src=https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/Episode_1.mp3?dest-id=4009908 type="audio/mpeg">
+      <source src='https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/Episode_1.mp3?dest-id=4009908' type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
     <h2>Episode 1: Where To Begin</h2>
     <p>Published: <time datetime="2023-05-08">Tue, 09 May 2023 10:00:00 +0000</time></p>
     
     <div class="flex-1 overflow-hidden"> <div class= "react-scroll-to-bottom--css-clyxj-79elbk h-full dark:bg-gray-800"> <div class="react-scroll-to-bottom--css-clyxj-1n7m0yu"> <div class="flex flex-col items-center text-sm dark:bg-gray-800"> <div class= "group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]"> <div class= "flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-xl xl:max-w-3xl md:py-6 lg:px-0 m-auto"> <div class= "relative flex flex-col w-[calc(100%-50px)] gap-1 md:gap-3 lg:w-[calc(100%-115px)]"> <div class="flex flex-grow flex-col gap-3"> <div class= "min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap break-words"> <div class= "markdown prose w-full break-words dark:prose-invert light"> <p>In this episode, Jake Pacheco, a barber, and Seth Whiting, a full-stack developer, discuss Jake's journey to learn coding from scratch, documenting his progress from beginner level to mastery. Jake is working on learning anything related to JavaScript and talks about the challenge of understanding the base knowledge necessary to search things properly. He also talks about his difficulty understanding the difference between website and web app development. Seth also goes on to explain the difference between front-end and back-end development.</p> <p>The conversation touches on the importance of the development community in programming. Seth explains the spirit of collaboration and cooperation that is deeply ingrained in the development community, with open-source development and Git making it easy to collaborate with other developers. They also discuss the difference between WordPress.com and WordPress.org, and how WordPress templates work, advising Jake that WordPress is an excellent place to start if he wants to learn coding.</p> <p>Special thanks to <a href= "https://open.spotify.com/artist/7JxrbI1DZLSJUyzsrBQop2?si=Vt5jO60AR3C4O_wgt9yxkA" target="_blank" rel="noopener">Diarrhea Planet</a> for our intro and outro music and <a href= "https://www.instagram.com/skratchtopo">@SkratchTopo</a> for our artwork.</p> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div>
+
+    <h3 style="margin-top: 60px;">Episode transcript:</h3>
+
+    <p><strong>Seth Whiting:</strong> Hey, I am Seth Whiting and I am a full stack developer from Portland, Maine, and I've been coding for about 10 years now. </p>
+<p><strong>Jake Pacheco:</strong> And I'm Jake Pacheco. I've been a barber for six years and a coder for about six days. So Seth was so kind to try to help me out on this journey and we thought it might be an interesting thing to keep a catalog of it.</p>
+<p><strong>Seth Whiting:</strong> Yeah. So in this podcast, we're going to attempt to get. Jake from square one to Mastery basically, and hopefully help a lot of other people in his shoes on the way. That's, that's the, that's the goal. </p>
+<p><strong>Jake Pacheco:</strong> That is the goal. </p>
+<p><strong>Seth Whiting:</strong> Jake, what have you been working on lately? </p>
+<p><strong>Jake Pacheco:</strong> Lately I, I've been working on just learning anything to do with JavaScript.</p>
+<p>I mean, it's kind of tricky right now because I know when I first mentioned to Seth I wanted to learn this, like he gave me a few different options and asked me really what I want to do with it. </p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> And asking that to someone who like, where coding is essentially voodoo , it's kind of a hard question to answer because it's like, well, what can I do?</p>
+<p>You know what I mean? I know that there's app development and web development.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm.</p>
+<p><strong>Jake Pacheco:</strong> Still kind of undecided right. And when, when people say app development, I feel like that means one thing to a coder and one thing to someone who isn't a coder.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm.</p>
+<p><strong>Jake Pacheco:</strong> Cause an app to me is like, what's on my phone or whatever.</p>
+<p><strong>Seth Whiting:</strong> Sure. Yeah.</p>
+<p><strong>Jake Pacheco:</strong> But I've heard of like, talk of like web apps and stuff. Yeah. But yeah. There's just so many questions. That's one of the hardest things , I think right now is like just trying to wrap my head around like all of the base knowledge that you have to know just so you can.</p>
+<p>Search things properly. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. So like yeah, that is interesting. Like to, to a non coder. And, and also a lot, a lot of the stuff that I've told you and a lot of the stuff that I'm going to say, it might not be true for all coders, so I, I don't want to, you know,</p>
+<p><strong>Jake Pacheco:</strong> yeah. </p>
+<p><strong>Seth Whiting:</strong> Claim to speak for all coders, but I feel like somebody working at like Facebook, if, you told them that you were, if you told them that they were working on a website as opposed to an app, they would probably correct you and say like, no, Facebook is like a very complicated app. It's, it's not, it's not a website. But then again, some coders might even say, yeah, it's a website where like same thing with like Reddit and a lot of other like, complicated websites out there, like.</p>
+<p>And that's sort of a another thing where like if you, if you take kind of what they have on Reddit or what they have on Facebook and you put it on your phone, like the difference between like the mobile version of Facebook and the mobile version of Reddit be between. That and the apps that you download on your phone, there's like very little difference as far as like what's going on there like architecturally and all of that.</p>
+<p>So like yeah. There, so I guess I, I have an answer for this, but do you, do you think that you have a a grasp on like, At least, I guess like what I would consider the, the difference between a website and a web app.</p>
+<p><strong>Jake Pacheco:</strong> Hmm. </p>
+<p>My assumption, and it's probably extremely wrong cuz I can very new so in some of the Java script coding that I've been doing it.</p>
+<p>Basically, you know, it has like different projects that you have to do. And in those projects you're usually solving for a problem with a bunch of lines of code that are like, kind of like a big equation. Mm-hmm. And you can change one piece of it and the rest of it will change with it. Mm-hmm. And kind of give you the answers to other problems that you might have in that code.</p>
+<p><strong>Seth Whiting:</strong> Sure.</p>
+<p><strong>Jake Pacheco:</strong> So my assumption of what a web app might be with that bit of knowledge along with on some sites and stuff people might say, like H T M L is in an actual language. </p>
+<p>So, so I, I guess depth. Would be the only thing that I would be able to wrap my head around, which would be mean that it actually does things.</p>
+<p>It actually has like, I don't know if I'm using the word right, but an algorithm that like is, is working in the background to tell you , Hey, this is the newest thing, or this is, I don't know, the mo the most important thing for you to see currently. </p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> I feel like there's a lot more in the background.</p>
+<p>I don't know if you can do that with just like normal website or if that is kind of what makes it an app is that it has so much. Stuff going on in the background, so it presents you with things that you actually</p>
+<p><strong>Seth Whiting:</strong> Yeah, so that, that kind of actually brings up like a, I, I had an answer, and then when you started talking, I was like, Hmm, maybe my answer is like, not even the answer that I would want to give.</p>
+<p>So, like I, I, I guess you can kind of come at it from two different ways where if you have a. Just a website that is like very functional. Or, or even just functional in any way. Like if you have like a calculator on, on your website just to say like. I actually worked on a website before that sort of had like an appi type component to it.</p>
+<p>That was, that they were making formulas for like hospital patients who couldn't eat solid foods to like get all the nutrients that they needed and, they had, it worked out like how many cartons of this formula equaled how many, grams and milligrams of each nutrient.</p>
+<p>And if you up the cartons, then the nutrients go up and you know, accordingly. So it was like a calculator.</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p><strong>Seth Whiting:</strong> So that, that could technically, I guess, potentially be considered an application. Sort of within a website. But the, the, the answer that I was initially going to give is the concept of storage.</p>
+<p>Like you're storing something. So like if you go on to. Facebook and you make a post, then you leave Facebook and come back, your post is still going to be there because it's stored. So and it's, it's not always well, I guess it is sort of always like user driven storage. So, but a lot of applications have like Have you like log in with a username and password, that kind of thing?</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p><strong>Seth Whiting:</strong> And then once you get in there, you can start creating stuff that is stored for, for later use, basically.</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p><strong>Seth Whiting:</strong> That's basically like when you get a database involved that's when sort of like you get , the back end merged in with the front end. And that's sort of another, another question I guess.</p>
+<p>Is when you talk to a a developer, there is a big concept, there is a big kind of delineation between backend coding and front end coding.</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p><strong>Seth Whiting:</strong> Do you wanna take a stab at like, what, what that means? </p>
+<p><strong>Jake Pacheco:</strong> Yeah. I mean, cause it, it's funny because like the way that I might read stuff Because it seems like there's front end coding, backend coding and then there's like, it, it almost feels like.</p>
+<p>Web development or creating a websites and stuff is kind of its own entity. Almost separate from front end and back end. Even though I kind of in my mind put web development in front end.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> I don't know if that's right, but like, that's kind of what I'm reading into it as Uhhuh.</p>
+<p>But yeah, so I guess backend, Seems more </p>
+<p>like, I guess you're doing the, </p>
+<p>I don't know how to explain it. Like the you're making it so the program works.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> And then front end feels like. That's what tapes it to the website kind of a thing. Like it's what, it's what makes it so it can actually apply to the website or handshake with the website.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> But, but I don't know if that's right. I, I, </p>
+<p>again,</p>
+<p><strong>Seth Whiting:</strong> yeah, no, that's, that. I mean, that's a good, a good you know read on it. So. If somebody were to ask me what, what the difference is, basically the difference is front end development is where all of the code runs in your browser, like on your computer, in the browser.</p>
+<p>And, and when I say that, the, the code is actually being processed by the browser application on your computer And not on any other computer anywhere in the world. Backend develop. Sorry, go ahead.</p>
+<p><strong>Jake Pacheco:</strong> Sorry to </p>
+<p>interrupt, but is that, is that like the code that I would see if I like right click on any old webpage and see console and open up my console on there?</p>
+<p><strong>Seth Whiting:</strong> Yes. </p>
+<p><strong>Jake Pacheco:</strong> And is that the code that I'm seeing that is the front end code? </p>
+<p><strong>Seth Whiting:</strong> Oh, oh, yeah. Like when you, when you like inspect the html.</p>
+<p><strong>Jake Pacheco:</strong> Yeah, yeah.</p>
+<p><strong>Seth Whiting:</strong> Yes, yes. That's all front end. Yes.</p>
+<p><strong>Jake Pacheco:</strong> Interesting. Okay.</p>
+<p><strong>Seth Whiting:</strong> But that's not all that there is to the front end. I mean, if you, if you go into other tabs in the console, you can see the scripts and all of that kind of stuff.</p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah.</p>
+<p><strong>Seth Whiting:</strong> That's, that is all on the front end. . So that's the front end. It's all running in the browser. The back end runs on a different computer that you like very rarely will ever see in your life. Hmm. You, you write the code on your computer and then you send it off to a server somewhere.</p>
+<p>Like for, for us, because we live in the northeast that somewhere is usually like Virginia. Yeah. So they've, it goes to like a server farm mm-hmm. And runs on some. Little black box on a rack and you know, is just being piped into everybody's computer around the world. From that, from that one place.</p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah.</p>
+<p><strong>Seth Whiting:</strong> And often there are basically like replicas of that to fall back on. Like if too many people are accessing it at a time, it'll, it'll run on two servers instead of one or three or four.</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p> , I'm </p>
+<p>pretty familiar with like servers and server farms and stuff.</p>
+<p>Yeah, I, a little bit of background again with me is like, I've built computers before. I've worked quite a bit on like, software stuff.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm.</p>
+<p><strong>Jake Pacheco:</strong> But I like. Six days ago was my first line of code that I've ever written or anything. Yeah. It was always a thing where like I understood how the hardware works, even some of the architecture in the hardware.</p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. </p>
+<p><strong>Jake Pacheco:</strong> But then, and I can wrap my head around most softwares, but then it's like everything that came in between the reason why, like my hard drive, power supply, ram, and all that stuff. Creates pictures on my screen is voodoo. </p>
+<p>To me. It's a, it's completely </p>
+<p>like, it's, it's completely lost. And I always just figured it was magic.</p>
+<p>And even when I first met Seth it was a thing where it was like, like I found out he was a coder and I was like, Oh, he's serious. </p>
+<p>Kinda. </p>
+<p>I was like, man, like that's knowledge that I would love to know. Like</p>
+<p><strong>Seth Whiting:</strong> Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Just cause it's, it just, it, it feels truly like Mount Everest. </p>
+<p><strong>Seth Whiting:</strong> Well, yeah, it's, it's, it's definitely like if, if you haven't, if you haven't gotten really into it, it seems very inaccessible.</p>
+<p>Yeah. But I can tell you, like, I'm not, I am not like, Some exceptional person or anything. I just took the time, you know, to, to learn a thing and, and now I've got so many years and so many mistakes under my belt that, like what I do can seem very like I don't know like foreign to a lot of people.</p>
+<p><strong>Jake Pacheco:</strong> Yeah.</p>
+<p><strong>Seth Whiting:</strong> Because like it's sort of like writing a foreign language, you know?</p>
+<p><strong>Jake Pacheco:</strong> Yeah. </p>
+<p><strong>Seth Whiting:</strong> That's why they call them languages. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. </p>
+<p><strong>Seth Whiting:</strong> So </p>
+<p><strong>Jake Pacheco:</strong> The way that, I was actually telling my mom that I was beginning to learn coding and you were helping me and stuff. And I was like, and she's like, how is it, it seems like you'd be like really difficult. And I was like, yeah. It's like I.</p>
+<p>If you were to write a text to a friend, but if any of your, and, and you have a lot of symbols mm-hmm. And if any of your punctuation or if your caps lock is on or anything a anything is messed up, then they will not be able to understand what you're writing. Yeah, yeah, </p>
+<p>yeah. I mean com that's, that's sort of the things like the, the like, The, I, I feel like it's like a common trope or whatever that like computers are actually very dumb and like they, they can do amazing things, but you need to be like, you know, you need to treat them like, you know.</p>
+<p>I don't know, like a really dumb, like kid or something and just like be Absolutely, you know, clear as to what you want them to do. Yeah. But once, once you tell them what you wanna do, they can do it really, really fast. And yeah. Yeah. So it's </p>
+<p>almost like the the brain power version of an inanimate object.</p>
+<p>And then it's like, but if you bestow some of your knowledge onto it, then eventually then it's, it becomes something pretty </p>
+<p>Right. Yeah. Yeah. So, so yeah, that, so like back end and front end development. So web, so, and that's also sort of what separates The, the web apps from websites and, and phone apps from phone sites is like, there's a backend and there's a front end.</p>
+<p>And although, yeah, that, that's, that's a a good point that I just thought of. So I'm saying that's a good point to myself in my brain. A lot, a lot of a lot of apps. Out there don't have a backend. They're just sort of like little utility things, you know, that, that don't store anything. You know, like you just have a calculator app on your phone, but that's still an app.</p>
+<p>So I so like to contradict myself. It's not really that they have a backend and in front end, it's more just like the functionality part of it. But if, but if you have incorporated a back end to your. App than it is officially an app like that that, you know, that's functional, you know, that you've crossed the functional threshold at that point.</p>
+<p>For sure. So, so it really is, there's </p>
+<p>kind of a a, a breaking point or something where it's like, it becomes from just being a website into like being an a like a full-blown </p>
+<p>application. Well, so I'm kind of saying the opposite of that. I'm saying that like, that like, The, it's it, what makes an app is just the functionality.</p>
+<p>Hmm. But, and, and it's like, well, how much functionality is, is enough to be considered an app? I, I guess the, the, the answer is just like, if the user can interact with it and it, you know, does something based on that interaction, that's not just like a parallax scroll or something. Do you know what PAX is?</p>
+<p>Where like, </p>
+<p>I, I can, I can wrap my head around the idea. </p>
+<p>Yeah. Not just like a, like a little animation that happens when you scroll. Okay. That's not really fun. It's like when you like enter something or like, yeah, I guess like enter something and something happens based on what you've entered. Mm-hmm. So so, but it, what I was saying before is like if you have a backend incorporated with your.</p>
+<p>With what you're making, there's like, no, no question about it. That what you're working on is at that point, an app. You know, that's, that's like to have a backend to incorporate it into your site, like it's going to be functional. It's, it's definitive at that point once you have something going on. Right.</p>
+<p>Yeah. It's like unquestionably an application. Interesting. Yeah, I would say, yeah. And </p>
+<p>I know you told me. Code Academy. Mm-hmm. And that's what I've been using. And I like checked in on it cuz I've been trying to do a lot of it without any like, hints and stuff. Mm-hmm. Which, </p>
+<p>It is very difficult.</p>
+<p>Yeah, yeah, for sure. Yeah. </p>
+<p>To start off anyways, I, I don't know. It's, it's just, it's, you know, you have to like cram this knowledge that you haven't learned and then you like just kind of go with it. Yeah. Then it's like, oh yeah, write it </p>
+<p>perfectly. It's like, like but </p>
+<p>I've also seen like Stuff for you.</p>
+<p>To me, I've seen things for coding boot camps. It seems like coding boot camps are a really great resource also, if you have like, kind of the money for it or like </p>
+<p>you're maybe struggling with like like </p>
+<p>sitting down and focusing on just like doing something </p>
+<p>that you don't have to pay for. Yeah.</p>
+<p>That's that's another thing is like there's, there's a lot of ways to go about. Learning this stuff. I personally did a, a bootcamp like you were talking about in 2012. And, and it was great. And that's, that's what I needed, I think in order to actually, what I, what I actually needed, I'm gonna tell a, a quick story was, so I, I did the bootcamp, it was supposed to be, Three months of front end stuff and three months of backend stuff.</p>
+<p>And we've talked about the difference between the two. Mm-hmm. And so I, I did the three months of front end stuff and I was like, I don't think I like coding and I am gonna not. I'm just gonna not keep going. So I, I stopped halfway through the program and I didn't like graduate or whatever. And then I did, went off, did some other stuff, like, worked at Starbucks for a bit and like, whatever.</p>
+<p>And then I, I tried to like, start a business with some friends, which was a, a tech business. The meaning like we were trying to start up like a, a website, web app thing. And cuz I, I had some friends in college who, who were coders and they were like, good. They were like legit. So we were working on this thing and got accepted into this like startup accelerator program thing in Nashville.</p>
+<p>And That, that kind of like eventually fizzled out. But one of the coders that I was working with knew that I went to this boot camp thing and was like, Hey, you know enough front end stuff, you know, to help me out on this. Like, I need some help. Could you, could you help me out? And I, I agreed. And that's, that's when I started learning was like when I was like just getting paid to work full-time on code.</p>
+<p>And if I didn't, If I didn't do a good job, if I didn't like, prove that I actually could do this thing, then I would feel awful and yes, look like a total idiot and, you know, just ruin the project that my friend was working on. So that's, that's what I needed. Jake, I, if you know, none of you know Jake, but Jake does not need that.</p>
+<p>Jake takes something and he just runs with it and he, he has so much like self-discipline that is like very Admirable and like foreign to me, I, I need to be kind of like held over the fire and Jake kind of like creates the fire himself. So I knew that he was gonna be able to learn on his own. So I just pointed him to some resources.</p>
+<p>In particular Code Academy, which is. Without the A, so it's Code Academy. Mm-hmm. Dot com, and we can link to that. And so like they, they have great interactive tutorials. Mm-hmm. So and that's the best way that I've found to learn new things. Like I had already been. A developer for a while and then discovered Code Academy, and I was like, oh, I've been wanting to learn this other thing.</p>
+<p>And they have a, a thing for it. Like they have a tutorial for it. That's where I will always look first If I'm, if I need to learn something and I don't already know it, and they have a course for it, then I'm like, perfect. I'm set. You know, I, I will get this. So yeah. What, what were you, I feel like I, I semi cut you off of what you were saying, but like that sort of a digression align the same lines of what you were talking about. Yeah, yeah, yeah. No, it made </p>
+<p>sense. Yeah, so </p>
+<p>it's because. N I I, </p>
+<p>I notice a lot in like some podcasts I've been listening to about coding also, cuz I, I kind of just delve deep into anything that I wanna learn.</p>
+<p>Great. And it's, it's one of those things where my first mission is to figure out how to explain the things that I don't know about whatever thing I'm learning. Mm-hmm. My most recent thing before this was building science cuz I'm building what's called like a passive house almost. So, but I'm doing it all myself.</p>
+<p>So it, it's one of those things where that is an extremely difficult thing to like kind of research. Mm-hmm. Because there isn't. A lot of people that are builders aren't really people that use a lot of computers, you </p>
+<p>know? So like, yeah, it, it made </p>
+<p>it extremely difficult. Whereas with this, I'm kind of stoked about like the community.</p>
+<p>I mentioned to Seth, it was a thing where it's like you Google, you like go on Reddit, you do anything and everyone is. Unbelievably helpful. Mm-hmm. And like I, I've like built cars before and like I said, working on a house and stuff, and I've built other stuff before, but like, usually the community isn't this like, just like everyone is trying to like, help out is is just kind of a awesome, it's, it's pretty incredible.</p>
+<p>Even when Seth like, and I know like Seth has a lot going on in his life. But like, it's like the fact that you were just like, yeah, I'll help you. Any question </p>
+<p>you have anytime, it's like mm-hmm. Like, </p>
+<p>I, I, I mean at first I was like, oh, that's Seth. He's just, you know, sweet. But then like, I like. Go online and it seems like quite a few people are like that, like forthcoming with with just information or if you have any questions, we'll help you.</p>
+<p>Yeah. You know? Yeah. That's kinda, that's really blown me away. I mean, like, like Code Academy, that the fact that it's free is like, yeah. That's awesome. I mean, I, I've, I've always been into like PC and Android and like a lot of freeware are for both of those things. And it's kind of like a Yeah, I, I, I've always liked, like, prefer using like, freeware stuff not just cuz of savings or whatever, but like, but because the community is all there to explain things and why they do things.</p>
+<p>Mm-hmm. And it definitely is </p>
+<p>like, just, </p>
+<p>I'm, I'm kind of blown away at the vibe of vibe. All of these programmers and everyone that just wants to like, kind of help is </p>
+<p>pretty awesome. Yeah. Yeah. You, you, you'll learn even more. About that when we get into like open source development and mm-hmm. And Git well, I'm sure we'll cover git pretty extensively in the future.</p>
+<p>Mm-hmm. But basically like the, the, the, for since the nineties, like early nineties, Well, I actually, I'm not sure when Git was made. It was made by a guy named Linus to Vaults, to Vaults who made Linux. Have you heard of the Linux operating system? Yeah, yeah, I have it, </p>
+<p>I have it side loaded on my other </p>
+<p>computer.</p>
+<p>Yeah. Yeah. So he's, he's been around for forever. And guy from, I think he's from Sweden, and he Like, he's like a genius and whatever, but basically he made this thing that makes it really easy to collaborate with other developers. Like I wrote this code, you wrote that code. Let's merge them together in a way that like makes sense.</p>
+<p>If, if, if I wrote anything that conflicts with what you've written, flag it basically and come to an agreement of like, which, which parts should stay, which parts should we get rid of? So it, and it keeps like a log of like, who wrote what, and, you know so because of that people have been able to work on like, very large scale projects together.</p>
+<p>Like, like you could, you could talk about like, you know, big companies like Facebook, Reddit, you know, Instagram, whatever. They, they're, you know, everybody makes use of GI no matter what, but. The, the thing that I'm getting at is there are projects out there that nobody's paying anybody to work on. Yeah.</p>
+<p>Like if you think about that, like nobody's paying anybody to work on this stuff. Yeah. But they're all stoked to, to be working on it and to be contributing and, and especially with JavaScript there's just like this huge ecosystem of people making stuff for free. That is like incredibly useful to everybody.</p>
+<p>Hmm. Everybody else. So like yeah, kind of like the, the spirit of collaboration and cooperation is, is like pretty deeply ingrained in like the, the development community. Yeah. I mean, it </p>
+<p>definitely seems it, and it's like the way that you said that and like where it, where it's like there's people working on these things that are like just out there, like, and they're not doing, they're not getting any money from it.</p>
+<p>They're just like giving it. Yeah. It reminds me of like I used to like root my phones a lot, you know, cause of Android and stuff. So so I would root it and everything and then like you could have different ROMs and stuff like that playing on it or like, you know, working with on it. And with those, again, it was one of those things where like everyone on, like, or a lot of people on X D A developers, like they.</p>
+<p>They're not getting money for this. They're just like, oh, in my free time I poured, you know, the Google Pixels UI onto your galaxy Yes. Or whatever. Yeah. And it was like, that's so cool. Like, why would you do this? Like, you know, it's like, yeah. It's again, and, and I can definitely see how that just like kind of flows right into just like coders in general, or programmers in general.</p>
+<p>Mm-hmm. Yeah. Yeah, it's, it's just really cool. It's kind of, like I said, it's kind of blown me away. </p>
+<p>Yeah. And I, I think for me, Like, I know how much coding has like, like impacted my life, basically. Mm-hmm. And like, I, I like want the same for anyone. Yeah. For anyone else. Especially my friends, you know.</p>
+<p>So like whenever any of my friends express any kind of interest, I always kind of like, I'm like, Giddy about it. Yeah. Yeah. Yeah. It's, </p>
+<p>well, I mean, I, I get it. That's very much how I am with like any of my passions. I'm like, you wanna learn? Yeah. I'm here for it. Yeah, yeah, yeah. Yeah. Yeah, I definitely get that.</p>
+<p>And I definitely see that with you. But yeah, so back to back to some other like questions and stuff. Yeah. So I, I guess I'm confused about So like when we're talking like backend front end like where would WordPress fall? I guess it would fall in the main category being front end, but then it would fall in like a subcategory of something, or would it just be, is that more of like more just working on a piece of software to create </p>
+<p>something?</p>
+<p>You know what I mean? Yeah. So, yeah. No, that's, that's a great. Question. And like if people, if people don't know WordPress is what's called a content management system, which just means that for people trying to make websites. If you look at any, any website out there, there's like texts on a page and images on a page, and.</p>
+<p>Content management systems basically make it so that any, any block of text on a page or any photo on a page or, or any content on a page is kind of like split up into like their little blocks. So like, we've got a, a paragraph here and then we've got like a sidebar here that has some links and then we've got a photo up top that, you know, spans the hole width, all of that stuff.</p>
+<p>Can be changed out whenever you want. That's what a content management system like, that's the functionality that it provides. Mm-hmm. So WordPress is a tool for making websites. Mm-hmm. But the tool itself is an app. Yeah, it's an application. Yeah. So, </p>
+<p>so it's an application you use basically to like, adjust different parameters on that.</p>
+<p>Like I, I, I made an like worked on the software side pro, probably similar to this to make the application that runs on people's phones to To like for our scheduling at our, at our barbershop. Right. And it basically just has like a bunch of parameters that you can adjust and change, make changes to and stuff.</p>
+<p>Right. But it's not actually like me typing in a code mm-hmm. To make it. Mm-hmm. So this is now blue? Yeah. It's, I select blue from a dropdown menu or whatever. Is </p>
+<p>that kinda like that? Yeah. So, so the, the, the, yes, that is, that is exactly like that. Okay. You know, it's, it's, it's managing the content that is, you know, presented in the, the final product.</p>
+<p>So. The website that you make on WordPress is just a website. It's, it's not functional. It's not you know, there's, there's no backend that the users are interacting with. It's just the, the end result of what the app spits out. The app being WordPress or, or the content management system. Yeah. The content management system.</p>
+<p>Is basically like if you've ever filled out a form on a, on a website, like, like your personal information, like this is my, mm-hmm. My name, my street address, blah, blah, blah. It's sort of like that. But instead of like, this is my name, this is my street address, it's more like, this is the title of the page.</p>
+<p>This is the photo that I want to put up there. This is the The main body of the page, like the main content of the page, you know, like in, in paragraphs. And then you hit save and it spits out onto the website. Hmm. So the interesting that, that kind of like form that you fill out is kind of the application part of it, where when you hit save, it goes off to a database.</p>
+<p>You know, on a server somewhere that you never see. Yeah. So yeah. Does that Interesting. Does that answer the question? Yeah, yeah, definitely. </p>
+<p>So I guess on top of that then, I'm curious, so with WordPress, can you like, add on like your own applications to that website that you've created with WordPress?</p>
+<p>Yeah. So you, you know what I mean? You can, yeah. So if you get really into WordPress development and start making like, custom forms, and, and also I, I should note that there are WordPress plugins that other people have made. Okay. For free or paid or whatever. Yeah. Like, like form. Yeah. Form applications like to, to like sign up for like a, a newsletter or something on your, on your WordPress site?</p>
+<p>Like in the or, or a, a, a more common use for a form would be like the contact page on any website. Yeah. So like very, very often any website that you're gonna be on is going to be a WordPress website. It's, it's, it's something insane, like 40% of all websites Geez. On online, our WordPress websites.</p>
+<p>That's crazy. Yeah. It's, it's, at least it was. Like five years ago, 10 years ago or something. I, I think it still is. Which is crazy to think about. But so that form could potentially, like, be considered an application mm-hmm. On, on your, on your website. Hmm. And you know, there, there may be a bunch of like senior developers out there screaming at their.</p>
+<p>Phones listening to this and being like, this guy's, you know, he's got it all wrong. He's lost it. It's the, it is sort of a matter of opinion because like Yeah, a lot of things in development are pretty loosely defined. Mm-hmm. Or at least if they are strongly defined, they're not easily like Yeah, they're, they're not like U ubiquitous or whatever, like everybody you know, knows the actual definition.</p>
+<p>So people kind of have differing, differing feelings about it. Yeah. I guess like ideas of what things are, but that's, that's what I would, that's how I would describe it as like if you have a form on a website that's saving somewhere that's know essentially an application. Yeah. Mm-hmm. Yeah. Hmm.</p>
+<p>Interesting. </p>
+<p>But, so basically a lot of it's done through a like. Through software though, or whatever, like a lot of the creation of a WordPress it's not really coding necessarily unless you really get deep, deep </p>
+<p>into it. So, yes. Or it doesn't have to. That's a point. So there, there's, so there's there's, wordpress.com is a platform that.</p>
+<p>Basically you sign in and all of that and you you have like predefined templates and you never, you never touch any code at all. Yeah. But WordPress dot, basically WordPress the application that you can access via wordpress.org. But that's, that's the mm-hmm. That might be confusing cuz it. Don't worry about that.</p>
+<p>Yeah. WordPress is an application that you download from wordpress.org. Mm-hmm. And you can create custom. Custom code, like you can, okay. You can mod it out until next Tuesday. And it's, it's kinda so, </p>
+<p>so word press, WordPress is MySpace. Mind joking. </p>
+<p>I mean, in a way, WordPress templates. </p>
+<p>And then you have like, if you really want to get crazy </p>
+<p>and Right, okay.</p>
+<p>Yeah. Someone's code and make it something fruity. Yeah, yeah, yeah. But, but yeah, we're plus the application, like you, you basically, you, you kind of need to know what you're doing at that point because like, you're actually getting into the code and, and you're actually like, like you very often when, so I, I actually, I worked at two different.</p>
+<p>Marketing firms that. Worked exclusively in WordPress sites and creating WordPress templates like the, there are WordPress templates that you can work with that other people have made and you know, you can buy them or whatever. We were creating them completely from scratch. We were starting with like, no, no code and building, you know, the, all of these things you know, from the ground up and It, it, you know, it can get pretty like complicated and, and whatnot, but but yeah, so like, and, and I like all a, a side note for, for WordPress stuff is that when Jake reached out to me and said like, where do I start?</p>
+<p>I told them there, there's sort of like two, two routes that I would advise someone to go down. If you, if you don't, so there's the, the, the avenue that gets you into basically making a decent amount of money in, in a relatively. Short amount of time. And when I say relatively, like it's still gonna take a while.</p>
+<p>Mm-hmm. But it's, it's not gonna take you as long as the other avenue, which is well, so the first avenue to reveal is WordPress. So it's, it's coding, but you don't really have to worry about. Backend versus front end. You don't have to worry about you know, getting super into like functional components and stuff like that.</p>
+<p>You really just need to worry about HTML and c s s. But the HTML is written in, in a, a language called P H P which just allows you to create those little gaps for like, this is a part that can be controlled by. The, the kind of like form stuff that I said before, like, this is where the title goes, this is where the body goes.</p>
+<p>Mm-hmm. And then once it shows up, it should look like this. So that, that is a really good start. Like that's a good place to start. And you can, you can make money off of that pretty, you know. Relatively quickly, like I said without having to dive like incredibly deep into, you know, what, what makes something super functional.</p>
+<p>It's more just like how to make things look good which, which is difficult and its own right. But it's, it's not as difficult as making something very functional and useful, like a useful tool for other people to use. Mm. Or like companies to use. Yeah. But it's more for, for making things for, for companies to communicate.</p>
+<p>Like, this is what we do, this is who we are. You know, that, that's like where you would make money is like, there's so many companies out there. That need websites and WordPress is the way to go for that. Mm-hmm. So if you wanna make w websites whi, which like I said, they're less complicated than making applications you can make some decent money off of that more quickly than you could if you went down the other path of application development.</p>
+<p>If you want to go down the application development path, I would say focus on JavaScript. So either focus on WordPress or focus on learning JavaScript. And I Jake, I told you on the phone before, like why I said JavaScript. Do you, do you remember anything that I, that I said about.</p>
+<p>JavaScript and like why you should learn JavaScript. Yeah. Yeah. </p>
+<p>So it, my understanding with it anyways is that you can work both in the front end and the back end in JavaScript. JavaScript is used in a lot of websites, but also you can, like, actually, like you said, I mean, and now I have more of a greater understanding about what backend in front of me, so mm-hmm.</p>
+<p>So yeah, you do more, you actually do with next Js. Some back, a a lot of backend stuff as well, and the language computes on both sides kind of a thing. And then I believe it was react kind of merges those </p>
+<p>two together. Yeah. Oh, so actually the, the other way around you, you're, yeah, that's, that's great.</p>
+<p>S j's front end. So React is strictly front end. Okay. Next, next JS is basically a way to tie a. React application into a no JS backend. Oh, okay. That's what it was. Yeah. Yeah, yeah, yeah. And, and like, if you're, if you're, you know, starting at square one, like Jake is like, don't, don't worry if you don't know what any of that stuff is, like, you, you, you know, will, we'll cover that for sure.</p>
+<p>So to begin with The Jake hit the nail on the head. The, the, the reason that I say JavaScript is because when I was talking about front end and back end, JavaScript is the only language that can run on the front end. It's, that's just it. It's the only language that can run in your browser, the only language that your browser knows how to read.</p>
+<p>And, and not until like 20, oh, what was it, 20 12, 20 13 did a guy named Ryan Doll figure out how to make JavaScript run on the back end. So previously it was like, like, Python or Java on the back end, and then Java script on the front end. And if you don't know, there is a big difference between Java and Java script that they have nothing to do with each other, other than the name is similar, but yeah, and, or, or like Ruby is another backend language.</p>
+<p>So there's, there are, there are like a good. Like half dozen to like a dozen backend languages that are popular. Mm-hmm. But JavaScript is the only one that can also run on the front end. Mm-hmm. So if you're gonna start learning application development, to me it makes the most sense to learn one language and Yeah, just run it in both places.</p>
+<p>Yeah, it makes a lot of sense to a lot of people out there because if you know JavaScript. And you know how to make it run on the front and back end. You're gonna get hired somewhere. Like there's so much opportunity out there, and you're gonna make a lot of money. Like more, more than a WordPress developer.</p>
+<p>Hmm. Like significantly more. But it takes significantly more knowledge to, to do application development. So, you know, you, you get what you pay for between, you know, Website development and web application development slash mobile application development. Oh, and that's another thing. Not to, not to take up the whole podcast, but No, keep going.</p>
+<p>I'm finding this interesting, so this is fine for me. Yes. So another thing with JavaScript is there, there are, well, basically what I was going to say is, If, you know JavaScript specifically React and there, there, there are other front end frameworks and, and we should get back to that React is a front end framework.</p>
+<p>So we, we'll come back to that. Mm-hmm. Yeah. Basically they, they figured out ways to make JavaScript run on a mobile application, like on, on iOS or Android. So if you, if you know, if you know JavaScript. And specifically within the framework of React. Mm-hmm. You can write code that will run on the the front end of your, in your browser, but it will also run in an iOS application.</p>
+<p>And it will also run in an Android application with one. That's awesome. One language. So that's crazy. It's, yeah, it's, it's, it's, it has come to be that like one language, like rules them all basically. Yeah. Yeah. So if you, if you want to learn application development, learn. Yeah. Hmm. </p>
+<p>Because I hear like a lot of people talk about like Python, a lot of people say Python first language and stuff like that.</p>
+<p>Yeah. But like you had me sold on it when you said like, that it, it can run in the front and the back. I was like, okay, well that's the whole thing. Yeah. Yeah. I was like, I was like really intrigued by that. So I was like, yeah, I'm, I'm gonna go to the JavaScript and I, I, I haven't even looked at any other types of code and I, I kind of, I have a slight assumption that it's I almost feel like it's a bit like Latin, Latin languages.</p>
+<p>Mm-hmm. In the sense that like, once you know one, like you can kind of like fudge your way through some other ones. Like, it's like, yeah. You can kinda, it, it makes more sense when you learn the other ones, like why things are worded the way they are or why you have to have things spaced out the way you do, or.</p>
+<p>You know, have a dollar sign randomly in the middle of a sentence. </p>
+<p>Yeah, yeah. </p>
+<p>But it makes sense. Like it's, it is just, I, I, I feel like I feel like if I get like kind of a firm grasp on JavaScript and then eventually like understand you know, node next and and re react then. Mm-hmm. I feel </p>
+<p><strong>Seth Whiting:</strong> like that's a very good ground.</p>
+<p><strong>Jake Pacheco:</strong> And then if I have to learn something else, it's not, it's not so daunting as </p>
+<p><strong>Seth Whiting:</strong> long as I have like kind of Oh yeah, for sure. Yeah. Firm grasp on this, I think. Yeah. Yeah, definitely. Like learning another language, like it will still take a lot of time. Mm-hmm. But you will have such a better base, you know, to go off of.</p>
+<p>Yeah, like yeah, for sure. Yeah. So like there's a lot of stuff to cover in the next episode. Like what is a front end framework? Like what like I I didn't want to kind of say that like JavaScript is better than any of the other backend ones. Mm-hmm. In fact, like it's, it's worse in, in a lot of cases.</p>
+<p>But. It is perfectly accurate and, you know not accurate, adequate in like, you know, anything that you wanna build, like it will work, you know? Yeah. And it, it will do and it will, you won't, you know, regret it or anything. Yeah. But there, there are certain there are certain uses for other languages that like would make more sense in, in certain scenarios.</p>
+<p>Mm-hmm. So we can cover some of that. And yeah, I'm sure like we, we should just talk about like, you know like a whole list of stuff for the next episode. Like this, this, I think was sort of like a good intro. And kind of we could, we could take it a lot of different ways from here, but I, I think this is I think we should end it here and come back and clear up some stuff in the next episode of like like.</p>
+<p>The biggest one is like, what is a front end? A front end framework? I, I think yeah, that, that would be good. Cause that doesn't clear up, cause Yeah, it means nothing to me right now. Yeah. And it probably means nothing to like most of the listeners, if we're hitting our, our demographic, so. Yeah. Yeah.</p>
+<p>Sweet. All right. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> That sounds good. And yeah, I, I guess we'll see you guys next time. </p>
+<p><strong>Seth Whiting:</strong> Yeah. See you next time.</p>
 
   </main>
 

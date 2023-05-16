@@ -1,4 +1,4 @@
-const template = (item) => /* html */ `
+const template = (item, lines) => /* html */ `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +28,17 @@ const template = (item) => /* html */ `
     <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
     <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
     <audio controls>
-      <source src=${item.enclosure['@_url']} type="audio/mpeg">
+      <source src='${item.enclosure['@_url']}' type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
     <h2>Episode ${item['itunes:episode']}: ${item.title}</h2>
     <p>Published: <time datetime="2023-05-08">${item.pubDate}</time></p>
     
     ${item.description}
+
+    <h3 style="margin-top: 60px;">Episode transcript:</h3>
+
+    ${lines}
 
   </main>
 
