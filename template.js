@@ -1,3 +1,5 @@
+const { toISO, prettyDate } = require('./utils');
+
 const template = (item, lines) => /* html */ `
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +8,7 @@ const template = (item, lines) => /* html */ `
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The podcast that follows one aspiring web developer's journey guided by a seasoned professional">
   <title>INIT - The podcast that follows one aspiring web developer's journey guided by a seasoned professional</title>
-  <meta name="keywords" content=${item['itunes:keywords']}>
+  <meta name="keywords" content="${item['itunes:keywords']}">
   <meta name="author" content="Jake Pacheco and Seth Whiting">
   <link rel="canonical" href="https://www.init.show/" />
 
@@ -28,11 +30,11 @@ const template = (item, lines) => /* html */ `
     <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
     <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
     <audio controls>
-      <source src='${item.enclosure['@_url']}' type="audio/mpeg">
+      <source src="${item.enclosure['@_url']}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
     <h2>Episode ${item['itunes:episode']}: ${item.title}</h2>
-    <p>Published: <time datetime="2023-05-08">${item.pubDate}</time></p>
+    <p>Published: <time datetime='${toISO(item.pubDate)}'>${prettyDate(item.pubDate)}</time></p>
     
     ${item.description}
 
