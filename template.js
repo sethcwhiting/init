@@ -6,8 +6,8 @@ const template = (item, lines) => /* html */ `
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The podcast that follows one aspiring web developer's journey guided by a seasoned professional">
-  <title>INIT - The podcast that follows one aspiring web developer's journey guided by a seasoned professional</title>
+  <meta name="description" content="${item.title}">
+  <title>${item.title} | Init Podcast Episode ${item['itunes:episode']}</title>
   <meta name="keywords" content="${item['itunes:keywords']}">
   <meta name="author" content="Jake Pacheco and Seth Whiting">
   <link rel="canonical" href="https://www.init.show/" />
