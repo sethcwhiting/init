@@ -10,7 +10,7 @@ const template = (item, lines) => /* html */ `
   <title>${item.title} | Init Podcast Episode ${item['itunes:episode']}</title>
   <meta name="keywords" content="${item['itunes:keywords']}">
   <meta name="author" content="Jake Pacheco and Seth Whiting">
-  <link rel="canonical" href="https://www.init.show/" />
+  <link rel="canonical" href="https://www.init.show/episode/${item['itunes:episode']}" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icon/favicon-32x32.png">
