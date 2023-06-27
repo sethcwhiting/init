@@ -38,7 +38,7 @@ const template = (item, lines) => /* html */ `
     
     ${item.description}
 
-    <h3 style="margin-top: 60px;">Episode transcript:</h3>
+    <h3 style="margin-top: 60px;">(Auto-Generated) Episode Transcript:</h3>
 
     ${lines}
 
