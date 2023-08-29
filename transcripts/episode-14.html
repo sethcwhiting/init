@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Episode-14</title>
+</head>
+<body>
+<p><strong>Seth Whiting:</strong> Hello friends, I'm Seth Whiting and I am a developer from Portland, Maine. I've been coding for about 10 years now, and </p>
+<p><strong>Jake Pacheco:</strong> I am Jacob Pacheco. I am a barber from Augusta, Maine, and I've been coding for about 14 weeks now. Nice. So I'm on my about, on my second trimester, third trimester. So second </p>
+<p><strong>Seth Whiting:</strong> trimester. I think.</p>
+<p>You know, just really </p>
+<p><strong>Jake Pacheco:</strong> gen, generally speaking, kind of, yeah. Trying my best, </p>
+<p><strong>Seth Whiting:</strong> you know? Yeah. It's just, you know, once you get to that third trimester, it gets real. Once you get to like full term, you know? Yeah. Then that's when you become mm-hmm. A legit. You've birthed a, a developer at that point. That's the goal within yourself.</p>
+<p>That's the goal To </p>
+<p><strong>Jake Pacheco:</strong> birth the developer that lives inside.</p>
+<p>Oh, from the fleshy depth comes the developer. </p>
+<p><strong>Seth Whiting:</strong> Yeah. That's, that's the goal. We're, we're sorry we're off to </p>
+<p><strong>Jake Pacheco:</strong> an awkward start. Yeah. We're sorry everyone. I don't know. Hey, you know, we're just trying to have fun. Yeah, have fun while we're </p>
+<p><strong>Seth Whiting:</strong> developers. Just want to have fun. Yeah. That's what they say. I've heard that.</p>
+<p><strong>Jake Pacheco:</strong> I think someone said that </p>
+<p><strong>Seth Whiting:</strong> once. It's the same goes. Yeah. So here is this episode is where things get pretty interesting. We are gonna try something that we've never done in the history of the show. All 13 weeks never been done. Week 14 is, is the one so we are gonna try some. Live coding and Jake's gonna share his screen.</p>
+<p>And we're, we're just going to try to jam through some code here and we're gonna try to make it as audibly interesting and followable as possible. But no, no promises. And if you want to see this, we'll, we'll put it up on I, I guess YouTube probably is the right place to do that, so. Yeah. Yeah.</p>
+<p>We'll throw it up on </p>
+<p><strong>Jake Pacheco:</strong> YouTube. Yeah. I don't know if Spotify also might have a video thing. Now I know that they do it for a few different podcasts. You, you can upload videos onto it. Oh, weird. So you can watch videos on Spotify now too, so may maybe we'll have it up there too, depending on if, if we find that as a possibility, then we'll we'll throw that up there too.</p>
+<p><strong>Seth Whiting:</strong> Yeah, yeah, yeah. Should be on YouTube though, regardless. Yeah, definitely. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> And or, but no, it'll be, and </p>
+<p><strong>Seth Whiting:</strong> if anything, cool. Yeah. All right, let's try out. We're gonna, all righty. What, what we're, what we're going to try to do is get started on Jake's project that we've been talking about. Mm-hmm. He's been going through the Code Academy stuff, so we, we've got some like stuff that he has been learning that we can apply to this.</p>
+<p>And then maybe some stuff that he hasn't learned yet. So, we'll, we'll see. We'll see how it goes. Yep. </p>
+<p><strong>Jake Pacheco:</strong> And just so everyone knows at the beginning of this, I have already set up my actual like application my actual React application in in Visual Studio Code. So you listen to some of the stuff we've talked about already.</p>
+<p>I am pretty sure we guide through that. Relatively extensively just in talking about how to set that stuff up. But it really is pretty straightforward. </p>
+<p><strong>Seth Whiting:</strong> Yeah. And you're using vtt, right? Yep. Yep. I'm using Vet. Yep. Yeah. Oh, yeah. Yeah. If you, yeah if you want to use VT as well, that should get you started with like a, a good, good like base setup, so Yeah.</p>
+<p><strong>Jake Pacheco:</strong> Yeah, yeah. And, and that basically gives us our basic structure of what our application is. Mm-hmm. From my understanding, that's what it's, so, </p>
+<p><strong>Seth Whiting:</strong> Yeah, let's share less Green</p>
+<p>Baba. </p>
+<p><strong>Jake Pacheco:</strong> So here we are, everyone. So yeah, you'll see if I can get that to move out way. But yeah, you'll see right here I have my Visual Studio code </p>
+<p><strong>Seth Whiting:</strong> set up. Mm-hmm. With my app, j s </p>
+<p><strong>Jake Pacheco:</strong> X file, it comes all set up like this. Except it doesn't say click on the silly geese. I just thought it'd be funny. But then you have your c s s file, so all your styling, you have your j ss o n file, which I am still touch and go with what all that means.</p>
+<p>And then package json too. Mm-hmm. I think that this is all of the packages </p>
+<p><strong>Seth Whiting:</strong> that are used in the app. Right. So like, no known modules and a bunch of other stuff, or It is, but package j ss o n is is what you're actually going to like use package lock. Okay. Yeah. Yeah. Is something that you just don't ever need to worry about.</p>
+<p>Okay. </p>
+<p><strong>Jake Pacheco:</strong> So can I just exit this out? Yeah, yeah, for </p>
+<p><strong>Seth Whiting:</strong> sure. The package lock is basically like, something that gets sort of like, I don't know if it's like compiled or what, but it's like it keeps track of all of your. Packages And your packages. Packages. And your packages. Packages. Packages, yeah. Yeah.</p>
+<p>Sorry. And all you're worried about is the packages that you're, you're actually working on. Yeah. Which is in the package. Do chase on. </p>
+<p><strong>Jake Pacheco:</strong> Yeah, that's what I was kind of trying, trying to say in my very layman's terms was that it's like that's, that's just like the file that keeps track of all of the things that you're using in this that you don't change is </p>
+<p><strong>Seth Whiting:</strong> kind of a thing, right?</p>
+<p>Yeah. And I, I think that I'm right about it, like keeping track of like the packages, packages, packages. Mm-hmm. But but regardless, like I don't, I don't even need to know exactly what that thing does. Basically, it just makes it so that if you are working on a team, then whoever has that package lock is going to be locked into like the exact same versions of the exact same packages that you're going to be using.</p>
+<p>All righty. At all times. So, all right. Yeah. Cool. So yeah, I, I guess we can start by kind of, if, if you could just, I mean, give </p>
+<p><strong>Jake Pacheco:</strong> a brief explanation on AB J S X. I'll give my understanding first and then you can kind of like go from there and like, see, see if I'm completely wrong with it, but </p>
+<p><strong>Seth Whiting:</strong> oh, hold on real quick though.</p>
+<p>Yeah. What's up? One thing that you're gonna be doing a lot is mm-hmm. Flipping between this and your browser. Okay. Yeah, yeah. So let's set that. Do you have it up on your browser? </p>
+<p><strong>Jake Pacheco:</strong> I don't have it off on my browser. I had it up in my browser but for some reason site cannot be reached, so. </p>
+<p><strong>Seth Whiting:</strong> Okay.</p>
+<p>Who knows. Can you go to your package Jss o Yep. And I think that we, yeah. Okay. So you're gonna do so in order to get your terminal up, have, have you yeah. Have you done that like via vs. Code before? No, I haven't. Okay. So do</p>
+<p>I, I'm, so, like, I, I work on a I don't know. You are on a pc. Okay, cool. Mm-hmm. I was gonna tell you the Mac way to do it, so, but I forgot the Mac way to do it. Yeah, well, </p>
+<p><strong>Jake Pacheco:</strong> we don't need to know that anyways, </p>
+<p><strong>Seth Whiting:</strong> because PC Mastermind. There you go. So, I'm on a Mac right now, but I work on a pc, so the the way to get the terminal up and, and so basically it'll, it'll open a power shell Yeah.</p>
+<p>Terminal right within VS code. Oh, cool. If you're on a, if you're on a, a pc. Yeah. So you would do shift control and then the little backtick symbol slash okay. There's like, Tilda is the little squiggly line, so it's. And or backtick that key up there Under the escape button. The escape button. </p>
+<p><strong>Jake Pacheco:</strong> Oh, that guy.</p>
+<p>Yeah. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Yep. There you go. Binging bong, </p>
+<p><strong>Jake Pacheco:</strong> bing. Bong, binging, bong. All right. Now what do I, which </p>
+<p><strong>Seth Whiting:</strong> do you want me to type? So n here you would type n p, m, run dev, </p>
+<p><strong>Jake Pacheco:</strong> n p m all </p>
+<p><strong>Seth Whiting:</strong> one word or three words. Yep. There you go. Like that. Yep.</p>
+<p>A There you go. Here we go. Follow the link point. And so you can see here, click on the silly geese at the bottom. Silly geese. That's something that you, you already changed. Yeah. Right here. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. You know, proud, not </p>
+<p><strong>Seth Whiting:</strong> sure. Proud silly goose. Yeah. I'm </p>
+<p><strong>Jake Pacheco:</strong> a proud silly goose. What can I say? Alright, so just, just so I remember again that's the control shift, backtick.</p>
+<p><strong>Seth Whiting:</strong> Okay. Yeah. And go back to your browser and reload it just to make sure that you closing the terminal. Didn't, didn't stop it. I don't think that it did. Nope. No. Okay. I mean, </p>
+<p><strong>Jake Pacheco:</strong> this, this one has been up for like Yeah, yeah. Since the first time I opened it, so, oh, there's </p>
+<p><strong>Seth Whiting:</strong> my I mean, if you reloaded that, it would probably, it, it would probably show this now.</p>
+<p>Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> I tried, I I've reloaded it like five times. It doesn't, it didn't anything. </p>
+<p><strong>Seth Whiting:</strong> Well, the thing happened, the thing is, you're now running the process mm-hmm. That makes it show something. Oh, okay. Because it, that process wasn't being run. Yeah, it stopped working. Yeah, it stopped, stopped working because you're running like a server process and if it hits that server and the server isn't running, it's gonna be like, well, there's nothing here, so I'm not gonna show you anything.</p>
+<p>So what are we even doing here? Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. That makes sense. Why did you ping me? Why are you doing this? Get outta here. </p>
+<p><strong>Seth Whiting:</strong> Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Cool. So I'm gonna go back to this. And that's what I was explaining to you before is like how it has like the V react. Mm-hmm. Yeah. And it has like that little that little blur thing that comes up when you on mouse over, which I kind of like very nice.</p>
+<p><strong>Seth Whiting:</strong> Yeah. Fancy. So yeah. When </p>
+<p><strong>Jake Pacheco:</strong> you look at all this mm-hmm. I, my brain just goes, okay, where the heck do I even start with? Just anything. Yeah. You know? Yeah. Do I just go ahead and delete a lot of this or what, </p>
+<p><strong>Seth Whiting:</strong> what Yeah. Yeah. Basically So what I would do is actually, instead of, instead of using App Jsx mm-hmm.</p>
+<p>The way that it's being used now, which is like your whole app is in app jsx. Mm-hmm. I, I would actually make a a, a new folder. A new file within a new folder. Okay. With within your source folder. So Ss r c, that's like where everything that you make is gonna go in the Ss r c folder. Basically like 99% of what you're gonna make.</p>
+<p>Okay. Gonna go there. New, new. I, I wouldn't call it that. No. So there, there's is there like a thing about it? No. The, the thing is whenever you're, so it, it's a, there's a big thing in development where like a lot of your time, a lot of your, like, not a lot, but like. It's, it's a thing where you need to put thought into naming things.</p>
+<p>Okay. So you need to name variables and you need to name files and you need to name folders. Yeah. And you need to name them in a way where it's like, okay, am I gonna remember exactly what this thing does? Mm-hmm. Or what this is for. Okay. And not only am I going to remember it, but is somebody who has never looked at this code base before going to know exactly what this does without me having to explain it.</p>
+<p><strong>Jake Pacheco:</strong> Okay. So you have to have it, so it kind of has a lasting impression on like what </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah, yeah. I mean, basically you need to be semantic about it. Okay. Since semantic just means like you need to name things. In a way that it's like, oh, that's what that is. You know? Yeah. Yeah. So your, your folder here is gonna be like screens.</p>
+<p>Yeah. And you're gonna make, make a new screen. And well, let me see here. And in order for it to be like a legit screen, you would introduce the concept of a router, which we're not worried about that yet. We can, we can really just make one thing for now, and I would probably actually call, I, I would probably actually categorize what you're going to make as just a component.</p>
+<p>Okay. So you put it in a components folder. Folder, okay. Yeah.</p>
+<p>Components. Yeah. And then, and then within that I would probably say Make a new folder called reptiles. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Maybe new folder </p>
+<p><strong>Seth Whiting:</strong> reptiles. And then within that, make a you could call it index jsx, or you could call it like list Do jsx. I maybe just do list that, that might be like a bit more semantically.</p>
+<p>Okay. Correct. Uh uh, yeah. There you go. </p>
+<p><strong>Jake Pacheco:</strong> All righty. All now. Is this normal right here? What, what, </p>
+<p><strong>Seth Whiting:</strong> what this guy's doing? Yeah. So that, that's just, that's just showing. If there's nothing in the first folder, then it, if there is only one folder within that first folder, it'll just kind of show it side by side like that.</p>
+<p>Okay, cool. If you, if you put another folder within components called like, users or something like that. Yeah. And then you could have like a list jsx within users, and then it would be like your list of all your users instead of the list of all your reptiles. Okay. Then, you know, the, the folders would show up on top of each other.</p>
+<p>Yeah. Yeah. That makes sense. But yeah. So yeah. So yeah, within so basically what, what we're going to end up doing here is building out a component. Within this list, JSX file. Mm-hmm. And then we're just gonna import that into app jsx and Yeah. Kind of replace everything in app jsx with just that one component.</p>
+<p>Yeah. Just because we can, and that's like all we're really worried about is just this one component for now. Yeah. If we, if we wanted to later add like, like a tab component or something and we could tab between like the reptile list and the user list or something. Like we could do that Yeah. At some point if we ever wanted to.</p>
+<p>Yeah. I don't think we would want to. I think we'd actually want to be like more of a navigation Yeah. Thing. Yeah, definitely. But anyway, </p>
+<p><strong>Jake Pacheco:</strong> Cool. So, where do you </p>
+<p><strong>Seth Whiting:</strong> even start? Yeah. Yeah. So, I'm trying to just make sure that we have kind of like described everything that we've talked about so far, but everything that we've like done so far, hopefully people listening to this can kind of like understand.</p>
+<p>So basically to recap, it gives you app jsx out of the box V does, and it gives you some like boilerplate markup for that. Mm-hmm. And it's basically just like a, I don't wanna say like a marketing page, but it's like v Yeah, it's like a V default, like welcome page. Yeah. And that is meant to basically be overwritten by whatever, whatever you're going to actually write in your application.</p>
+<p>So, but in an actual application, the app jss file is sort of like the like gathering point. For all of the, the, the components and, and pages and everything that you're, you're gonna end up writing. So it's just sort of like the, the file that kind of like kicks everything off and then everything that you write from then on lives in its own place.</p>
+<p>It's kind of all separated out and kind of like organized nicely in separate files. So that's, that's what we're doing now is just, we're just making the first of those files. Yep. And and then all of that stuff gets imported into the app JS X file. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> So it up here where it says import and all that jazz, right?</p>
+<p>Yeah. I assume. Yeah, yeah, yeah. And we're just basically replacing all of this </p>
+<p><strong>Seth Whiting:</strong> jargon. Yeah. And actually why don't you go ahead and copy all of this. Just do a control all. Yep. </p>
+<p><strong>Jake Pacheco:</strong> CTRL all. </p>
+<p><strong>Seth Whiting:</strong> Control A ah, oh man. Select everything. Well, that's convenient. All right. You can do that in like any program. Did you know that?</p>
+<p>Control A? No. No, I didn't. Yeah. That, that works in like Microsoft Word and like Google Docs and Everywhere. Anyway, </p>
+<p><strong>Jake Pacheco:</strong> I can just do that. Control A and then control C to copy. Yeah. Yep. </p>
+<p><strong>Seth Whiting:</strong> Yep. And then I would like, just for fun and just to like show that how to like export and import things. Mm-hmm. Just go to list J S X and have this B list, J, s, X for now.</p>
+<p>Okay. Everything that you just copied. Okay. And then so highlight okay. So instead of import app, c s s mm-hmm. Just, just get rid of import app. C ss s import app css. Okay. And you can get rid of the logos. So get rid of React logo and feet logo. Okay. So, yeah, we're basically just kind of like stripping things down to so that we don't need to worry about like basically the, the original app, J S X file we're now making into just the, the list J S X file and then importing that into App J sx.</p>
+<p>So it's still gonna look similar. But now that we've removed the C Ss s and we've removed those logos, it's gonna, it's gonna look a lot different, but the a lot of the code is going to be the same. So, do you see those two links? The, so the anchor tags. Where it's like vjs.dev and then reactjs.org.</p>
+<p>Yep. So everything from line 11 down to line 16, you can delete. Okay. 'cause actually even line 10 to line 17. Okay. The, the wrapping dss. Yeah. Get rid of the divs as well. Yeah, because we just got rid of the logos. So if we left those in there, it would be like you're trying to display these logos, but the, they don't exist because you, you weren't importing them anymore.</p>
+<p>So, so now, now we are going to rename this. So it says function app. Yep. And then at the bottom of the file it says export default app. Yep. We're, we're just gonna rename it as</p>
+<p>We could either rename it, reptile list or mm-hmm. Just list. Okay. Because it's in Yeah. My Might as well reptile folder. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. And might as well just use list that way, maybe in the future you can kind of reuse the code. Is that a thing? Is that a thing that people don't, where it's like, yeah, yeah. I can use this form for a different function later on Uhhuh, if it's not Yeah.</p>
+<p>Specifically for this. I don't know if that's a thing that people do, but, </p>
+<p><strong>Seth Whiting:</strong> well, so I feel like right now we should maybe call it reptile list because Okay. We might have an, like a user's list later and then at some point we could combine the two and make it reusable. Yeah. But at, and that's when we would rename it.</p>
+<p>Just list Should this be in like Camel case or anything? So we're gonna be using what's called Pascal case. Okay. Which is the same thing as Camel case, but with a capital first letter. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah. I've noticed that come up when you do react dom </p>
+<p><strong>Seth Whiting:</strong> or </p>
+<p><strong>Jake Pacheco:</strong> something like that. Mm-hmm. Mm-hmm. It, it makes you do react in an, in a upper case and Dom and all uppercase.</p>
+<p>And I was like, what? Okay. Yeah, </p>
+<p><strong>Seth Whiting:</strong> yeah. Reptile this. Yeah. And then just copy, copy and paste that over app at the bottom. So we're declaring a function called reptile list, which is our component function, and then we're going to export that list, the reptile list. Yeah. From this file. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. You've, you've renamed what your, what your whole thing has been called.</p>
+<p><strong>Seth Whiting:</strong> Your function is, yeah. All right. And this is kind of annoying me. The fact is that they don't use semicolons by default. </p>
+<p><strong>Jake Pacheco:</strong> Oh, yeah. At the, at the end of each </p>
+<p><strong>Seth Whiting:</strong> line, you mean? Yeah. Like you, you don't need them technically. Yeah. Yeah. But I don't know a lot of people who don't use them. Yeah. So it's kind of like a, it's a pet peeve. It's irksome, sort of, sort of. It's just like, I feel like some people kind of like, some people kind of like say like, okay, this is the, the way that Yeah, we're gonna do it.</p>
+<p>And like, hopefully other people start doing it this way. But like, I feel like it's not really like they're trying to make fetch happen. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> The way that you're explaining it is a little bit like to bring back in our older episode, I talk about Silicon Valley also, but when it is like tabs versus spaces.</p>
+<p>Yeah. Yeah. It's like, like I still don't </p>
+<p><strong>Seth Whiting:</strong> understand what they mean by that, but Yeah. Yeah. Well, they call that like bike shedding. Okay. I don't know why they call it that, but it's like a thing where it's like, you can do it either way. It works either way, but like people sometimes have like very strong opinions on like X versus Y, you know?</p>
+<p>Yeah, yeah, yeah. And I don't have like a super strong opinion. It is just like I've, I've seen it happen a bit more, more recently in like, like documentation of like, like I feel like maybe the next JSS documentation does it too. Yeah. So, I don't know. Maybe that's the way the world is kind of like moving.</p>
+<p>Yeah. And I should just jump on board, but like, I haven't seen. I haven't seen it. Yeah. Like really, like I haven't really seen the, the shift fully, you know, shift. Yeah. So it's still, so it's still under your skin a little bit. Yeah. It's still like, well, are we, are we doing it this way? Have we all decided that we're doing it this way </p>
+<p><strong>Jake Pacheco:</strong> now?</p>
+<p>Is everyone decided that? Yeah. I mean, I, yeah. Yeah. I mean, I guess if the less things you, that you have to type in general </p>
+<p><strong>Seth Whiting:</strong> is the better, right? I mean, I guess. Yeah. Yeah. Yeah. I mean, like, I don't, I, I would almost prefer to write it this way, but only if everybody like, agreed to write it this way, you know?</p>
+<p>Yeah, I agree. What you mean. Yeah. Yeah. So anyway so, </p>
+<p><strong>Jake Pacheco:</strong> so our H one is V plus react, which we saw that on our webpage right here. Mm-hmm. Which makes sense. It's the it's the header because it's bigger than the a body would be or anything like that. Right. Is that, is that how that works? Kind of?</p>
+<p>Yep. Yep. Or, or what does that, what's, what's p stand for again? Paragraph. Paragraph. Yep. Yep. Why It's bigger than the paragraph and stuff. Mm-hmm. And yeah. So </p>
+<p><strong>Seth Whiting:</strong> what now buddy? So now you have created a component and you are exporting that component from this file. Yeah. So </p>
+<p><strong>Jake Pacheco:</strong> we need to import, </p>
+<p><strong>Seth Whiting:</strong> import it into app jx jsx.</p>
+<p>Yes. We're gonna go back to App Jsx. Mm-hmm. And delete everything after everything after function app function app. Okay. Yeah. Alrightyy it. </p>
+<p><strong>Jake Pacheco:</strong> Get rid of the parentheses or whatever as well. No, </p>
+<p><strong>Seth Whiting:</strong> no, no. Sorry. After that line </p>
+<p><strong>Jake Pacheco:</strong> is what I mean from the cons down. Yeah. From line seven down. Yeah. </p>
+<p><strong>Seth Whiting:</strong> So, yeah. And then Just within within the curly braces basically.</p>
+<p>So it's opening the curly braces at the, the top of what you're, you're doing and you, you need to just delete everything up until the closing curly braces. 'cause if you delete the closing curly braces, then it won't close and the Yeah. Code won't work. Yeah. Cool. So now now at the top, you can do import reptile list from All righty.</p>
+<p><strong>Jake Pacheco:</strong> Do we, do we want to get rid of all of the the V S V G and all that stuff as well? Or is that Yeah. Does that all stay? </p>
+<p><strong>Seth Whiting:</strong> Yeah, you can, you can get rid of everything other than line one. No, it's, you can get rid of line ones, which is the used state. So, okay. We're not using state in this component anymore.</p>
+<p>Yeah. So yeah, basically all you have now is like, Function app, and then you're exporting function app. And that's like, that's all, that's where we're starting. So, is this right? Yeah. That works. Yep. Yep. So, so you you started typing import reptile list and it auto completed for you vs. Code knows like, oh, I know where that is.</p>
+<p>Like your, I can't, </p>
+<p><strong>Jake Pacheco:</strong> I can't express, express how like, lovely that is. </p>
+<p><strong>Seth Whiting:</strong> Yeah. I just love that. Like, just little, little </p>
+<p><strong>Jake Pacheco:</strong> things like that I really </p>
+<p><strong>Seth Whiting:</strong> enjoy. Right? Yeah. So now you can do within your app function so this, this is now like your, this is your main like, starting point for your application. All you're gonna do is do return and then open some parentheses.</p>
+<p>Open some </p>
+<p><strong>Jake Pacheco:</strong> parentheses no, not parentheses. </p>
+<p><strong>Seth Whiting:</strong> Do a space first. Okay. Yeah. And then open some parentheses and then hit enter. And I'm gonna, I'm gonna tell you to, to put, yeah. I'm gonna tell you to put this within a div, just because if you don't, it might do something that's a little confusing and it, it will work either way.</p>
+<p>Yeah. It's just, I, for, for my own sanity. And for this, for your sanity potentially, I'm gonna tell you to put it inside a diviv. So you, you have made a diviv and it has the, the opening diviv tag and the closing div tag. Now hit enter so that you're kind of sandwiched between mm-hmm. The opening and closing diviv tags.</p>
+<p>Yep. And actually go, go back to the end of the opening one and hit enter again just so that you Yeah, you are actually sandwiched within there. Yeah. Actually between them and then Yeah. And now do open angle bracket Yep. And then reptile list. Yep. And then just hit I think forward slash Is it forward slash Yeah.</p>
+<p>Yeah. Yeah, that one. Yeah. And then the closing angle bracket Uhhuh. So that's a self closer, right? Is that what it's called? Yes. Yeah, that's a self-closing tag. And you see that, you see that a lot in React. You see that more in React than you do in just like H T M L. Mm-hmm. Like in H T M L, you see it a like s semi often because that's how you do like images and that kind of thing.</p>
+<p>But in React when you have components like. You can also have components that open and close like divs, you know, but it's, it's much more frequent in react to, to have like the self-closing ones than it is in html. So anyway, all of that is just to say, say you've now taken what you used to have in App jss.</p>
+<p>Mm-hmm. And kind of put it in list JS J. Yep. J S X. Mm-hmm. Sorry. And imported it back into app jss X. So you have the same markup now in app JS X. It's just imported instead of all written out, written in that file. Yeah. So, but with, with the exception of like the CSS and the logos and stuff, we kind of stripped, stripped a lot of that out of Yeah.</p>
+<p>That the list jsx. So you can save this now. Okay. And go back to the browser. I mean, it doesn't auto </p>
+<p><strong>Jake Pacheco:</strong> save, or, </p>
+<p><strong>Seth Whiting:</strong> If it looks like you already saved it. Okay. All right. Yeah. Go back to the browser now. So back to the browser. There you go. So this is your ugly version of, it's so ugly. What was there before.</p>
+<p>Yeah. It still </p>
+<p><strong>Jake Pacheco:</strong> says silly geese though, and I like that. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah, yeah. Cool, cool. So, so before I go any further, do you have, do you have any questions about like, what we just did? Any of that? </p>
+<p><strong>Jake Pacheco:</strong> I don't believe so. It's basically, we just made it, so we brought ourselves down to just nothing almost.</p>
+<p>Mm-hmm. And we're making it so these two can handshake with each other. The list, J Ss X and the app, J S X. Mm-hmm. So they both understand what each other are kind of a thing. Basically my list, J SS X is now inside of this diviv here. Mm-hmm. When it imports it in, it'll have whatever I've created in my list, J S X into that.</p>
+<p>Mm-hmm. And, but I, I am curious is the bonus of it being like this so we can kind of adjust these things separately. And so I might write a lot of my code on this page, my app, J s X page. But as far as the lists, the rep lists go, it'll all be written on this page and I'll continue doing that with multiple pages for like users and for other stuff.</p>
+<p><strong>Seth Whiting:</strong> Is that right? Yes, theoretically. But you, you wouldn't. You generally wouldn't write a lot of markup within app J S X? Yeah. Okay. Like it's just specifically app j s x, like that, that file is kind of like just a catch all for like the, the starting point for Yeah. For your app. And that's where like you, you just kind of like import a bunch of stuff.</p>
+<p>Mm-hmm. But you're, you're not really writing like markup there. It's basically just like importing stuff. Yeah, </p>
+<p><strong>Jake Pacheco:</strong> importing everything into it. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Okay. Yeah. All right. So theoretically you could write a bunch of stuff there and then have your list, and then you could write a bunch of stuff below it and then, you know, in order to update the part of that page that pertains to the list, you would do all of that in the, the list file and not the Yeah.</p>
+<p><strong>Jake Pacheco:</strong> File. Yeah. That, that makes sense. So, I mean, if. If compiler wasn't already being used for something. This is kind of your code, like all being compiled into one thing. Like everything that you've written on other pages is now being brought in and organized on this. So it's now presented to the the actual application in an organized fashion.</p>
+<p>Mm-hmm. Instead of having just write a bunch of code on one page, they would get pretty messy, pretty quick and stuff. I assume </p>
+<p><strong>Seth Whiting:</strong> y yeah, kind of. I mean, definitely. I mean, like if you, if you write your entire application in one file, that would be just bonkers. Like you, you would Well, it's, that would suck.</p>
+<p>It's, it's </p>
+<p><strong>Jake Pacheco:</strong> funny 'cause that's totally something that you don't really realize at first. Yeah. You know what I mean? Yeah. Like, I, you, you understand, I mean, even up until, I don't know, not long ago, like I, I thought that it was like, okay, I have my c s s, my J S X and my j ss o n file or whatever, and. I write everything in those, but now it's like, no, like you have like multiple J Ss X files and stuff like </p>
+<p><strong>Seth Whiting:</strong> that.</p>
+<p>Yeah. Yeah. So yeah. Interesting. Yeah, no, you're, you're gonna end up with dozens and dozens of, of J S X files. Huh. That's cool. </p>
+<p><strong>Jake Pacheco:</strong> I, I mean that's, it's clever though, because it means that you don't have to like wade through an ocean of code just to find a problem or whatever. If you're having a problem with just, that's kind of what we talked about in the last one where mm-hmm.</p>
+<p>With the button thing, where it's like you don't have to wait through a bunch of things Yeah. That are all calling for this, this one piece. It's all that one piece is handled in its own file. Yeah. And you're just bringing that into other pages or whatever </p>
+<p><strong>Seth Whiting:</strong> it is. Uhhuh. All right. Cool Leo. </p>
+<p><strong>Jake Pacheco:</strong> So, yeah. Cool.</p>
+<p>So what do we, what do we what, where do you think we should start? What do </p>
+<p><strong>Seth Whiting:</strong> you for, for one thing just I. Just to make this kind of like up to standard and everything. Mm-hmm. List. J S X should be a capital L. Okay. Like the file name. So the </p>
+<p><strong>Jake Pacheco:</strong> file name should always start with a capital no matter what.</p>
+<p>'cause </p>
+<p><strong>Seth Whiting:</strong> it's a component. Okay. And like utility files that, so that would be just like functions that are useful within within other files. Th those kind of things like just kind of like helper functions, those you wouldn't capitalize, but because you have to capitalize component names. Mm-hmm.</p>
+<p>You, you, you capitalize the, the file names for those components as well. Okay. That's, it's literally just like a convention. It, it's not, yeah. It's not a hard and fast rule Yeah. By any means. But, but it, it, </p>
+<p><strong>Jake Pacheco:</strong> it, like, if you were to look at it and I had it not capitalized and like we were working together, you'd </p>
+<p><strong>Seth Whiting:</strong> be like, why isn't that capitalized?</p>
+<p>Like it would Yeah. Or I would just go capitalize it. Yeah, yeah, yeah. Seth, no, you, you're not gonna </p>
+<p><strong>Jake Pacheco:</strong> confront it. You're just gonna be like, nah, </p>
+<p><strong>Seth Whiting:</strong> that's this. Yeah. Or I would, I would capitalize it and be like, by the way, I capitalize this thing, you know? Yeah, yeah, yeah. Cool. Yeah. So </p>
+<p><strong>Jake Pacheco:</strong> that is done then. So yeah, what do we, what do we wanna start working on and stuff </p>
+<p><strong>Seth Whiting:</strong> Like what's, yeah.</p>
+<p>So now what I would like to do is, Make a list. And you, you wouldn't do this in an app, actual application usually. There, there are some use cases for this. Like if you're working with like a list of like states in a like contact form or something and you just wanna show those in like a dropdown, maybe you would do this kind of thing.</p>
+<p>Yeah. But what I'm about to tell you to do is something that you would normally do via a database. Mm-hmm. But since we're not working with a database or a backend at all I'm gonna tell you to create a folder within source called data. Okay. New folder. Capitalized or not? No. The folders don't get capitalized.</p>
+<p>Okay. Just the files. Alrighty. And this, this is an example of a file that I, I wouldn't have you capitalize because you're not writing a component. Yeah. You're just write, you're just writing some data. Okay. And so within that new file, make a file called reptiles dot jss and not jsx, because it's not a component.</p>
+<p>It's not, it's not markup. Yep. It's just data. Okay. So reptiles, jss, and all we're gonna do is export from this. Yep. We're just going to export. I'm just gonna ahead and go ahead and do export default. Okay. Or actually, no, sorry, that, that might be kind of confusing. So export const reptiles equals. Am I doing </p>
+<p><strong>Jake Pacheco:</strong> CamelCase or No, just lowercase. Not just lowercase. Yeah. Yeah. Lowercase is fine. Reptiles wouldn't </p>
+<p><strong>Seth Whiting:</strong> be that anyways. Equals, equals And then we're gonna open up a array.</p>
+<p>So that would be the square brackets. Okay.</p>
+<p>Okay, cool. And then within your square brackets I'm gonna have you create an object. Mm-hmm. So do enter, so that we're kind of sandwiched between the square brackets and then do the curly braces and and then hit enter. And then, so now you're sandwiched within the curly braces and. Write name, colon and then the name of one of your reptiles colon.</p>
+<p>Okay. In, in, in the, in the form of a stream. So it would be within quotes. Okay. In quotes. Yep. Yeah. Yeah. John Sanko, ku, thank you very much. And that's, and </p>
+<p><strong>Jake Pacheco:</strong> Ku is actually one of our reptiles, but it's also the main character in </p>
+<p><strong>Seth Whiting:</strong> Dr. Stone. Dr. Stone. It's my favorite children's book author. It's </p>
+<p><strong>Jake Pacheco:</strong> a great anime.</p>
+<p>It's fun. Anyways, </p>
+<p><strong>Seth Whiting:</strong> so second in in objects. Mm-hmm. For object properties, you do commas instead of semicolons. Okay. Yeah. And. I, and then I'm going to have you copy, so, so before, before I have you copy it, put a comma at the end of that object. So at the closing curly brace, 'cause we're gonna make another object within our array.</p>
+<p>So this is going to be an array of a bunch of objects. Okay. So </p>
+<p><strong>Jake Pacheco:</strong> am I doing more cor curly </p>
+<p><strong>Seth Whiting:</strong> braces then? Yeah. So copy, copy that whole object. Okay. So lines two through four. Yep. So open curly brace and then name colon sku, and then close curly brace, comma, right? Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Am I supposed to have a comma after SKU now </p>
+<p><strong>Seth Whiting:</strong> or, yes.</p>
+<p>Yes. Yeah. Yeah. Okay, cool. You, you can, or you or you. And because it's the last one and the list of object properties, you could leave it off. Okay. Like if you had three properties in here mm-hmm. Like, name, date of birth color. Mm-hmm. Like, you would need commas after the first and second one, but not necessarily the third one.</p>
+<p>Yeah. Because it's not </p>
+<p><strong>Jake Pacheco:</strong> going into another thing. Right. It's not separating anything. </p>
+<p><strong>Seth Whiting:</strong> Okay. Right. It's like putting aa in the middle of a sentence versus the end of a sentence. Like you, you wouldn't put at the end of a sentence. Yeah. Yeah. It doesn't really make sense. </p>
+<p><strong>Jake Pacheco:</strong> Okay. So I have that copied now. Where am I putting that?</p>
+<p>So, am I just putting it after this comma, or are we just copying the same </p>
+<p><strong>Seth Whiting:</strong> thing over and over again? Actually, I wanna show you a trick here. Okay. So, triple click line two. Okay. So it'll select the entire line. Okay. And then hit shift down, down so that you're, you're. You are now selecting the entirety of lines two, three, and four.</p>
+<p>Okay. And now you can do shift option down. I don't even know where </p>
+<p><strong>Jake Pacheco:</strong> option is. One </p>
+<p><strong>Seth Whiting:</strong> second. Or alts. Okay. All right. Shifts option. Yeah, shift alt down. Okay. Oh, huh. That's nifty. Yeah. So if you're, if you're just listening to this, if, if you have something highlighted and you hit shift alt and then you hit down or up, it will copy it to the, the next line.</p>
+<p>Mm-hmm. Or the previous line, depending on whether you hit up or down. Yeah. So, so, so what we </p>
+<p><strong>Jake Pacheco:</strong> just did is we copied line two through four, which is a curly brace name, sku, comma cur end, curly brace, and then a comma. And when we. Did that, it ended up by adding a whole nother object, which is the same object you already wrote, but still.</p>
+<p><strong>Seth Whiting:</strong> Yeah. So now, cool. We, we have two objects now that are, that, basically just all that's in the objects is just name, colon, sku. Mm-hmm. So we're gonna do that a couple more times, like however many reptiles you want to list. Yep. And then just update the names for, for Okay. Oh, yeah. </p>
+<p><strong>Jake Pacheco:</strong> That's a, that's a cool way to kind of just reuse the code.</p>
+<p>Yeah. All right, cool. So then we're going to, oh, is there a way to make it not switch all of 'em at the same time? </p>
+<p><strong>Seth Whiting:</strong> It's, it's not going to, Oh, okay. Okay. I just, it highlights all of them because it, it notices that they are the same word. Yep. And Instead of clicking and then backspacing all of them.</p>
+<p>Mm-hmm. You can just double click KU and then start typing and it will overwrite. Oh, really? Yeah. Huh.</p>
+<p>Oh, </p>
+<p><strong>Jake Pacheco:</strong> that's nifty. See, you're, you're teaching me a bunch of things. I'm excited about. This is fun. </p>
+<p>I mean, you know, it's just little things that you never, you know, </p>
+<p><strong>Seth Whiting:</strong> you don't realize. Yeah.</p>
+<p>Ah so yeah, double click will do the word triple click will do the whole line. Do the whole line. Yeah. Yeah. And it looks like you're just single clicked right now. I am. Yeah. So you just wanna double click. Okay. There you go. There we go. How'd </p>
+<p><strong>Jake Pacheco:</strong> you know, because the line was in the middle there.</p>
+<p>Yeah. Instead of at the end. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Zuki. Cool. Cool. So save that and then then control Ss. Yep, yep, yep. Awesome. Cool. And then you can go back to list. Yep. And now we can within Diviv. Mm-hmm. We can get rid of everything within that, that first div. Okay. Okay. So like, and sorry, the, the, the, the very first div, so the one that just wraps everything </p>
+<p><strong>Jake Pacheco:</strong> from H one all the way down, basically.</p>
+<p>Yeah. </p>
+<p><strong>Seth Whiting:</strong> Unless, unless you wanna keep an H one and just say, actually let's do that. Okay. Instead of what, what I was telling you take the H one and change that text to like, oh, your audio cut out. Oh. Can you hear me? Yeah. What'd you just say? I just said Change the, the H one. Mm-hmm. Everything like that text there.</p>
+<p>Yep. Change it to like reptiles or reptile list or whatever you wanna Yep. Call it. Okay.</p>
+<p>Yeah. Enough. Cool. And then within the card just delete everything within the card. </p>
+<p><strong>Jake Pacheco:</strong> Okay. So like from button down, basically? </p>
+<p><strong>Seth Whiting:</strong> Yeah. From button down to the, yeah. Next Diviv. Yep. Yep. And then you can, you can get rid of that last paragraph as well. Yeah. Yeah. So all we have left is the H one, which is just like the title of, of the page.</p>
+<p>Yeah. And then and then an opening diviv, which is nothing. It's just gonna be blank space right now. Yeah. And it's not even gonna be blank space. It's gonna be zero pixels by zero pixels. So, it's just gonna be like an invisible box that has no width or height. Yeah. Cool. So now you can get rid of that used state stuff too.</p>
+<p>Used state right here? Yeah. At the top and then at the top of your component. Okay. So count, count and set count. Yeah. 'cause we're not, we're not, okay. We're not using that. All righty. Anymore. Cool. So now all you have is, A wrapping diviv and then an H one that's gonna be the title of the page and then just a blank box.</p>
+<p>Yeah. With no height or width. So, so now I'm gonna say,</p>
+<p>let's just do it. Let's just do it right, like in line. I think that might be the, the easiest way to wrap your head around it, so, okay. So at the very top, you are gonna import that data that you just made. Yeah. So, import and then what do we call it again? I think it was reptiles. Yep.</p>
+<p>Reptiles dos. Yeah. So you're gonna do import space and then you're gonna open some curly braces. Oh yeah, yeah. And then do reptiles and then it's gonna auto complete for you now. All righty. There you go. And the reason that we're doing it within curly braces is because it's not a default export. So if you look at the bottom of your current file here at line 17 Yeah.</p>
+<p>Your export default reptile list. Okay. That allows you to import something. Like if, if we did that in reptiles, jss, we would just do import reptiles as opposed to import curly brace reptiles. Okay. But because we didn't do that, we could potentially have something called reptiles in our reptiles jss file.</p>
+<p>Mm-hmm. And then we could have something called like, like reptiles schedule or something like that. Yeah. And we could import both of them within those curly braces. If that makes sense. Yeah, I think it makes sense. Yeah, so now we have access to the data that we just created. Yeah. Yeah, that makes sense.</p>
+<p>So within within that card, diviv so underneath the, the title underneath the H one, we have just a blank open Diviv. And within that, like sandwiched within that diviv, you're gonna open some curly braces. Okay. </p>
+<p><strong>Jake Pacheco:</strong> It, do I get rid of class </p>
+<p><strong>Seth Whiting:</strong> name card or anything, or keep all that? You, you can if you want to.</p>
+<p>You, you don't need to. It's not gonna do anything. It's just sort of like wasted, wasted characters at this point. So you totally could if you wanted to, but doesn't matter. So should it, </p>
+<p><strong>Jake Pacheco:</strong> should it look like how I just did it? Am I saying </p>
+<p><strong>Seth Whiting:</strong> it to you? Actually, actually not really, no. Okay. So you, with this, you're gonna open it up and, and it, it really doesn't matter.</p>
+<p>Yeah. But if, if I were writing this and if, if somebody else who it, it and like Vs. Code may even like correct you for doing this. For doing it. Yeah. And, and it's, it's not a big deal. 'cause it, it'll, it'll still compile the same way and everything. Yeah. Yeah. But if, if you're writing React code and you've been doing it for a while, you, you, you wouldn't do that.</p>
+<p>Okay. So where would you, where would you put it? So open, open the curly braces, but don't hit enter basically. Okay. Oh, okay. So you're just gonna be writing stuff Yeah. On one line. Yeah. Yeah. So now you're gonna do reptiles map.</p>
+<p>Cool. And then open the parentheses. Mm-hmm. And then now you're gonna write the word reptile. Yep. And then do an arrow. So, space equals, and then the angle brace. Yep. To, to make it look like an arrow. Mm-hmm. And so just to pause for a second, what we're doing now with this map function is we're looping through that data within our markup.</p>
+<p>And when we're doing that semantically, it makes sense to make each item that we're looping through the name of like the, the list, but like the singular version of that. Okay. So we have a, a reptiles list of data, like an array called reptiles, which is an array, is basically just a list of data. So we have our reptiles array.</p>
+<p>And each item in our reptiles array is an object, and we're going to call each of those objects reptile, because that's, that's what it's, that's semantically, that's what it is. Yeah. Yeah. All righty. We could instead call it like item if we wanted to. And oftentimes if you don't like, if this is like a function that you're gonna pass, like different, different data into you, you would just call it item because you know, that's, it's an item of the array.</p>
+<p>It, we know, we know what we're looping through. So like for ourselves to kind of like grasp, you know, exactly what, what we're working with here, it would make the most sense to call it, call each of those items reptile instead of item, or instead of data, or instead whatever. And then we're </p>
+<p><strong>Jake Pacheco:</strong> going to be now telling the computer that reptile is reptiles mapped.</p>
+<p>Each individual is a reptile, basically, right? </p>
+<p><strong>Seth Whiting:</strong> Mm-hmm. Mm-hmm. Okay. Okay. Yeah. Cool. It's the same as, it is the same as like declaring a variable. Yeah, yeah. Yeah. We basically just declared a variable called reptile. Mm-hmm. But it knows that that variable is going to be equal to whichever reptile is like at like the point where we're looping through, basically.</p>
+<p>Yeah. Yeah. If that makes sense. Yeah. Yeah, that makes sense. Yep. Cool. All righty. So now now that we're mapping this and looping through the reptiles, we can just do I would say just to keep it simple, open a paragraph, just do a p tag. Okay. And that's a lowercase p Yeah, I know, I, I </p>
+<p><strong>Jake Pacheco:</strong> I had my finger on the shift still </p>
+<p><strong>Seth Whiting:</strong> on that side.</p>
+<p>Yeah. And it's, that, that can be a little bit tricky because like the, the default H T M L tags are going to be all lowercase or camel case. Okay. And the, the like react tags that you create yourself are gonna be Pascal case. They're gonna be okay. Case. Alright. So cool. So now within the p tag you can open another pair of brackets.</p>
+<p>Okay. Just the square brackets or the ones, sorry, the curly ones. 'cause the curly ones. Yeah. Yeah, yeah. And yep. So, and then right within there. Mm-hmm. That's good. Do reptile name. Okay,</p>
+<p>cool. And then save that and go back to the page. Cool.</p>
+<p>This page. Yeah. And let's see here. Did I not save it properly? It didn't update for some reason. List is it, it should at least, you know, update with like the currently keeping and whatnot. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah, manga, </p>
+<p><strong>Seth Whiting:</strong> Can you open your console to do the shift control and then Yeah. The backtick button.</p>
+<p>Oh yeah. Yep. And just see if it like, stopped. So go over to the right, you can see go back to terminal. Yeah. And then you, you see there's PowerShell and then node on top of that. Yep. That's, that's the process that is running, I think. And I think it, it seems like it's still running. So that's so that's not the issue.</p>
+<p>So, So we're doing some live debugging here. Yeah. Hey, here we are. Here we are learning. So, go back to App jsx. Okay. And just comment out reptile list, so you can just on the line that you're on, just do this one control. Yeah. Just do control and then forward slash and that will comment it out for you.</p>
+<p>Okay. Actually within J S X, the, the commenting is different. Okay. So do so highlight the reptile list. Okay. Like that whole thing. Highlight the diviv and </p>
+<p><strong>Jake Pacheco:</strong> everything, or just </p>
+<p><strong>Seth Whiting:</strong> this, this bar? Yeah. Just from, from the beginning of the angle brace to the closing angle bracket. All righty.</p>
+<p>Yeah. Yeah. And then do the open curly braces, and that will wrap it in some curly braces. Okay. And then I think now you should be able to do control forward slash and that will comment it out the correct way. No, it still didn't, yeah, it's still not gray. Is </p>
+<p><strong>Jake Pacheco:</strong> it, is it, is it angle brace angle angle bracket.</p>
+<p>Angle bracket, and then and then semicolon? Is that what it is? Or, or colon? No, I assume that No. Written that way before to get rid of a thing. No, </p>
+<p><strong>Seth Whiting:</strong> no. I'm not sure what language that would be, but, so within the, the curly braces do mm-hmm. Slash star slash star? Yeah. Okay. And then at the end of those curly braces like right before the end, do star slash.</p>
+<p>Right before the end. The of the curly brace? Yeah. With within, </p>
+<p><strong>Jake Pacheco:</strong> yeah. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Star slash Yeah. And that's just gonna comment out whatever's in the, the curly braces. Okay. So now you can go back to the page and if anything shows up, then we know that something's totally bonkers 'cause Okay. Yeah. So it's empty, so we know it's working.</p>
+<p>Cool. Yep. So now just get rid of, just undo a bunch of, just do control Z Oh, control Z. Just do undo, undo, undo. Mm-hmm. Until we're back to like how it was. Yeah. And then save that and go back. Yeah. Yep.</p>
+<p>Yeah. Okay. That's my suspicion. Okay. Vitri act list. Oh. Oh, here we go. Okay. So it vs code. Usually is like good about renaming the, like the files that you're importing? Yeah. Like when, when you're importing them, it's, it's usually good about like renaming the paths. So you can see data slashes, oh, I know what </p>
+<p><strong>Jake Pacheco:</strong> this is.</p>
+<p>Yeah. Earlier when I changed something mm-hmm. It said Update for all and I </p>
+<p><strong>Seth Whiting:</strong> didn't do it. Ah, there you go. </p>
+<p><strong>Jake Pacheco:</strong> Okay. And that's what it was. And I was, I was like, why would it ask me that? And then I was like, watch, that's gonna be a problem later on. I knew it. I knew it. Anyone who's watching this, you can see the bewilderment in my face when I clicked to no on it.</p>
+<p>I was </p>
+<p><strong>Seth Whiting:</strong> like, I'll have to go back and watch that. That's pretty funny. So go, go back to app jsx. Yeah. Yeah. And change components slash reptiles slash lowercase list to component slash reptile slash slash uppercase list because we renamed it. Okay. So what does that say? Already included, file name users, Pacheco, desktop keeper.</p>
+<p>It, there's probably like a lot more to that line, but yeah, I'm just gonna go </p>
+<p><strong>Jake Pacheco:</strong> with it </p>
+<p><strong>Seth Whiting:</strong> and see what it is. Here we go. List list only in casing the file here. You, you know what I might be able to </p>
+<p><strong>Jake Pacheco:</strong> do? Maybe, I don't know. We'll see. Rename</p>
+<p><strong>Seth Whiting:</strong> list, see if that Nope. Doesn't do anything. Maybe, maybe if you do lowercase and then uppercase. Yeah, yeah. </p>
+<p><strong>Jake Pacheco:</strong> Like change it twice </p>
+<p><strong>Seth Whiting:</strong> kind of a thing. Yeah, yeah, yeah.</p>
+<p>Maybe. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Update imports for this. Yeah. So I'm gonna go Yes. </p>
+<p><strong>Seth Whiting:</strong> And then I'm gonna go Yes. Again. Yeah. And then do it again. Yeah, exactly.</p>
+<p>What I'm sure riveting to listen to. Oh yeah. I'm sure this is </p>
+<p><strong>Jake Pacheco:</strong> really entertaining, especially </p>
+<p><strong>Seth Whiting:</strong> with the, that I'm hearing anyways. Yes. Yeah, I'm not hearing that, so, okay. Well that's good. Okay, so why does it say already included file? Let's </p>
+<p><strong>Jake Pacheco:</strong> see. Let's see if that did anything though. </p>
+<p><strong>Seth Whiting:</strong> Hey, </p>
+<p><strong>Jake Pacheco:</strong> yeah, it worked. So it's giving you a weird code </p>
+<p><strong>Seth Whiting:</strong> thing right here, but Yeah, but it worked. This code isn't liking that for some reason. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> File naming program because it's imported data. I, no, </p>
+<p><strong>Seth Whiting:</strong> who knows? Any ideas? I would need to look at it for like, yeah, let's too long for it to be, let's </p>
+<p><strong>Jake Pacheco:</strong> not care about that.</p>
+<p>Yeah. Yeah. Let's not care about that </p>
+<p><strong>Seth Whiting:</strong> for now. Yeah. Cool. Well, it's working. It's </p>
+<p><strong>Jake Pacheco:</strong> working. It's working. Stop asking </p>
+<p><strong>Seth Whiting:</strong> questions. Everyone. Everyone. Yeah. Cool. So cool. All right, so go, go back to the page again, just to bask in the glory of what you just did. Ta Yeah. So, so simple. All yeah. All of those. Simply beautiful.</p>
+<p>Yes. So let's see here. Now we have basically for the people listening, like you, you probably have put it all together, like visually in your mind, but we have a page that has a title on it, and then we've got a list of the names of the reptiles. So it's just a bunch of paragraphs stacked on top of each other that just have the, the reptile names within them.</p>
+<p>Yep. And I </p>
+<p><strong>Jake Pacheco:</strong> am going to share a screen because I keep forgetting too. I, I know you guys just like looking at us. </p>
+<p><strong>Seth Whiting:</strong> Cool. There it is. Yep. So now basically I think so there, there's kind of like two, two things that I would like to do before we kind of like wrap it up. One is just to make it look a a little bit better.</p>
+<p>Mm-hmm. And another is to add more properties to the object and display them on the, on the page. Yeah. So I. One involves c s s, that would be the second one. Mm-hmm. And the other involves just kind of like a little bit more coding in our list. J S X. Yeah. A little bit more Js and a little bit more J Ss X.</p>
+<p>Mm-hmm. So, yeah. So let's quickly do a little bit of css ss, just to make it mm-hmm. Look a little bit better. Yep. So, and actually don't worry about this file. Okay. We're just gonna do c s, s and jss. Okay. Cool. And do you wanna do it on the list? J S X or app J S X? Probably. So you're </p>
+<p><strong>Jake Pacheco:</strong> gonna do it list?</p>
+<p>Yep. Yeah, I, I knew </p>
+<p><strong>Seth Whiting:</strong> that I was just being stupid. Okay. So, and we're, we're gonna do it on the things that you're looping. Okay. Actually, let me backpedal a second. So within app, J S X. The opening diviv there. Yeah. I don't know if that's going to do if that's gonna take up the full like height and width Okay.</p>
+<p>Of the page. But, so just, just to find out basically right there, click right there. So, in the opening diviv tag, but before, like the closing angle bracket of that opening div tag so right after directly after Diviv, right? Yeah. Directly after Diviv. Like directly after the v mm-hmm. Of the word diviv.</p>
+<p>Yeah. So click, click right after that and then hit space and then write The word style equals and then no spaces there. So style equals style equals, yeah. Then do two angle brackets. Okay. Opening or closing or opening. It should close it for you automatically vs code. Okay. Usually does, or sorry, did I say angle?</p>
+<p>I meant curly braces. Yeah, sorry about that. So get, get rid of those ones there too. That's my bad </p>
+<p><strong>Jake Pacheco:</strong> curly braces. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Okay. Cool. Yeah. Do and then do another one and another one. Yeah. Oh man. A thing and a thing. Well, yeah. So what we're doing here is the style prop of, of like any J S X tag accepts an object.</p>
+<p>Okay. As, as its its value. Mm-hmm. So within the curly braces, you could have like a number, or you could have a string, you can have a color too, right? Or can you. Well, color colors would usually be in the form of a string. Okay. So, but what I'm saying here is like to pass props into a component.</p>
+<p>Mm-hmm. You usually have one set of curly braces and then within that one set of curly braces you can pass a string or you could pass an, an array or you could pass a number. Right now we are passing an object objects and that's are within ankle within curly braces. Curly braces. </p>
+<p><strong>Jake Pacheco:</strong> Cool. </p>
+<p><strong>Seth Whiting:</strong> Cool. Yeah, I get what you're saying.</p>
+<p>We're passing an object and we're gonna have c ss s properties in within that object. Okay. But written in kind of like the jss syntax. So what we're gonna do is do color pollen. Then space and then a string and, or, sorry, my bad. Mm-hmm. Color would change the color of the text by default. Okay. That's, that's what color does in cs.</p>
+<p>Okay. What we're gonna do is background color. </p>
+<p><strong>Jake Pacheco:</strong> Okay. So background </p>
+<p><strong>Seth Whiting:</strong> color. Yeah. Written in camel case. Okay.</p>
+<p>Yeah. Color space, </p>
+<p><strong>Jake Pacheco:</strong> Or equal space. It's </p>
+<p><strong>Seth Whiting:</strong> a colon. Oh, colon. Yeah. Colon space. Because the, the equivalent of an equal symbol within an object is a colon. Mm-hmm. Yeah. Yeah. It makes sense. Okay. So we're assigning the value of, so do, do a quotes. Mm-hmm. And you can write color names in here, so you could do like mm-hmm.</p>
+<p>Teal or red or gray? It, like, if it were me, I would probably do like light gray. 'cause we want it to be like, we want it to be like really subtle, basically. And that would be one word. Okay. I, I think it is all lowercase. Okay. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> I, I would think it was, but </p>
+<p><strong>Seth Whiting:</strong> yeah. But I don't know. All right. And so save that and we'll see we'll see how big this div is.</p>
+<p>I want it to be okay. It's not big enough. Yeah. It's not, it's not very big. All right. So make bigger. Yeah. We're also going to do width colon. </p>
+<p><strong>Jake Pacheco:</strong> Am I doing this right after all of what I just wrote? You could do it before, or </p>
+<p><strong>Seth Whiting:</strong> you could do it after. Either way. Okay. Yep. And you're gonna separate these properties with, with a comma?</p>
+<p>Commas. Yeah. Yeah. Okay. With colon,</p>
+<p>how wide? So you could write a number value in here. Mm-hmm. But we want it to be like more dynamic than that. So we're gonna do, within within quotes, we're gonna do 100, like the, the, okay. The number of 100 and then percent. Okay. I'm just gonna say with a hundred percent. 100%. And then do the same with height.</p>
+<p>Okay. So, and then so comma height. Yeah, 100%. And real quick, I'm gonna pause 'cause Liam is trying. Yeah. Do your thing, buddy. Cool. </p>
+<p><strong>Jake Pacheco:</strong> 100%. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Cool. So did that solve it like, No, no, it didn't. Okay. No, I, I, I checked it while you're, while you're away. So this goes deeper. So</p>
+<p>this isn't the best way to do it, but mm-hmm. Instead of a hundred percent for the wit mm-hmm. Do 100 vw. 100 vw. Yeah. Is that V width? Yes. Yeah. And then VH for I D H. So this is sort of like brute force overriding. Yeah. It worked. Yeah. Yeah. Although there's still a, a oh, it's because of the the H one has, yeah.</p>
+<p>A margin at the top. Mm-hmm. It doesn't matter though. I mean, like, for our purposes this is, it's fine. It's fine, yeah. For now. Yeah. Cool. So go back to list J S X. Yeah. And then so around the so within the map of Okay. The reptiles Yep. Instead of having paragraphs for, for just the, the reptile names.</p>
+<p>Yep. We're gonna start having more, more properties being shown. Okay. So we're gonna wrap each of our reptiles in a diviv now. Okay. And the way that you would do that is highlight from the, the beginning of the opening paragraph tag to the end of the closing paragraph tag, where we have our reptile names.</p>
+<p>Okay. And then wrap that in parentheses. Okay. Like, just, yeah, those, yeah. Okay. Because, because we're going to be doing like multiple multiple, like H T M L tags. Now you have to wrap it in parentheses. If you just have one, then you don't need the parentheses. Okay. But we're going like multi-line here, and that's when you start needing parentheses.</p>
+<p>Yeah. We're going into the danger zone. Well, yeah. So after the opening parentheses hit enter. Okay. No, the opening parentheses not the opening paragraph tag. Oh, dear. </p>
+<p><strong>Jake Pacheco:</strong> Sorry. No worries. Yeah. O opening </p>
+<p><strong>Seth Whiting:</strong> parentheses right here. Yeah. Yep. Right before the opening paragraph tag. And then go, go back to the, the the opening parentheses and hit enter again just because we're gonna be on like a new line.</p>
+<p>Yeah, yeah. We're gonna open up a diviv here. Mm-hmm. Okay.</p>
+<p>Yeah. And then after the closing paragraph tag, we're gonna do a closing div tag. So after the, the closing paragraph tag hit enter. Okay. So </p>
+<p><strong>Jake Pacheco:</strong> I wait after the closing paragraph tag? Yeah. We're putting a div </p>
+<p><strong>Seth Whiting:</strong> there. A closing div. Yeah, yeah, yeah, yeah. But I would do it on its own line if I were used. So you can still type it, but, and then yeah, just hit enter after, but, but yeah.</p>
+<p>Oh, interesting. They converted it. Okay, gotcha. So like that. Yep. Yep. Okay. Cool. And now Hit enter again, just so that the yeah, the parentheses are on their own line. Yep. So now we've got this little H T m L block here. And just for my own sanity, can you indent the paragraph tag? Just that we know one, it's nested within the diviv.</p>
+<p>Yeah, yeah. Yep, yep. That makes sense. There, there, there is a like a plugin for vs. Code that I will, I will like tell you about after this and everything that will do all of that for you, which is nice. Okay, cool. So sweet. So now we have sort of like a a, an opening diviv, so like an opening box that like wraps around the reptile name that's, yeah.</p>
+<p>Right now in a per, in a paragraph tag. Yeah. So that box, we're gonna put a, a few little styles on it. So after the, the V of Diviv. We're gonna do space style equals</p>
+<p>and then do, no, no spaces for the, the I, I'm always gonna </p>
+<p><strong>Jake Pacheco:</strong> mess that up, but yeah, no worries. Yeah. Equals And then a space after the equals, though. Yes. No. </p>
+<p><strong>Seth Whiting:</strong> Oh, man. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Quotes. Quotes. It is no, nothing. </p>
+<p><strong>Seth Whiting:</strong> All right. Dial equals one. This is true. We do the the eng, the curly braces. Okay. All righty.</p>
+<p>And then more curly braces. Yeah, just like before. Oh, yeah. You remember? So we're, we're passing Yeah. An object here. An object to it. Yeah. Yeah. So now you're gonna do background color, white</p>
+<p><strong>Jake Pacheco:</strong> color colon, white. Yep. Or no? Yeah. Yeah. </p>
+<p><strong>Seth Whiting:</strong> You got it. Then white is gonna be in in quotes. There you go. Oh, oh, yeah, yeah. Sorry. </p>
+<p><strong>Jake Pacheco:</strong> Could I have just clicked that and it would've made, it made it in </p>
+<p><strong>Seth Whiting:</strong> quotes. Yeah. Yeah. Here we are. Now we know. And then comma, and we're gonna give it some padding and some margin.</p>
+<p>So we're gonna do padding, colon, I would say 30 pixel. It would just do 30 because 30 it knows that it's pixels if you, okay, cool. A number. Yep. And then margin, I would say 15, imagine 15. So that's gonna give that's going to our, our, so now we're gonna have a white box mm-hmm. That has our paragraph inside of it.</p>
+<p>And we have 30 pixels of padding within that white box. So between the outside of the box or, or sorry, between like the edge of the box and the paragraph tag. There's now gonna be 30 pixels be before the box touches the, the the paragraph. Okay. Like it, it's going to, like, if you didn't have that, it would just touch the paragraph tag.</p>
+<p>Yeah. But let's look at You have that? Yeah. Yeah. So, so let's look at this. So, and that's too much. We need to change that. That's too much. Okay. </p>
+<p><strong>Jake Pacheco:</strong> But, but right now it might be it on, yeah. But it might be a good way to explain what we're talking about. So, yeah. Yeah. So what, what one is my margin here? </p>
+<p><strong>Seth Whiting:</strong> Margin.</p>
+<p>So margins is gonna be on the outside of the box. Okay. Up here. Yeah. So there's 15 pixels from where the bottom of the first box. Separates from the top of the second box. Yeah. Yeah. But that's, that's 15 pixels worth of space there. Okay. And the thing about margins is that they don't, they collapse on each other.</p>
+<p>Okay. So instead of it being 15 pixels below the first box, butting up against 15 pixels above the second box to to, to add up to 30 pixels. Yeah. It's, it's going to say like, okay, there's 15 pixels here, 15 pixels here, but like, we're just gonna collapse 'em together. Yeah. Yeah. That makes sense. That it does.</p>
+<p>But it's kind of annoying. Like I kind of wish that it worked more like padding. Yeah. Yeah. Basically. Mm-hmm. But and then the padding </p>
+<p><strong>Jake Pacheco:</strong> here is that this, all this white </p>
+<p><strong>Seth Whiting:</strong> space here. Yeah. So around and stuff. Yeah. I would, I would probably change that to 15 if it were me. Like that. Okay. That looks pretty bad.</p>
+<p>And you know, that's my fault 'cause I said 30. So yeah. Cool. That's a bit better. Yeah. And then</p>
+<p>make your, make your browser a little bit wider. 'cause you see at the bottom there's a horizontal scroll bar. Scroll bar all. Yeah. Do we wanna get rid of that? Oh, hold up a second. Yeah. It's doing a whole thing. What, what we actually want is go back to the code. Yep. We, we actually just want vertical margin.</p>
+<p>We don't, we don't really want that horizontal margin. Okay. All righty. So we're gonna do, just go vertical before that? No, no. So within the margin, do put quotes around that, around margin, sorry. Around 15. Okay. All righty. My bad. So, </p>
+<p><strong>Jake Pacheco:</strong> so I can just double click that and then press quote, right? </p>
+<p><strong>Seth Whiting:</strong> Yeah. A alerting.</p>
+<p>Yeah. And then do px, so, yep. Sorry. Do 15 px. 15 px. So 15 pixels. Yeah. I was still double click. And then after the X of PX do space and then zero. So the way that margin and padding work, and this is not. This is not like super important to what we're doing, but just mm-hmm. So that, you know, if, if you have four different values, it will be the top and then Right.</p>
+<p>And then bottom. And then left. It goes like clockwise. Okay. So if you had four values, it would be like top one's 15, uh right. One is zero. Yeah. And then if you did 15 zero again, it would be bottom one is 15, the left one is zero, left one is zero. Okay, that makes sense. But if you just have two, then it knows top and bottom are gonna be 15.</p>
+<p>Yeah. And then left and right are gonna be zero. So </p>
+<p><strong>Jake Pacheco:</strong> should I do, do you do this zero or can you do zero </p>
+<p><strong>Seth Whiting:</strong> PX or does it matter? You? I think you can just leave it as zero. All. But it looks like the scroll bar was still there. Yeah. Yeah. So </p>
+<p><strong>Jake Pacheco:</strong> that's why I was asking. I was like, </p>
+<p><strong>Seth Whiting:</strong> Yeah, that's interesting. I'll try pressing PX and see what happens.</p>
+<p>You can try it. I don't think it's gonna fix it, but go for it. Look at </p>
+<p><strong>Jake Pacheco:</strong> that scroll bar still. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. So</p>
+<p>maybe it's like messing up because of the padding, but that doesn't really make sense. But just for fun, for fun. Zs Yeah. Do, do like the same thing with the padding, I guess. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> So, </p>
+<p><strong>Seth Whiting:</strong> yeah, because padding and margin work the same way with like the top left, right, bottom thing. Yep. So you can just copy that string.</p>
+<p>Oh, this over here. Doesn't matter. Sorry. I pointed at it. I pointed at it with my finger. That's kind of funny. Yikes. I did the thing again. </p>
+<p><strong>Jake Pacheco:</strong> Got a long day. Everyone. I, I, I cut 15 people today and now I'm coding and trying to learn and trying to figure out how I'm gonna dig cement pillars, five feet in the ground.</p>
+<p>It's fine. Everything's okay. </p>
+<p><strong>Seth Whiting:</strong> Is that because like, you cut all these people and now they're dead and you need to hide them under these cement pillars? No. No. They're, </p>
+<p><strong>Jake Pacheco:</strong> they're cement pillars. Seth, what are you talking about? I need to just dig really deep holes about five to six feet in the ground, just to put those cement pillars.</p>
+<p>Not why are you cutting people? No, it's not. Don't just, you're, you're the code guy. Just teach me code. </p>
+<p><strong>Seth Whiting:</strong> All. Alrighty. No, that didn't fix it either. Weird. Nope. We got, we </p>
+<p><strong>Jake Pacheco:</strong> got a nice little scroll bar on the bottom. That's nice. </p>
+<p><strong>Seth Whiting:</strong> That's strange, huh? That is so get, just for fun, like do highlight all of the padding and all of the margin stuff.</p>
+<p>So like Okay. After white, just highlight all of that stuff and do CTRL X just to, to get rid of it, but to keep it on your, like clipboard, you know, so that you can Oh, yeah. To cut it, it later. Yeah. Yeah. You, yep, yep. All righty. Okay. So it's still there, so that's, yeah, it's </p>
+<p><strong>Jake Pacheco:</strong> still there. Yeah. So it's something different.</p>
+<p>I mean, if I have this full screen, </p>
+<p><strong>Seth Whiting:</strong> it's still there. Yeah. It's still, yeah. It doesn't matter. We'll say Makes sense. I think it's because of the a hundred view width thing. Yeah. But that still doesn't completely make sense. But regardless So do, do put everything back. Yeah. The way that it was.</p>
+<p><strong>Jake Pacheco:</strong> Not control p c, control V. Right. </p>
+<p><strong>Seth Whiting:</strong> Or you can do Control Z either way. Oh yeah. To reverse it, just like, yeah, yeah, yeah, yeah. And then do get rid of the the two values for padding. Just have padding B 15. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Padding. Okay. So get rid of the p </p>
+<p><strong>Seth Whiting:</strong> the zero px. Yeah. And you can leave it as 15 PX in the quotes if you want.</p>
+<p>Yeah. It's not, or you can just have it the number 15. Yeah. It's not hurting nothing. Yeah. So, what we can do here is on the wrapping Div, the app mm-hmm. With the class name app open up a style at, at like the very first div on your whole component. Yeah. Right here, right? Yeah. Yeah. No, no. Even, even higher than that.</p>
+<p>Oh, okay. All righty. Yeah. Yeah. So do style. Yep. Just like the other ones. And then equals no equals </p>
+<p><strong>Jake Pacheco:</strong> ah, I'm always going to do this. I quotes, or am I </p>
+<p><strong>Seth Whiting:</strong> doing curly braces? Curly braces. Yep. There you go. And then do width colon six 40. And six 40 is arbitrary, but it's sort of like, a common width for things in Okay.</p>
+<p>In web browsers. All right. And then do comma margin. And then in quotes, do auto sorry. Duke colon. And then in quotes Oh, yeah, yeah, yeah. Margin, colon, and then quotes auto. And this is just gonna say, Basically all this does is, is that it centers something. So okay. If something is, yeah, there you go.</p>
+<p>Still doing that, but whatever. It's so weird. Just leave it for now. But it's nice and </p>
+<p><strong>Jake Pacheco:</strong> centered though, and I like that. It's, it feels better now. Yeah, I like that. </p>
+<p><strong>Seth Whiting:</strong> Yeah. So we'll leave that. Yep. But like, don't worry about the, the horizontal scrolling for now. We can fix that later off's fine. Camera and everything.</p>
+<p>Yeah. So, the last thing that I wanna do with the styling, not a big deal, but give the the, the white boxes there just mm-hmm. Curve the edges a little bit. That, that'll just make it a little bit nicer. Okay. So, so what we're gonna do is before background color or after margin, either way. Yep.</p>
+<p>Yep. We're gonna give it a border radius Yep.</p>
+<p>Of 1515. Sure. It's all arbitrary, but it's all, none of it makes sense. No. Yeah. 15 will be like noticeable but not overkill. I would say all it, I mean, eight would also be, yeah, but that looks nice. That's a little much. Oh, you don't like it? Okay. Yeah, I would do like eight. Let's, let's do like, </p>
+<p><strong>Jake Pacheco:</strong> let's do like 8.5.</p>
+<p>Not sure. </p>
+<p><strong>Seth Whiting:</strong> Eight. You got it. Yeah. Try that now. There's eight. Lovely. </p>
+<p><strong>Jake Pacheco:</strong> There you go. Yeah. Yeah. Aggressive. Not too aggressive. Yeah. Yeah. </p>
+<p><strong>Seth Whiting:</strong> Cool. Fancy, sweet. So now the last thing I wanna do is just add a little bit more data here. So, okay. Go back to reptiles js Ah, jss. Yep. And then under name. What, what should we give them?</p>
+<p>Like, I. Age or their color or like what I mean, some kind of relevant information species. Sure, yeah. There you go. You know, uhhuh species. And then </p>
+<p><strong>Jake Pacheco:</strong> do it the same way that we usually do it. Yep. Yep. Okay. </p>
+<p><strong>Seth Whiting:</strong> MAC monitor and then you can triple click that. Yep. And control what again? So you could do shift alt Yeah. Down. Yep. And then once you have done that, that's again, that's gonna copy it to the next line. Yeah. Yep. And then once you've done that, just hold alts down. Okay. And that's gonna just move it ah, Geez, </p>
+<p><strong>Jake Pacheco:</strong> man.</p>
+<p>You're teaching me a bunch of stuff. What? </p>
+<p><strong>Seth Whiting:</strong> Okay. So do do it down underneath the next name? Yeah. Yeah. So it's down there and then you can do that again. I, I would probably do it until they're all kind of populated and then go back and change. Yeah. Yeah. The actual values.</p>
+<p>Yeah. So if you didn't catch that, what Jake is doing is he's, he is just like using hot keys basically to copy a line, a whole line onto the next line and then move what he just copied down to its appropriate place. So he's taking all of the, the reptile objects and adding species to all of them, kind of like more quickly that way he's trying anyways.</p>
+<p>Yeah. And yeah. So, so we're back in like our, our reptiles list of just data, not, not like the visual list. This is just like the data list. Yeah. And so now we have the, the names of all the reptiles and then the species. And we're gonna take this data and it's already being fed into our list, but we're gonna make use of the new data that we just added to this.</p>
+<p>And like I said, when when you're working in like a, a legit app, you would normally get this data from a database. You, you wouldn't be like, hard coding it into a file, because what happens when you get a new reptile? What happens when you lose a reptile, sell a reptile, whatever. Like you, you can, if you're working with a database, you can easily.</p>
+<p>Add one or remove one. Or edit one. Yeah. Like, oh, we, we changed this one's name, you know, like, we're gonna update the name. So, yeah. Yeah. Yeah. Are you adding something else, or? </p>
+<p><strong>Jake Pacheco:</strong> I was thinking of it, but we, we can just continue because we, we probably wanna wrap up relatively </p>
+<p><strong>Seth Whiting:</strong> soon anyways. Yeah. Let's just, let's just do species for now and then we can Sweet.</p>
+<p>Come back later. Yeah. Cool. So back to our list component. Yeah. And we're gonna have to add, </p>
+<p><strong>Jake Pacheco:</strong> Species into it instead of just </p>
+<p><strong>Seth Whiting:</strong> name, right? Yeah. So you can put that above the name or under the name wherever you want. Okay. </p>
+<p><strong>Jake Pacheco:</strong> All right. So, in, in another p or what </p>
+<p><strong>Seth Whiting:</strong> do you, or what, what do you mean? Yeah, I would, I would probably do so, what I would do here is just do shift control down again.</p>
+<p>Okay. Just that you have the, you're copying the, the line that has a paragraph and within that paragraph it has the reptile.name. Okay. So if you copy that whole thing. Okay. So do the, the shift alt down shift. Yeah. Sorry, did I say control? No worries, bud. I messed that up every day. It's all good.</p>
+<p>It's all </p>
+<p><strong>Jake Pacheco:</strong> good. </p>
+<p><strong>Seth Whiting:</strong> And then change it to species. Yeah. And by the way, shift alt down. No, no, no. That's, that's the same on Mac and pc. I was gonna say that. That's different, but it's not. That's the same one. Mac and pse. So, so now save that and go back to the browser. Yeah. And it, the, yeah. So the name and the species are the same size font and everything.</p>
+<p>Yeah. I, if I were you, I would probably go back in and then change the name to mm-hmm. Be in like an H five or something like that. Yeah, yeah. Just so that it's like, so it tells you it's it name a little bit bolder. Okay. And a little bit bigger probably. Alrighty. So, so right here, would you do this or would you do it in Yeah.</p>
+<p>Okay. So in the, in the paragraph tag that's wrapping the reptile name. Yeah. We're changing that from a paragraph to an H five. Okay. And then leaving the species as a paragraph, as a paragraph. So it smaller visually we're saying the name is like, a bit more important than the species. Yeah. Yeah. Well that, that just looks so nice.</p>
+<p>Yeah. Love that. And it, it, </p>
+<p><strong>Jake Pacheco:</strong> well, it, because like, what I'd also probably want to do is H five and then change the style and make it so the, the font is a little bit bigger or something. Yeah. </p>
+<p><strong>Seth Whiting:</strong> You could, you could if you wanted to. Yeah. Or you could also change the H five to like an H three. Okay. And that, that would automate automatically make it bigger.</p>
+<p>So H one is gonna be the biggest and Yeah. All the way down to H six. Yeah. H six is usually like the same as a paragraph tag, I think. Okay. Ish. I mean, it's, it's, it's really, you know, you can style it, however, you can style each of those tags to be as big or as small as you want. Like, you can have your H six be way bigger than your H one.</p>
+<p>Yeah. But in H T M L, by default, if you don't have any styling on it, the H one's gonna be really big. Yeah. And the H six is gonna be a lot smaller. </p>
+<p><strong>Jake Pacheco:</strong> And it's, it's a bit more concise, I assume, to just do a different H style versus changing like the font size. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. Yeah. I'm just basically, I'm, I'm telling you to do an H three as opposed to an H five because you wanted it to be a bit bigger.</p>
+<p>Yeah. And I just knew that like changing Yeah. From an H. Yeah. Five to an H three it would, would probably makes it bigger. Be bigger. So cool. And one thing that's bothering me about this is that, yeah, what's up? I think I want the this is, I want, it's, no, tell me what you want. I would change the padding to be like five like five or 10 pixels vertically and still 15 horizontally.</p>
+<p>Okay. So on margin you're doing 15 and zero on padding Uhhuh, you would do like five and 15. Okay, </p>
+<p><strong>Jake Pacheco:</strong> so five, oh, it's all in one quotes. I </p>
+<p><strong>Seth Whiting:</strong> and 15 px px. Yeah. So five, so within a string, so you're doing padding, colon, and then string five PX space, 15 px. And it's gonna give you vertical of five, horizontal of 15.</p>
+<p>Yeah, it looks something better. Okay. Yeah. Yeah. That's </p>
+<p><strong>Jake Pacheco:</strong> so funny how like, I don't know, it's just like these little things that you're like, that looks so much better. And I'm, </p>
+<p><strong>Seth Whiting:</strong> I'm like, yeah, I guess, you know what I mean? Like, </p>
+<p><strong>Jake Pacheco:</strong> but, but I get it. It's like you're, you're, you've been in it for a while, you know what things look good and what things don't.</p>
+<p>Yeah. So my padding is where my actual like like where, or no, is it my margin or my padding where like SKU is in reference to the outside of the box. </p>
+<p><strong>Seth Whiting:</strong> That's the padding. That's </p>
+<p><strong>Jake Pacheco:</strong> the padding. Okay. I thought that's the padding. Yeah. Cool, cool. Yep. So that's </p>
+<p><strong>Seth Whiting:</strong> just like, yeah. And also like at play here mm-hmm.</p>
+<p>Are the, each of the H tags by default come with margin around them. Okay. Yep. I like, if it were me, I would probably reset all of that stuff. Mm-hmm. So I would use like a c s s reset file somewhere that I just like grab online or whatever. That just sets everything down to like, nothing has padding, nothing has margin, nothing has font size.</p>
+<p>That way you can just customize everything. You specify everything. Yeah. Yeah. Do you prefer doing it like that? Like that is that I, I do just because, like, I want, I wanna know what I'm getting into and like I want to dictate what I'm getting into. If, if that makes sense. Yeah, it makes sense. So. But this is, this is good for now.</p>
+<p>Yeah. Sweet. It's fine. Yeah, and the gray is a little boring. That, that's my bad. It's all good. But you could, you could totally go back to your app jss X and change it to teal, like you had it originally. Oh, it's, it's going teal. There we go. Teal. </p>
+<p><strong>Jake Pacheco:</strong> Let's see. I mean, I'm sure it'll recognize teal, right?</p>
+<p>That's a thing. Yeah, </p>
+<p><strong>Seth Whiting:</strong> yeah, sure. Bam. See, that's lovely </p>
+<p><strong>Jake Pacheco:</strong> noise. And then I'd change currently keeping to like an orange, I don't know, something, I don't know, whatever or whatever. Or the, the, the dark blue looking thing. It, it </p>
+<p><strong>Seth Whiting:</strong> works too. Yeah. If, if I were you, I would go to like, like if I were you and if I were me, I wouldn't actually be like designing a legit thing by myself.</p>
+<p>I would have like a designer's like input on all of this. But but, but yeah. Anyway, yeah. This is good. Yep. Good stuff. All righty. Well, hopefully that was informative too. Yeah. To listener, like, hopefully that was like people are able to like, follow that. Yeah. Audi auditorily. Yeah. Yeah, yeah.</p>
+<p>Hopefully that was useful to somebody. Hopefully that was useful to you. Like, do you feel like you you Yeah. Kind of understood. Yeah. I understood </p>
+<p><strong>Jake Pacheco:</strong> everything that was going on. Like, I, I, I can confidently say I understand everything that's going on. I might not, not remember everything a hundred percent, but if I look back at everything that I just did, I know exactly what it all did.</p>
+<p><strong>Seth Whiting:</strong> Nice. So that's a positive. Yeah. That's great. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Cool. Yeah. But yeah. And hopefully it helped everyone listening and watching with us. You know, yeah. Hopefully that helps everyone there too. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Let us know, you know, if, if you'd like this like format. I, I think you know, I, I'm definitely open to, to doing more stuff like this.</p>
+<p>Yeah. I, I think it's pretty fun, you know, it's, it's fun. Yeah. I mean, it's fun to do. I don't know if it's fun to watch or to listen to, but it's fun to do. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> But I mean, I think that, I think that the pace that we did it at and, you know, people can tell us also if you, if you have any opinion on this, like, but if the pacing was good for you to follow along and kind of just do everything that you know, we might've been doing kind of along with us while you're making your own thing.</p>
+<p>Go on. Yeah. I, I, I think that it might, it might work pretty well that way. Yeah. Because I'm, I'm not super fast, so I was like, kind of just following along with what you were directing. Mm-hmm. And, and I will say this is the funnest experience of learning while like actually coding that I've had so far.</p>
+<p>So like, this was, this was pretty </p>
+<p><strong>Seth Whiting:</strong> sweet. I, I liked it a lot. Cool. Yeah. Cool. Cool. Sweet. All right. But </p>
+<p><strong>Jake Pacheco:</strong> yeah, thanks everyone for listening. Yeah. Yeah. And watching. Yeah. And watching. </p>
+<p><strong>Seth Whiting:</strong> Hey, bong, for the first time ever. Yeah. For the first time ever. Maybe, I mean, we might totally release, like, we, like, full disclosure, we haven't released anything yet.</p>
+<p>So like, if you're watching this in the future, like, and we, we've already released like a ton of videos, then we just totally remind you. Go. Yeah, exactly. </p>
+<p><strong>Jake Pacheco:</strong> Exactly. But, but yeah. Well, everyone have a good week and we'll be talking next week. So cool. Yep. Just keep swimming, </p>
+<p><strong>Seth Whiting:</strong> right? All right. Just keep swimming.</p>
+<p>Keep </p>
+<p><strong>Jake Pacheco:</strong> swimming. Have </p>
+<p><strong>Seth Whiting:</strong> a good one, guys. See ya.</p>
+
+</body>
+</html>
