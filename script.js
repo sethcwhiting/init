@@ -13,7 +13,7 @@ const parser = new XMLParser({
         .then((str) => parser.parse(str))
         .catch(console.error);
 
-    const item = data.rss.channel.item[0];
+    const item = data.rss.channel.item[2];
     const existingEpisodes = await readdir('./episode/');
     const ep = item['itunes:episode'];
     if (existingEpisodes[existingEpisodes.length - 1] === `${ep}`) return;

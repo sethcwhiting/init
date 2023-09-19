@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coding Jake's App in L33t Hxcker Mode">
+  <title>Coding Jake's App in L33t Hxcker Mode | Init Podcast Episode 15</title>
+  <meta name="keywords" content="web development,Coding for beginners,Reptile keeping app,React coding,React hooks,Reactive variables,Component interaction,User interactions,Free scheduling app,React development,Page navigation,App design tips,Virtual DOM,JavaScript coding">
+  <meta name="author" content="Jake Pacheco and Seth Whiting">
+  <link rel="canonical" href="https://www.init.show/episode/15" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/icon/site.webmanifest">
+    <!-- Add any other SEO-related meta tags here -->
+
+  <!-- Add any stylesheets, fonts, or other assets here -->
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <!-- Add your website's header, navigation, and any other global elements here -->
+
+  <main>
+    <a href="../../" style="color: white; text-decoration: none;"><h1>INIT</h1></a>
+    
+    <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
+    <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
+    <audio controls>
+      <source src="https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/Episode-15.mp3?dest-id=4009908" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h2>Episode 15: Coding Jake's App in L33t Hxcker Mode</h2>
+    <p>Published: <time datetime='2023-09-07'>Thu, Sep 7, 2023</time></p>
+    
+    <p>Watch this episode on YouTube: <a href= "https://youtu.be/xGd5NUHgKMk">https://youtu.be/xGd5NUHgKMk</a></p> <p>Hey, dudes and dudettes, get stoked for this rad podcast episode with your hosts Seth Whiting and Jake Pacheco! Seth's the coding wizard from Portland, Maine, with a solid 10 years of coding under his belt, while Jake's the Augusta-based barber who's been riding the coding wave for about 14 weeks – talk about gnarly!</p> <p>They're cooking up a free reptile keeping app, perfect for all you reptile aficionados out there. It's your one-stop-shop for tracking your scaly pals' deets, from breeding stats to feeding schedules, and even some killer reptile pics and care sheets.</p> <p>But hold onto your boards, 'cause they're diving into the React world too! They'll school you on reactive variables, hooks, and the art of passing props between components. And you know what they say, sharing is caring!</p> <p>They're also dropping some knowledge on routers, page navigation, and how components in your app can vibe together. Plus, they'll add some slick style to the detail component – custom back buttons, anyone?</p> <p>In the final ride, they'll show you how to display those reptile deets like a pro and give you a taste of the virtual DOM. And don't bail just yet – they're all ears for your questions and feedback. So, grab your boards, hop on, and ride the coding wave with these two groovy hosts!</p> <p>Special thanks to <a href= "https://open.spotify.com/artist/7JxrbI1DZLSJUyzsrBQop2?si=Vt5jO60AR3C4O_wgt9yxkA" target="_blank" rel="noopener">Diarrhea Planet</a> for our intro and outro music and <a href= "https://www.instagram.com/skratchtopo" target="_blank" rel= "noopener">@SkratchTopo</a> for our artwork.</p>
+
+    <h3 style="margin-top: 60px;">(Auto-Generated) Episode Transcript:</h3>
+
+    <p>Yep. </p>
+<p><strong>Seth Whiting:</strong> What's up everyone? I am Seth Whiting. I'm a developer from Portland, Maine, and I've been coding for about 10 years. And I am </p>
+<p><strong>Jake Pacheco:</strong> Jake Pacheco. I am a barber from Augusta, Maine, and I've been coding for about 14 weeks now. </p>
+<p><strong>Seth Whiting:</strong> All right. All right, all right. Alright, here we go. So this week we're gonna do more of what we did last week.</p>
+<p>So it's more of like a visual show, but we're gonna try to keep it as accessible or like followable like if you're just listening to it. So what we're gonna do is some, some more live coding than if you didn't listen to the previous one. I would go back and listen to that one. Because we got started, I.</p>
+<p>Making Jake's app that we've been talking about making for a few weeks now, and today we're going to continue on that and kind of take the next, the next step. To me it's like the next logical step. But and we'll, you know, we'll be going through what that, that logical next step is. At least it's in my brain, the, the logical next steps.</p>
+<p>Somebody else might have a different opinion, but so, Jake, can you share your screen and we'll get Yes. Going. So, if you have not been following along actually Jake, why don't you give us like a, a a rundown on what your kind of like vision for this app is for, for people who like, haven't.</p>
+<p>They might not have been following along. Yeah, yeah. Or even if they have, like, maybe just summing it up would give you or me some more like ideas of things to Yeah, of course. In, </p>
+<p><strong>Jake Pacheco:</strong> So at its core, I suppose it would be a scheduling app for reptile owners. You could probably, eventually maybe add some more stuff.</p>
+<p>So, 'cause like fish keepers have a lot of like, kind of, stringent like schedules with their keeping and stuff like that. But basically it's the keeper app is the idea. And there's apps that do similar things. A lot of 'em cost quite a bit, so I'm trying to have mine just be as, basically as free as possible.</p>
+<p>And basically what it'll be doing is in reptile keeping. 'cause me and my girlfriend, we keep a lot of them. And breed them and stuff. When you breed them, you have to keep track of, you know, when eggs were laid and everything and how many days from those eggs being laid are they in incubation. And then at like, you know, with ball pythons that we just did at like day 52, we have to like cut the eggs so they can actually escape things like that.</p>
+<p>So I want a timekeeping thing in there as well, or a calendar keeping thing, just so it kind of, when you log into the app, it might notify you or show you, Hey, today's day 52, so you should check those eggs. Things like that. I'd also like it to just be a thing for reptile keepers to kind of have a repository of like, these are all of my animals.</p>
+<p>Maybe be able to put, put a picture on for your animal. For each one have maybe care sheets available for that. It. For that animal. So maybe I type ball Python and then it can pull up like an actual care sheet for them. We've spoken a little bit about that before using chat, G P T V P N for that.</p>
+<p>But there's other options to do with that and basically building my own database with that. So yeah, that's, that's basically what it is, is a scheduling app that also kind of, keeps your animals that you have like well organized and making sure that your feeding schedules are on point and all of your misting schedules and everything else is on point, </p>
+<p><strong>Seth Whiting:</strong> is basically the idea.</p>
+<p>Oh, cool. Yeah. So what, what we're working on first, which I think is like, sort of like the, the most basic thing that we could be working on is the, just sort of like the. Way to kind of keep track of which reptiles you have basically. So what what we started on was just a list of all the reptiles. Yeah.</p>
+<p>And so tho those are just a few of Jake's. I know that you have more than that, but Yeah. So, so we have a list. And now what, what I'm thinking that we will do today is when you click on one of these reptiles in, in the list. Mm-hmm. So, for people who can't see this, it just has a, a list of like little white boxes.</p>
+<p>And within the white boxes, he has the name of the reptile and he has the species of the reptile. And so what we're gonna do is whenever you click on one of those little white boxes, it's going to open sort of like what's going to look like another page. And that's gonna show just kind of more details on the reptile, like Yeah, maybe like how old it is or whatever.</p>
+<p>A description of the reptile. Yeah. Whatever we want. And, and we could have like a picture on that, that page too. If you have pictures, we could totally put them in here. I can probably get some, we, we don't have to do that today. Yeah, we can do that later. But but yeah. Does that make sense? Yeah. Cool.</p>
+<p>That makes </p>
+<p><strong>Jake Pacheco:</strong> sense to me. Yeah. Sweet. Cool. Cool. For a second there, I was waiting for someone else to answer. Yeah. Here's the world of podcasting with just two people and asking questions. I don't know, but, but yeah. Yeah, that makes sense to me. So, </p>
+<p><strong>Seth Whiting:</strong> So yeah, you </p>
+<p><strong>Jake Pacheco:</strong> can see right here we have like the currently keeping and we created our own kind of server.</p>
+<p>Again, this is all using React to </p>
+<p><strong>Seth Whiting:</strong> do all of this </p>
+<p><strong>Jake Pacheco:</strong> stuff. And the server is technically what? Next Js Is that what it's, or am I </p>
+<p><strong>Seth Whiting:</strong> messing that up? It's, no, it's just so I guess technically it would be geez, what would it be? I what, what does keeper, or not Keeper, what does V use? So there's like, I think that like, So it would be like based on Node at least?</p>
+<p>Yeah. Yeah. I have </p>
+<p><strong>Jake Pacheco:</strong> node modules in here, </p>
+<p><strong>Seth Whiting:</strong> so I would assume maybe Node. Okay. But there are different things that I think there's like Web pack is like, what? I don't know, sort of like a node configuration or some something. I'm, I'm not even really sure. Yeah, yeah. </p>
+<p><strong>Jake Pacheco:</strong> But yeah, in any case, we basically are running our own little server that is accessible through my computer to and basically prints this </p>
+<p><strong>Seth Whiting:</strong> page that you're seeing </p>
+<p><strong>Jake Pacheco:</strong> right now </p>
+<p><strong>Seth Whiting:</strong> onto this page.</p>
+<p>Yeah, yeah. Yeah. So, yeah. And so if you, if you make a, a change here, like if you change currently keeping, so the, the title of his page is called Currently Keeping right Now. Yeah. If you change that to currently keeping 1, 2, 3, 4, 5, does it automatically update? Just like in that H one? In that h in the.</p>
+<p>H one there currently keeping it, your, your mouse is going right over it. It's in the body of your it, yeah, it's in your code. Okay. Alrightly keeping, sorry dude. </p>
+<p><strong>Jake Pacheco:</strong> No worries. You're good. A long week. Yeah. H one currently keeping yeah, so if </p>
+<p><strong>Seth Whiting:</strong> you just change that just 1, 2, 3, 4, 5. Yeah. Just save that and go back and make sure that it's, yeah.</p>
+<p>Like the server's running and automatically updating and whatnot. Yep. 1, 2, 3, 4, 5. Bam. </p>
+<p><strong>Jake Pacheco:</strong> So yeah. As you can see there after my own confusion, I, you can basically just change it, it automatically updates to this. And yeah. And that's what we're working on today. Cool. And probably </p>
+<p><strong>Seth Whiting:</strong> for the foreseeable future for a little bit Anyways.</p>
+<p>So what, let, let's go back to the data. So we've got, okay. I think we just called it reptiles. Jss. Reptiles. Jss. Yep. Yep. And that's just a, a big array of objects and. On the objects there is the property name and the property species right now. Mm-hmm. Let's add another property that we're going to show on, like the, the detail view but not the list view.</p>
+<p>Okay. So </p>
+<p><strong>Jake Pacheco:</strong> we wanna make a whole new Nope. New thing. No. Nope. </p>
+<p><strong>Seth Whiting:</strong> Nope. Oh, really? Okay, cool. Yeah. So if you just add something here mm-hmm. Then I'll, I'll show you why it doesn't show up on the list view, but just add something here, like description or whatever you want. Like, all righty. I'm gonna do age, age works.</p>
+<p>Yeah. That works. Yep. Age and then yep. And you, you can do you can do numbers here or you could do like 14 years or like Okay. Four months. Yeah. In a string. Yeah. '</p>
+<p><strong>Jake Pacheco:</strong> cause it's taken as a string right. Automatically you, when you </p>
+<p><strong>Seth Whiting:</strong> do the quotes, When you do the quotes Yeah. It, it goes into a string.</p>
+<p>Yeah. But if you wanted to do like a a uniform what is it like a unit of measurement? Like if, like if you put in 14 or if you put in four, it knows that it's like 14 months or four y four months, you know? Okay. If it's always going to be one of those. Yeah. Otherwise you could have one. And if you, if you had it be a uniform unit of measurement like that, then you could just put a number.</p>
+<p>Yeah. And, and then you could add the word months in to all of the numbers that you put. Yeah. Like in, in the, the, the code, like in the, yeah, the hd M l yeah. If you wanted to. Yeah. I mean that, that makes sense. If you wanted it to be more kind of like, Flexible. Yeah. Then you could just have a string that says 14 months that says the, the age of it or whatever.</p>
+<p>Yeah. Two years or whatever. Mm-hmm. Yeah. So whatever would make the most sense. 'cause some, some of them might have like a short lifespan and some might have a long lifespan. And in that case, like, </p>
+<p><strong>Jake Pacheco:</strong> well, that's, that's the thing. It might have to be somewhat flexible unless we had like kind of a eventually maybe like two dropdown member dropdown menus that were like, it was born this, this month of this year or something that was Yeah.</p>
+<p>Right. You know, more concise. But, but for now, I'll just put in as a string, probably. String, yeah. Because like, like SKU is like three months old. Uhhuh and Vlad is like nine years old, </p>
+<p><strong>Seth Whiting:</strong> so, you know. Yeah. So yeah. Yeah. And like, like especially if you just had one that was like, just born, you know? Yeah. Then you'd have to do like 0.05 years Yeah, exactly.</p>
+<p>Or whatever. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah. Exactly. </p>
+<p><strong>Seth Whiting:</strong> And I don't really need that there yet. </p>
+<p><strong>Jake Pacheco:</strong> Wait now remind me again real quick. Mm-hmm. I want to go over all of it. And then is it control </p>
+<p><strong>Seth Whiting:</strong> al alt shift or is it so yeah, you, you could do shift alt down. Yeah. Shift alt down. And that's copying the current line that you're on onto the next line.</p>
+<p>So now you have like two, yeah, two of the same line. And if you do alts down from there, it will move that line down without popping it. It'll just move it to wherever you, wherever you want to move it. You're, you're the best. </p>
+<p><strong>Jake Pacheco:</strong> Truly. I didn't, I mean, this was, </p>
+<p><strong>Seth Whiting:</strong> this was news to me. Yeah, I mean this, this, this is only a VS.</p>
+<p>Code thing. Oh, okay. Okay. Yeah. There, there are. I was like, things like the, </p>
+<p><strong>Jake Pacheco:</strong> yeah. 'cause I've worked on computers for forever and I'm like, what the, </p>
+<p><strong>Seth Whiting:</strong> yeah, I remember like control all, like control a, yeah. Was new to you. And that's, that's universal for like your entire operating system. Yeah. But this, this is just a vs.</p>
+<p>Code thing. Yeah. Four years old. </p>
+<p><strong>Jake Pacheco:</strong> I mean, I probably don't have to write old every time. Vlad is about nine </p>
+<p><strong>Seth Whiting:</strong> years. LEDs are getting my ass. Which did you say LEDs are getting in your eyes? Yeah, </p>
+<p><strong>Jake Pacheco:</strong> on my, on my keyboard. So I was like trying to see the nine, but the l e d was like shining in my eye. Instead of seeing nine </p>
+<p><strong>Seth Whiting:</strong> Siri just go away.</p>
+<p>Siri. Siri, get outta here. We're not, we're not into you right now. Yeah. It like stopped your audio too. I don't, I don't know if it got, like, if Zoom caught any of what you were saying. Oh, no. But I guess like Audacity would've, but yeah. What were you, what are you saying? </p>
+<p><strong>Jake Pacheco:</strong> Nothing. Just my keyboard is like an l e d </p>
+<p><strong>Seth Whiting:</strong> keyboard.</p>
+<p>Okay. Because your face keeps flashing red. Really? If you didn't Yeah. If you didn't know, it's like flashing, like, well, that's just, </p>
+<p><strong>Jake Pacheco:</strong> it's I'm actually having a party in here and it's just, I have very good sound isolation, but it's actually just a, a, a bit of a disco. Just erase. I don't, I </p>
+<p><strong>Seth Whiting:</strong> don't know what that's about.</p>
+<p>That fix it. Nope, it didn't. Eh, it doesn't matter. Sorry guys. I'm in a party. Sorry for the party. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> That's not right. Cool. He's older than that. I always, I always. Undercut that little one. I'm always like, oh, she's so young. 'cause she's dating small for some reason, but like, no, she's like seven years old </p>
+<p><strong>Seth Whiting:</strong> actually.</p>
+<p>So on all of your object properties, you need a comma at the end except for the very last property in that object. Oh, okay. So Alrightyy, do you see what I'm getting at? So you're talking about after species? No, no, actually after species. Not after the age because age is the very last one. Oh, okay. Yeah. I added it </p>
+<p><strong>Jake Pacheco:</strong> to the first one, but I didn't add it to the other </p>
+<p><strong>Seth Whiting:</strong> ones.</p>
+<p>Right, right. Yeah. So you've got name species and age as your object properties. So you need commas after name and species. Yeah. And you're adding age is the last one. You don't need a comment. You can totally add one if you want to for next time. But you, you don't, yeah, you don't have to. Yeah. What am I doing?</p>
+<p>Sweet. Oh my word.</p>
+<p><strong>Jake Pacheco:</strong> It worked going down and not up. What the heck? </p>
+<p><strong>Seth Whiting:</strong> All right, cool. Cool. So, so that's saved and now go back to list jss. Mm-hmm. List jsx. Yep. Which is where your markup is. And you can see that you have within your like white box, you have the, the name as an H three and you have the species as a paragraph.</p>
+<p>And if you, if you notice, you don't have anything in your markup that is reptile dot age. Yeah. Yeah. So because you don't have that, like it exists in the data, but since you're not like summoning it within your, your markup Yeah. It's not, it's not gonna show </p>
+<p><strong>Jake Pacheco:</strong> up anywhere. Yeah. Which answers my question earlier when I was like, are we creating a whole new list thing or are we, yeah.</p>
+<p>Okay. Because basically we're just using. This as kind of like a database for it, so we can just pull information outta that, that </p>
+<p><strong>Seth Whiting:</strong> we select specifically. Yeah, yeah. </p>
+<p><strong>Jake Pacheco:</strong> But there is a way probably so we could just like, you know, H one equals, you know, reptiles, right? Like from this area, or is that not a thing?</p>
+<p>You know what I mean? Like, so, so it would just print all of it? Oh yeah. Like I'm just saying like if you wanted to just get all of the information, you could just get all of the information at </p>
+<p><strong>Seth Whiting:</strong> once. Yeah. Yeah. But it would, but it would also be selective. It would look like an array of objects. Yeah. You know, it wouldn't exactly be pretty.</p>
+<p>Yeah. So you wouldn't, and we, we want it pretty, yeah. But, </p>
+<p><strong>Jake Pacheco:</strong> But yeah, I was just, yeah. Okay. Cool. </p>
+<p><strong>Seth Whiting:</strong> Cool. So now this is list jsx. Mm-hmm. And what, what we want to do, lemme see here. Okay. So what we wanna do is go, go back to App jsx, which is where you're importing your list. Yep. And yeah, you have it imported as reptile lists, so that's cool. Yep. Now we're going to go to, so your, your list jsx is in the components slash reptiles folder. Okay. So now within your components slash reptiles folder, we're gonna make another file called, okay.</p>
+<p>Detail jsx. Okay. So </p>
+<p><strong>Jake Pacheco:</strong> new file or new </p>
+<p><strong>Seth Whiting:</strong> folder? New file. Within that folder. Yeah, because it's Jsx. Sorry. Yes. No, you're good. So, detail Jsx, and this is totally arbitrary. This is just something that I. Choosing to call it, 'cause it makes sense to me. But if something else made more sense to you, like, you know, we could, makes sense.</p>
+<p>Rename it because it's each, it's each reptiles </p>
+<p><strong>Jake Pacheco:</strong> details or whatever that, that makes perfect </p>
+<p><strong>Seth Whiting:</strong> sense, I think. Yeah. Cool. Cool. So, now you're gonna do export on here? Yeah. Okay. Export function. Export. So export space. Function, yeah. Space. And then detail dot sorry, not dot. So export function, detail function dot detail space detail.</p>
+<p>Okay. Actually, sorry, real quick. Go back to list Jsx. 'cause there's two, there's two ways to export this and I feel like I'm doing it. The, the, yeah. Okay. So we want to do it the same way that we did it before, just to Okay. To be uniform. </p>
+<p><strong>Jake Pacheco:</strong> So I'm gonna go here and then export from </p>
+<p><strong>Seth Whiting:</strong> here or something, or No, no, no.</p>
+<p>Go. Go back to detail. Yep. So instead of export function detail mm-hmm. We're just going to declare function detail. Okay. And do I, I </p>
+<p><strong>Jake Pacheco:</strong> forget, I feel like there was a time where I just had to write F U N C. Now, </p>
+<p><strong>Seth Whiting:</strong> is that not a thing? I don't think that's a thing in JavaScript. That is a thing in other languages.</p>
+<p><strong>Jake Pacheco:</strong> Okay. Well maybe I'm just making up stuff. Maybe I, I'm dreaming up a language. </p>
+<p><strong>Seth Whiting:</strong> Who knows? And just to remind you, detail should be in Pascal case, because it's the name of vm. Yeah. The component we're, so we're making a new component. It's </p>
+<p><strong>Jake Pacheco:</strong> funny 'cause before you said, like before when I had it written before, I don't know if you noticed, but I did cap it.</p>
+<p>I </p>
+<p><strong>Seth Whiting:</strong> did it right the first time. Sure you did. I could write the first time step. Come on. So, function. So when you declare a function, you're gonna open up and close the parentheses. Okay. And we're actually gonna, these, the curly braces or the parentheses? No parentheses. And without a space. Without a space that's, yeah.</p>
+<p>That's just like the, the proper syntax. All right. So with, without a space after detail, so Yep. The parentheses. Oh, without a, okay, so they touch detail. Yeah. So we're, we've got function, space, detail, open parentheses, close parentheses, and then space. And then open perley brace. Yeah. And then, yeah. And then this is where your component markup code and everything is going to go.</p>
+<p>Okay. But before we do that, just to make sure that it's available elsewhere. Mm-hmm. We're gonna go to the last line. Hit enter the last line here. Yeah, hit enter and then enter. One more time just to have like some, some breathing room separation there. Yeah. And then we're gonna do export detail.</p>
+<p>Export detail. Yeah.</p>
+<p>And then semicolon. Then semicolon. Yeah. Yeah. All or actually in list, jss, we're not using semicolons apparently. Okay. So, semicolons gone. You can do it without the semicolon. Doesn't matter. You can, like, I use semicolons everywhere. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. So in practice I probably should use semicolons, so I'm just gonna use them.</p>
+<p>Okay, that's </p>
+<p><strong>Seth Whiting:</strong> fine. Yeah, totally fine. And it's giving you Like an error right now. Yeah, because your function detail is not returning anything yet. Okay. So go, go within your function detail. </p>
+<p><strong>Jake Pacheco:</strong> Yep. And then am I doing reptile list? What's it called? Names or something </p>
+<p><strong>Seth Whiting:</strong> or whatever. Well, first, first of all, let's just return something.</p>
+<p>Okay. So within the curly braces go within that little like, curly brace sandwich. Oh, within the curly braces, sorry. Yeah. And then hit tab. Yep. And then type return. </p>
+<p><strong>Jake Pacheco:</strong> Am I still doing camel case or am I, or am I just writing return? </p>
+<p><strong>Seth Whiting:</strong> Yeah, just write return. And then not Camel case. What's </p>
+<p><strong>Jake Pacheco:</strong> the other one called again?</p>
+<p>Sorry? </p>
+<p><strong>Seth Whiting:</strong> Pascal. Pascal, yep. Return space. And then we're just gonna return some markup, so you can just do like H one. Okay. And then type whatever you want. Like this is the detail component or something. Well, well thanks </p>
+<p><strong>Jake Pacheco:</strong> for finishing that for me. Za. There we go. H one N. This is something, yeah, there you go.</p>
+<p><strong>Seth Whiting:</strong> Detailed. Cool. Cool. And then save that. And then oh, what is that saying? Declaration or statements? Declaration or </p>
+<p><strong>Jake Pacheco:</strong> statement expected. Do we have to import detail or import anything </p>
+<p><strong>Seth Whiting:</strong> first? So go, go back to this jss. Okay. And it, we might be Oh, okay. Export default. Yeah, detail. Okay. Sorry. My bad. So go back to detail.</p>
+<p>Jsx and do and j to reptile list, or no, instead of export detail. Do export default detail. Okay. And default is lowercase. That's not hard to remember. That's not, that's not a computer. Yeah. Yeah. It's component. Yeah. Yeah. So export default detail. Cool. Yeah. Yep. There we go. Sweet. All right. And now in order to see this, we're gonna go to app jsx.</p>
+<p>Mm-hmm. And do what exactly what you did with the list component. So we're gonna import it at the top. Okay. Import detail. Yeah, you can call it whatever you want. You could say reptile detail if you want. Or you could just say detail, or you could call it Susan, whatever you want. </p>
+<p><strong>Jake Pacheco:</strong> I'm just gonna do a detail so I know what it's, yeah.</p>
+<p>And then from then </p>
+<p><strong>Seth Whiting:</strong> quotes. You can just hit tab. Oh, you can if it's auto completing for you, you can just hit tab. All right. Which it is. So that's. Because it knows where it is. I just love that. Yeah. You know, like I, it's like you write </p>
+<p><strong>Jake Pacheco:</strong> details, it's like, oh yeah, you're </p>
+<p><strong>Seth Whiting:</strong> talking about this. Yeah. We, we know what you're talking about.</p>
+<p>That's, yeah. That's pretty sweet. Yeah. So just and I would hit enter after that just so that you have some space between your imports and your, like function Yeah. That you're writing. Yeah, that makes sense. Yep, that makes sense. Cool. And then so now where you have reptile list in, in your markup, you can, you can do the whole shift alt down thing to, to have two reptile lists.</p>
+<p>Okay. And then just change one of them to detail instead of reptile lists. On this, </p>
+<p><strong>Jake Pacheco:</strong> on this page, </p>
+<p><strong>Seth Whiting:</strong> are you talking about on the, on this Yes, but, so go. No, no, no. Not reptile list. Sorry. No, you're fine. It's, it's just what I'm saying is not in the imports at the top here mm-hmm. But down where you're actually using reptile list in the markup.</p>
+<p>Okay. Yep. Yep. Yeah. You could just, so just for the sake of like getting the open and closing angle brackets and everything Yeah. Like, it's just fast if you just duplicate that Yeah. And then change one word, so you can double click that word and change it to detail. Yeah. Oh, I get what you're saying.</p>
+<p><strong>Jake Pacheco:</strong> Okay. All right. You're, you're just saying so it's easier to write it </p>
+<p><strong>Seth Whiting:</strong> Yeah. Or whatever. Faster. Yeah.</p>
+<p>Detail. Yeah. And like, you definitely don't have to do it that way. That's just how I would do it. 'cause like, yeah, I've, it's bound. That's easier. Faster's easier. Yeah. Yeah, yeah. It's quicker and, yeah. Yeah. So now if you go back to your page on your browser, you should see this is something detailed or, or whatever you wrote at the bottom.</p>
+<p>Yeah. Hey, cool. That, so we know that, you know, it, it shows up somewhere. What we just made is, you know, an actual thing. Yeah. So now we're gonna get into the concept of reactive variables, which is just like a, a fancy word for saying like a variable that is going to change and like it's going to change based on a user's interaction.</p>
+<p>Yeah. So if you go to your app dot jsx. Which is where you are. Sounds good. I'm, yep. Yep. So above your return statement, like right above that Uhhuh, so, yeah. Within your function app, so Okay. Do it a new line. Okay. Under </p>
+<p><strong>Jake Pacheco:</strong> the curly brace. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. Within the curly braces. Yeah. Yeah, yeah. That's, so now, now you're gonna be importing something from React.</p>
+<p>This is like specific to React. Okay. So, but we're just gonna start typing it and I, I think it should auto, auto kind of import once we Okay. Once we start typing. So we're gonna say T Yep. And then do square bracket. Yeah. And do, do a space. Space in between. Yeah. So, and then within that square bracket, say view, and then comma, and then space, and then set view in camel case.</p>
+<p>Okay. All right. Camel case, so small. Yeah. So you, you had it right. So set and then uppercase view. Yep. Yep. And then outside of the square bracket, do space equals space. And this is, this is what's called a react hook. Okay. And this is one of the most basic react hooks. In fact, it's probably the most basic react hook but it's called use state.</p>
+<p>And in camel case use state, yeah. It feels, and since it auto completed, it automatically imported as well from React. Okay. So it's cool Importing, use state from React and then do parentheses. Okay. And then write the word null. Okay. And then on the outside of that, do semicolon? Yep. Ba on the outside of the parentheses.</p>
+<p>So this is, this is a big chunk, you know, like this is a big concept that you're probably not familiar with yet. Okay. So we have made a variable called View and we, we called it that. We could have called it Susan and then set Susan, or, you know, like Yeah, yeah. Reptile and set reptile, you know, we could call it whatever you want.</p>
+<p>And you don't have to call it set, whatever. That's just the like naming convention that reacts kind of like suggests, and what you'll pretty much always see it called is like variable set. Variable. So the variable can be whatever you want. It could be a number, it could be a string, it could be an array, it could be an object.</p>
+<p>And then the, the set variable part of it is always gonna be a function that updates the variable. Like the, the first, the first part of it, yeah. Yeah. Is the variable. The second part of it is a function that sets that first variable. Okay. Yeah. So that makes sense </p>
+<p><strong>Jake Pacheco:</strong> that I, I think I'm getting that. So what's what's, </p>
+<p><strong>Seth Whiting:</strong> you state?</p>
+<p>No. Yeah, so null if you within, so, okay. Yeah, good question. So we've got the, the variable and then the set variable, and then the use state, and then the open and close parentheses. You can, if you want to, which we are right now because we want to set a default value or an initial value. Mm-hmm. So it's going to start as nothing, the view is just nothing.</p>
+<p>And actually, oh, when I was thinking about this earlier, I was thinking I, I actually wanted to do it a bit differently. And that's why I put null and now I'm all like confusing everyone, but, so that's okay. The, the thing is, there's sort of two ways that we can go about what we're trying to do.</p>
+<p>Where like you could set a view and like a, a data variable. Yep. Or we could just set the data variable and if it's null, we know that the view is going to be one thing. Mm-hmm. And if there is a value to that, then we know it's the other thing. Right now we're only working with two views. We've got the list view and the detailed view.</p>
+<p>That's like what I'm getting at here. Okay. And so I'm saying if there is a value and we're, we're gonna change the, the name of the variable. Actually why don't we do that now so that it's a bit clearer from the get go. Okay. So we're gonna change it to selected reptile. And does that have </p>
+<p><strong>Jake Pacheco:</strong> to </p>
+<p><strong>Seth Whiting:</strong> be Gamo case?</p>
+<p>Yeah. Yep. Just to be like completely semantic, we could just call it Yeah, yeah. Like selected, or we could just call it data. But to be clear, what we're doing is we're selecting a particular reptile. So yeah. Yeah. Did I write that right? Yep. Yep. Cool. So now instead of constant square bracket view, set view, we've got constant square bracket selected, reptile set, selected reptile, and, and those, those are gonna be the two like parts of the used state hook that we're, that we're gonna be working with.</p>
+<p>And we're initializing it with the value, no. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> So now, So, so go for it. Just, I, I just wanna rewind a little bit. Yeah. And and, 'cause I know you already explained this, but sometimes it helps me to like, say it out loud and get a attaboy. So, so basically what we did when we imported you state is we basically imported a function so we don't have to write out a full, like the, the, the function that they already have </p>
+<p>built </p>
+<p><strong>Seth Whiting:</strong> into React.</p>
+<p>Yeah. Yeah. That's part of it. But it's also sort of like, if you try to do it yourself, you might run into like a bunch of gotchas, you know, it's like that won't work and react, you know, okay. </p>
+<p><strong>Jake Pacheco:</strong> Kind of thing. So, so they kind of build in a, a module for it, for, for lack of a better word, a i, i, </p>
+<p><strong>Seth Whiting:</strong> I know modules used.</p>
+<p>Yeah. It's like a built in function that they give, give you to Okay. You know, like, this is how you do what you're trying to do and react. Yeah. Cool. And like, here's, you know, here's like an easy way to do it. Yeah. Sweet. So attaboy. </p>
+<p><strong>Jake Pacheco:</strong> I feel much better now. </p>
+<p><strong>Seth Whiting:</strong> So what we're gonna do now is we're going to, within that markup, we've got a, a diviv that's currently wrapping reptile list and detail.</p>
+<p>And those are the reptile list component that we made in one file and the detail component that we made it in a different file. We're going to wrap those two components in parley braces to start. Okay. </p>
+<p><strong>Jake Pacheco:</strong> So I should probably do some kind of tab or space or something, </p>
+<p><strong>Seth Whiting:</strong> right? So if you, if you highlight oh yeah.</p>
+<p>Get rid of those. Just if you highlight both of them. Mm-hmm. So like start, start at the beginning of line 10 where your reptile list component is, and then go to the end of line 11 where your detailed component is. Yeah. Yeah. And then, and that does that. Yeah. And then do the curly braces. Yep. Sweet. Cool.</p>
+<p>So now we've got curly braces wrapping both of them. Yep. So now before reptile list, you're gonna do where is it? Okay. So selected reptile. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Should I, should I create a new line for this or no? After the covid race? No. Okay. So selected </p>
+<p><strong>Seth Whiting:</strong> reptile. Yep. Selected reptile equals equals equals null.</p>
+<p>Question mark. No question mark. Space after, no. So, space, space, question mark space. Yep. Yep. And then after reptile list, do a colon, not a semicolon, but a colon. An actual colon, yep. Yeah. So now th this is what's called a turny operator. Do have you, did you run into </p>
+<p><strong>Jake Pacheco:</strong> that? I've heard yeah, I've heard, I've heard of that, but I, I, I'm not, I have a tenuous </p>
+<p><strong>Seth Whiting:</strong> grasp.</p>
+<p>Yeah. So this is a shorthand way to write an if else statement. That's what this is. Okay. Sick. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah. Okay. Yeah. I see that now. Yeah, I know. I, I do know what it is. </p>
+<p><strong>Seth Whiting:</strong> Yeah, I do. Cool. Yeah. Yeah. So what we've got here is we've got some curly braces, and we're saying, essentially we are saying if selected reptile is strongly equal to the value null, Then show the reptile list.</p>
+<p>Yeah. Yep. Otherwise show the detail component. Yeah. Yeah. Yep. So the question mark is basically like if this and then the colon is else. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> That, yeah, it's, yeah. I, I always read it like select selected reptile equals null question mark. Like, like does it do that now? Yeah. Okay. Or like, yes, then yeah, like it </p>
+<p><strong>Seth Whiting:</strong> does, yeah.</p>
+<p>Yeah, it does. Yeah, exactly. Okay, cool. Yeah. Cool. So, so yeah, we've got selected reptile, triple equals null, question mark, reptile list, colon detail. Yep. And those are like within the, the ankle braces so that we know that we're like printing out a component. Yeah. So right now, Braces. But yeah, our selected reptile is set to know.</p>
+<p>Yeah. So we, we should only see, do, do, do detail. Nope. No. Wait, wait. </p>
+<p><strong>Jake Pacheco:</strong> Our, our s Yeah, we will see reptile list then? Yes. Yeah. Because we're asking if it is equal that, and if it is, then it's says yes. Okay. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. So save that and then go back to your page and just, you know, confirm that that's like working.</p>
+<p>Yep. Hey, so we got rid of that, that the details, this is a detailed, something detailed or whatever text. Yeah. Cool. Yeah. So now what we're gonna do is go back to app jsx and basically what we're, what we're gonna do here is within our reptile list mm-hmm. Is, is where we're actually going to be setting the selected reptile.</p>
+<p>You know what I'm saying? Yeah. So that means that we want to use the set selected reptile part of our used state function there. Mm-hmm. We wanna use that, but we're not gonna use it on this screen. We're gonna use it on one of the child components, which is Yeah. The reptile list. Okay. So what we have to do is pass that in to the reptile list as a prop and Okay.</p>
+<p>The way that you do that is after the word reptile list in, in the markup there. So within like the angle brackets. Yep. And before the slash, so like the closing slash do a space and then do set selected reptile equals camel case in this. Yep. Yep.</p>
+<p>And no spaces between like set selected reptile and equals. Yeah. So set selected reptiles, reptile equals, and then a open curly brace. Okay. And closing curly brace. Yeah. And then within that you're gonna do, basically you're doing set selected reptile equals set selected reptile. Okay. And, and this is just a prop that we're passing, so technically we could call it like set data equals set selected reptile if we wanted to.</p>
+<p>Mm-hmm. But just to be kind of like, Not confusing. Yeah. We're just gonna call it the same thing and Okay. That's, that's normally what you'll do anyway. Unless you're using like a really like reusable component where, you know, it's just like set data, but the data could be reptiles or it could be users.</p>
+<p>Yeah. It could, it could be a thousand different datas. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah, yeah. So basically, so rewind a little bit because I might have missed it. Just what is this exactly doing? Because it's gonna be showing it, but then it's gonna be showing it </p>
+<p><strong>Seth Whiting:</strong> what, what's this exactly then, you know what I mean? Like, like, yeah, yeah.</p>
+<p>It's gonna show, it's like what, what is a prop? Yeah, yeah. It's kind of like, I think that's kind of the question. So, yeah. A prop is like data that you pass or, or a function that you pass. In this case, it is a function that you pass to a child component. Mm-hmm. So, So basically it it, and it might just be clear if we just go straight to the reptile list.</p>
+<p>Yeah. Yeah. And show you like how you would use this. So basically all you, all you need to know on this view on your app jsx, is when you're using the reptile list component that you imported at the top. Yep. You are then passing something to that component. Okay. So now we're gonna go to the code for that component, which is the list jsx.</p>
+<p>List. Jsx. Yep. And within the open and closing parentheses after reptile list. So when we're declaring function, reptile list, open and close parentheses at the sort of Okay. Top of the, the component itself. Yep. Right here. Yep. Yep. So within those parentheses, we're gonna open up some curly braces. Mm-hmm.</p>
+<p>And we're gonna write sec set selected reptile. Okay. And yeah. Keep going </p>
+<p><strong>Jake Pacheco:</strong> and Yeah. I'm surprised it's not just coming up Yeah. At this point, </p>
+<p><strong>Seth Whiting:</strong> whatever. So, it's fine. You could, you could, instead of doing the curly braces set selected reptile, you could say like props or arguments or something without any curly braces because mm-hmm.</p>
+<p>What, what you get within every react component mm-hmm. Is a variable that is passed through called Yeah. Like, called whatever you want. But like the, the first thing that it gives you is anything that you may have passed. And that would be in the form of like a single variable. Yeah. But if you have like, like.</p>
+<p>One or several things that you're, that you know that you're going, you know, that you're trying to get out of this. You can do what's called deconstruction, which is instead of typing like props, dot set selected reptile, you could just put those, those curly braces there, which is just grabbing, grabbing that, you know, that particular prop.</p>
+<p>Yeah. It's, it's going to look for the prop that you passed called this specific thing, and you need to spell it. Spell it correctly. Yeah. You get the casing right and everything. But yeah, if there is something called set selected reptile that you have passed to this, it's going to know that that's the thing that you're trying to do.</p>
+<p>That's what we're talking about. Yeah. Yeah. Okay. Cool. </p>
+<p><strong>Jake Pacheco:</strong> Cool. That makes </p>
+<p><strong>Seth Whiting:</strong> sense. So now we have access to that function that we declared in the parent component, and we can, we can change the variable from that parent within this child component. Okay. So</p>
+<p>the way that we want to do that, or like the place that we wanna do that is within our reptiles map. So when we're looping through the data and spitting out those white cards, like those white boxes we want to put what's called an on click handler on that div. Yep. So on that white, white div with the border radius of eight and the padding of blah, blah, blah.</p>
+<p>Yeah. Yep. So, yeah, if you can see that. Yep. So at the end of it or before style, so, yep. We've got a, a style prop that we're, we're passing to that diviv. Yep. We're gonna pass the set selected reptile prop to this diviv as well. So, but, okay. Sorry. We're gonna within the on click prop mm-hmm.</p>
+<p>We're going to pass set selected reptile. So, okay. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yep. So I go diviv space right now it says style, but I'm gonna go before that and say </p>
+<p><strong>Seth Whiting:</strong> on click. Yep, yep, yep. On click equals, and then open curly brace. Close curly brace, one thing, and then space just so that you have some space between your on click and your style.</p>
+<p>That makes sense. Yep. Cool. And so now your on click handler accepts a function Yeah. As, as like, you know, it's like argument basically. Yeah. And and what I, what I actually mean by that is you're going to pass so set selected reptile is technically a function. Okay. But you're going to write a function that calls set selected reptile.</p>
+<p>And the way that you're gonna do that is the, the shorthand way, which is the arrow function. Okay. So you're gonna do open close parentheses. Yep. Open. Oh, parentheses, sorry. </p>
+<p><strong>Jake Pacheco:</strong> Parentheses, yep. Yeah, I confuse myself sometimes. Sorry. You're good. Open close parentheses. </p>
+<p><strong>Seth Whiting:</strong> Yep. And then outside of that, like to the, to the right of that, do space equals.</p>
+<p>Then and then the closing back. Greater assemble. Yeah. There you go. So it looks like an arrow. Mm-hmm. So equals greater than space and then set selected reptile. Okay. And we're going to pass a new value to this. So the value is currently set to know. Yep. We are going to pass the index of this particular reptile, and that's, we're, we're working with an array.</p>
+<p>So the way that we kind of like access different items within an array is by their index and indexes start at zero. Like if you remember from previous episodes, they start at zero and then go up from there. Yep. And so we're going to do open and close parentheses. Mm-hmm. Space or just no space?</p>
+<p>No, no space. Nope. Nope. Because we're like calling a function here. Yeah. Yeah. And so we're gonna do open and close parentheses, and within those parentheses we're gonna write the word index. All right. And that's giving it a value, right? It's going to. Okay. Right now we don't have access to the index yet.</p>
+<p>Okay. So, and one, one little note here is you have set selected. You have the E, the e selected is uppercase. It's big Ole e. Yeah. It's normally that wouldn't be like a big deal in anything other than coding, but Yeah. Yeah. But it's a big deal within it. It makes a difference. Yeah. Everything matters.</p>
+<p>Caps </p>
+<p><strong>Jake Pacheco:</strong> and, yeah. Yeah. Everything. Yeah. </p>
+<p><strong>Seth Whiting:</strong> So, so now we need to do sort of like a little lesson in what. In like the map function. Okay. So we have our data coming in from reptiles js, which is an array of objects. Mm-hmm. And we're mapping through that array of objects and outputting some markup that contains values from those objects within that, that markup.</p>
+<p>Yeah. So basically we're, we're looping through all of those, those objects within that array. And the map function will give you each of those individual objects as the first argument. Yeah. And if you actually, if you hover over the word reptile after map. Yep. So that's, that's the first those are the, yeah.</p>
+<p>So that's, that's the first sorry, not the first. The, the, the, yeah, I guess it is the first, this, the first argument that it gives you automatically, like the map function gives you, is the current item in that array. Yeah. If you wanted to, which we do here you can put some parentheses around the word reptile.</p>
+<p>Okay. New parentheses. Look at us. Who this? </p>
+<p><strong>Jake Pacheco:</strong> I know that there's a faster way to do this, Seth's. Just let me do this. All </p>
+<p><strong>Seth Whiting:</strong> righty. New parent. So you need one at the, at the beginning of the word reptile as well? Yeah. I, I have one or, </p>
+<p><strong>Jake Pacheco:</strong> oh, </p>
+<p><strong>Seth Whiting:</strong> I, yeah. So that's the first one is from, from your map function from the other one.</p>
+<p>Yep. And then this is, this is a new set that we're giving it, and then, yeah. After the word reptile, you do comma. Mm-hmm. And then space and then index. So if you, if you hover over the word map Yep. It'll show you. This is what it will give you. The first argument is the, like, the object and, and it knows, it knows what our object looks like here, apparently because it has name species age, and that's, you know, what, what our objects look like.</p>
+<p>Yeah. And then after that and, and then the, the callback function. Let's see here. Okay, so that's, that's actually the, the array that we're passing it. So the, where it says callback function there. Yeah. That's what we're actually looking at here is it has the, the see the word value there. Yep. That's the, the first argument.</p>
+<p>And then after that it says, index. Like way after. Yep. Yeah. Right here. Yep. So that's it. It automatically gives you, like the map function automatically gives you the value and the index. And then the third one is the array. So that's is that all oh, no. Right here. Right here? Yeah. Right there. Yep.</p>
+<p>And the array is just reptiles, like our reptiles array. Yeah. So if we wanted to, within our loop, we could access the original array if we ever wanted to. And I've, I've run into that like once or twice. Mm-hmm. But like the, the most, obviously, the, the most valuable thing that it could give you is the current item in the array, which is the, the reptile, because that's, you know, what we're gonna be working with all the time.</p>
+<p>Yeah. Then it's sometimes useful in, in particular, our case right now, it's useful to grab the index as well. Yeah. So we're gonna grab that. And we don't really care about grabbing the, the original array, so we're not gonna access the third argument that it gives us. Like, we, we Okay. Care about it. So we're just gonna work with the first two arguments that it gives us.</p>
+<p>All righty. Does that make sense? </p>
+<p><strong>Jake Pacheco:</strong> Yeah, that makes sense. We're working with reptile and index, basically. Yeah, yeah, yeah. </p>
+<p><strong>Seth Whiting:</strong> Yep. So, so if you look at your code, now you have the, the reptile that we're working with, and you're, you're grabbing its name and its species. Mm-hmm. But then we're also grabbing the, this second argument of the map function, which is the index.</p>
+<p>Index. Yeah. And when you click on the white box, we're going to set the value. Okay. All right. We're gonna set the value of the selected reptile to that particular index. Okay. So we've selected reptile zero or selected reptile one, or selected reptile two, you know. Okay. Whichever one we're poking. Yeah. Is the one that clicking, that's gonna call up.</p>
+<p>It's gonna, yeah. Yeah. Okay. </p>
+<p><strong>Jake Pacheco:</strong> Cool. Cool. Yeah. So how we do that? </p>
+<p><strong>Seth Whiting:</strong> So, so now if you go back to app, touch a sx mm-hmm. We have our turny operator. Yep. That's saying Right. If it's null, show the list. Okay. If it's not show detail, so if you select any of the reptiles, it's gonna give it a value that is not null.</p>
+<p>Yeah. So once you click one, it's going to not be nu anymore, and it's gonna show the, the detail component. Huh. </p>
+<p><strong>Jake Pacheco:</strong> Okay. It's like a, it's like a story that loops back around and it's like, ah. Yeah. Now I, I see what we did in the beginning </p>
+<p><strong>Seth Whiting:</strong> there. So, before, before we do that yep. Actually not before we do that, let's just go ahead and do that.</p>
+<p>Let's, let's go go back to the browser. Okay. And just do it. Just test it. Okay. So if you, if you click on any of them, you don't need to reload it or anything. It's hot reloading in real time. Okay. So if you click on any of them, this is something detailed. Hey. Yeah. Sweet. That's cool. So now what we wanna do is have some way that the user can go back without reloading </p>
+<p><strong>Jake Pacheco:</strong> the page, the whole page.</p>
+<p>Yeah, exactly. I </p>
+<p><strong>Seth Whiting:</strong> just did that. I was like, yeah, exactly. Okay. So we can get to the, the detail. We can't get back. So now we wanna just quickly add a way back. Okay. So, so now if you go to sorry. Go to your reptile list component. That not, not the file for it. Sorry. Oh, okay. That's confusing. That's fine.</p>
+<p>I'm just all good. All I'm saying is copy what you did with the reptile list where you have set selected reptile equals set selected reptile. 'cause we're gonna do the same thing with the detailed component. Okay. Alrightyy. </p>
+<p><strong>Jake Pacheco:</strong> So I, I'm copying the reptile list as well, </p>
+<p><strong>Seth Whiting:</strong> or just the set? Selected? No, just, yeah.</p>
+<p>Okay, cool. Yeah. Yeah. So you're, you're doing the same thing. You're passing a prop called set selected reptile, and the value of that prop is set selected reptile. And so you're gonna pass that to your detail. Wait, hold on. Before you go to yeah. Your detail component, you need to pass it through to your detail component within your app.</p>
+<p>Oh, in here Also Dutch a Ssx. Yeah. So, oh, okay. All right. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> The same way I did be the other one, </p>
+<p><strong>Seth Whiting:</strong> right? Yep. Yep. So at the end control of there before the closing slash of the, of the yep. Of that tag. Yeah. Does that, does that look right? Yep. Yep. That's perfect. Okay. So then you're gonna go back to detail jsx.</p>
+<p>Yep. And now you're gonna basically grab that prop from, from the opening, closing parentheses, just like you did before. Okay. Yep. So, do the curly braces. Yep. And then set selected reptile. So we're yeah. Grabbing what we just passed to that. Yeah. Yeah. And then that makes sense. Just for now just to be like quick and dirty with it within your H one tag, your opening H one tag.</p>
+<p>Yep. You can add an on click. Okay. Uh uh Yeah. And camel case and then equals, and then open and close the curly braces. Yep. And then you're gonna do an arrow function within the curly braces within the cur. </p>
+<p><strong>Jake Pacheco:</strong> Okay. So, re remind me the first thing I'm gonna put in again, </p>
+<p><strong>Seth Whiting:</strong> the parentheses open and close parentheses, and then Okay.</p>
+<p>Yep. Yep. Space and then </p>
+<p><strong>Jake Pacheco:</strong> space </p>
+<p><strong>Seth Whiting:</strong> and then arrow. Yep. So equals, and then greater than, and then space. And then set selected reptile</p>
+<p>piping. Yeah. And then open and close parentheses. Mm-hmm. And now you're going to set the value back to null. Okay. We know that whenever the value is No, we're gonna show the list. The reptile list. Yeah, yeah. The list component. Yeah. Okay. Cool. Does that make sense? </p>
+<p><strong>Jake Pacheco:</strong> Yeah. That, that, that makes sense, I think.</p>
+<p><strong>Seth Whiting:</strong> Yeah. Cool. So now we can do exactly what we did on the browser, and now we, we have a way to get back, which is simply by clicking the only thing that there is to click on the, on the page, on the component. Nice. There you go. Okay, cool. So nice. Yeah. So now we can basically just build out the, the detailed view.</p>
+<p>Okay, cool. Sweet. Yeah. Yeah. So we're gonna try to do that. Like we're I, I think probably just gonna like blast through that. Okay. Cool. So, before I start blasting is there anything, anything that like, is unclear still, like at all? Let me, I know it's like a lot like that. We're, we're going through a lot really fast.</p>
+<p>It, </p>
+<p><strong>Jake Pacheco:</strong> it is a lot. Just 'cause I, I guess one thing that I didn't expect was that we weren't really creating a new page as much as we're creating just a new, like, attribute to a page already Yeah. Kind of a thing. Is that significant? Is that like a thing that, is that how everything works? Usually? </p>
+<p><strong>Seth Whiting:</strong> No. So not, not necessarily.</p>
+<p>Usually when you're working with like a, a single page application, which is what we're, you know, making you'll have the concept of a router which is basically like, Something that handles switching from page to page? Yeah, a </p>
+<p><strong>Jake Pacheco:</strong> little a a tiny little onscreen back button or something that isn't just your regular </p>
+<p><strong>Seth Whiting:</strong> browser back button, kind of something like that.</p>
+<p>I not necessarily, no. The, the rubber is actually like the, the kind of like logical part of it. And if you, if you want to add the back button, you can add it, but you would be using like their so normally when you're using a router, you don't build your own because there are like 50,000 router packages out there for you to use and Okay.</p>
+<p>Some of them are really, really good and really, really like robust and have been used for years and have like so many people contributing to them. Like, so many people working on them. And they're, they're just great. Yeah. And there's no, no reason to not use them. Yeah. Yeah. And so. Instead of like the back button, just like hiding and showing something you would use like router dot, go back.</p>
+<p>Mm-hmm. Open and close parentheses. And it, it would be handled via that router package basically, that you're using. Sweet. And then you can have like pages that you set up that, that are like fake pages, you know, they're just like screens. They're, yes, they're components, but you set them up as pages and you can like, name them, you know, like reptile detail, reptile list, and you can say like, router dot, navigate, open parentheses, reptile list.</p>
+<p>And it like, wherever you are on your application, it will then kind of like navigate to that huh For you. That, that kind of thing. Okay. So yeah. Interesting. So we're, we're doing sort of the work of a router here, and you actually would do what we're doing now. In some cases, like if you're just like switching through a component that has like some tabs on the top, like you could have, you know, like a, a page that has like, I, I'm, I'm struggling to think of like a, a good </p>
+<p><strong>Jake Pacheco:</strong> a contact tab and a, and a info </p>
+<p><strong>Seth Whiting:</strong> tab or something like that.</p>
+<p>Yeah. Where it's like if you, if you have like, okay, so if you have like a person's like profile, you could have like a tab on it if you wanted to. That says like bio and then tab that says like picture and then a tab that says like contact info or whatever. Yeah. If you're switching through those tabs, you don't need a router for that.</p>
+<p>'cause like, yeah. And another thing about the router is like, usually when you're using the router and navigating from like page to page, Your u r l at the top and like your like U r L bar on your browser is going to be changing. So like, it'll be like when you go to the reptile list tab, it'll be like keeper.com/reptile list.</p>
+<p>Yeah. And then keeper.com/reptile/five or whatever. Yeah. Yeah. And it will be like the, the detail page for reptile five, you know? Yeah. That kind of thing. Yeah. Yeah. That makes sense. So, yeah, so there there're like use cases for doing it the way that we're doing it. You, you probably would use a router for this, like when in in the finished product.</p>
+<p>Yeah. But this is totally, you know, like this is totally just sort of like to mess around with React and Yeah. To build something. Quickly and whatnot. And it's, and </p>
+<p><strong>Jake Pacheco:</strong> it's informational. And right now we're not doing a deep dive in a certain thing. We're just like doing, Hey, let's create a thing just so we can see a thing and how it's created.</p>
+<p>Yeah. Yeah. Cool. Other than that, I think it makes, it, it, it all makes sense so far. It's very interesting, just observation is that that like you have all these separate pages on vs code, like talking to each other and kind of finishing each other's sentences mm-hmm. In a way, you know what I mean?</p>
+<p>Like finishing each other's yeah. Like functions, sandwiches and whatnot. Es Yeah, yeah, yeah. It's, it's, yeah. Sandwiches. Yeah. That's gonna be the new thing. Yeah. So Steph and I work great together because we finished each other's sandwiches. We would not anyways but but yeah, no, so that's kinda it.</p>
+<p>Something that I guess I wasn't, I. Really expecting. I, I knew that they would like call to each other in a certain way, Uhhuh, but it, it's the way that like the on clicks work and everything the way that the on clicks work alongside the like where, where was I the </p>
+<p><strong>Seth Whiting:</strong> return functions and stuff, Uhhuh, </p>
+<p><strong>Jake Pacheco:</strong> On multiple pages is just like interesting how it's like, oh, this equals null, then give it this.</p>
+<p>Yeah. And then in, in another page, it's still using that function or whatever, you know what I mean? </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah. It's, so that's, that's sort of like a tricky thing that I was like like. Kind of like, not, not worried about, but like, wanted to emphasize like this, this is sort of a tricky thing, you know, like we're we're declaring it in one component Yeah.</p>
+<p>But we're actually using it and like, setting it in, in one of the, in both of the child components. Yeah. Yeah. Which is, </p>
+<p><strong>Jake Pacheco:</strong> which is just, it's just wild. It, I didn't know that, how that worked. Yeah, yeah. Which is, which is a lot of what this past podcast is about, is me not knowing how that worked. Yeah.</p>
+<p>So </p>
+<p><strong>Seth Whiting:</strong> it's a, that is a little tricky and like, hopefully that's, you know, you, you kind of understand what's going on, you know, like, yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> It, it, it makes sense because we're, we're importing all the pages into each other's pages, uhhuh. So it would make sense that you can use the functions from the other pages and it's gonna know what the heck you're </p>
+<p><strong>Seth Whiting:</strong> talking about.</p>
+<p>Right. So like, instead of writing the, like, instead of writing. Instead of importing the reptile list into your app jsx. Yeah. You could just have all of that markup for reptile list on app jsx. Yeah. And then all of the markup for detail, the detail component on app jsx. Yeah. And instead of wrapping, you know, just the component name and, and whatnot in the, that like turny operator.</p>
+<p>Mm-hmm. Kind of like functioning thing. Yeah. Yeah. You could wrap the entire. Markup for that component. Like, we're essentially doing that here. Yeah. But we're just doing it in a cleaner way, a very </p>
+<p><strong>Jake Pacheco:</strong> clean way and organized way, so you know exactly what is doing what and where it is in the code. Because it's like our, our code already would be like pretty darn long mm-hmm.</p>
+<p>If it was all one page and stuff, so Yeah. It, it makes, it makes perfect sense why you do it like that. Yeah. It's just, it's just something that I, I, I keep being blown away by how much everything handshakes with each other. Yeah. And just like, you know, like talks to each other and stuff, I guess. Or, or like grabs </p>
+<p><strong>Seth Whiting:</strong> information.</p>
+<p>Right, right. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. So, but other than that, I, I think that, yeah. I think I'm, I'm caught up. Cool. Or is like, I get how it's working uhhuh, it's gonna take some staring at it to like, to remember exactly why it's working the way it's working. Yeah. You know what I mean? Like, it's like, Like the, the null thing being over here and then the null thing, being over here and being like, okay, wait, so it's null here.</p>
+<p>Right. And that's why it's pulling up the rep pile list Yeah. And </p>
+<p><strong>Seth Whiting:</strong> not the details. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> So like, yeah. Yeah, yeah. It's just things like that, that that kind of have to be cemented, you know what I mean? </p>
+<p><strong>Seth Whiting:</strong> Yeah, yeah. For sure. But yeah, getting cool. So on our list component, I think we're, I, I don't think that we're gonna need to, to update that anymore, which is Okay.</p>
+<p>Cool. Cool. One thing that we should maybe do is copy the, the opening diviv of the list component. So the very, very top diviv. Okay. The whole diviv. Just because it has that width six 40 and margin auto thing. Yep. So if you just triple click that line. Oh yeah. Will select the whole line. It does </p>
+<p><strong>Jake Pacheco:</strong> every time.</p>
+<p>Yeah. I keep forgetting that. </p>
+<p><strong>Seth Whiting:</strong> Just, yeah, just copy that and then go into detail. Yep. J ss x and then so instead of returning just that H one Yep. Wrap that H one, that line in like, yeah. Starting right there to the end of the line. Wrap that in a, in parentheses. Yeah. So basically we're just, all we have in our detail component right now is one h one tag.</p>
+<p>Just, just like a heading that says this is something detailed and all we're doing right now is wrapping that in parentheses. Yeah. And now within the opening, like right after the opening parentheses make a new line. Okay. So just do, do an enter. Yeah. And then do another enter. And on top of that, paste what you just copied, which is that Okay.</p>
+<p>That opening Diviv. Of our list component. Yeah. Which is just because it has a width and it's got a margin auto, so we know it's gonna be centered horizontally on the page. Okay. And now we have an opening diviv tag, but we want a closing diviv tag after the H one. 'cause we're wrapping that each one. Okay.</p>
+<p>Alrighty. I get what you're saying. Yep. </p>
+<p><strong>Jake Pacheco:</strong> So </p>
+<p><strong>Seth Whiting:</strong> I need to do</p>
+<p><strong>Jake Pacheco:</strong> div.</p>
+<p>I don't know why I have a question </p>
+<p><strong>Seth Whiting:</strong> mark in there, but it's there. Yeah, so get you, you've got two closing divs now you just need one. Yeah, I see that. Yeah. I'm </p>
+<p><strong>Jake Pacheco:</strong> fixing it. Cool. Working on it. And then it's saying that a closing parentheses is expected </p>
+<p><strong>Seth Whiting:</strong> where? Yeah, because your closing parentheses is still after the H one.</p>
+<p>Okay. All </p>
+<p><strong>Jake Pacheco:</strong> right. And that, does that need to be at the end of the div or are we fine? </p>
+<p><strong>Seth Whiting:</strong> Yes. Yeah. Okay. All right. Because you're, you're kind of like shutting out that closing diviv tag right now. So if you put it after the the diviv tag, then you should be all set abdo. So, </p>
+<p><strong>Jake Pacheco:</strong> For cleanliness, should that closing parentheses be next to this little guy right here?</p>
+<p>Yep. </p>
+<p><strong>Seth Whiting:</strong> Yep. So, so now, now we've, so if you, if you go back to the page like if you go back to the, the browser Yep. You'll just see that when you click on one of these and you go to the detail view, it's gonna be centered and it's gonna be, it's gonna have like, ah, yep. So yeah, we, we fixed the </p>
+<p><strong>Jake Pacheco:</strong> margin and padding and all that jazz on that.</p>
+<p><strong>Seth Whiting:</strong> Yep. Clear. Cool. So instead of clicking on the H one to go back Yep. Let's change that up a bit. And so within your detail component, you're going to make that h one into like a, we could make it a paragraph or we could make it a, an anchor tag, which is an A. Okay. I think it would kind of make more sense to be an anchor tag.</p>
+<p>That's because that, that's going to have like the look and feel of a link. Yep. So just change the H one. Just double click H one and then Okay. Hit a, because it will, it should change the opening and closing for you automatically once you do that. Yeah. Cool. Okay. Interesting. Okay, cool. Yeah, and normally with anchor tags, you, this is just gonna confuse you, but, and, and you don't need to know this and we're not gonna use it, but a lot of times it will complain at you that you need what's called an H ref prop on the anchor tag.</p>
+<p>All righty. Which is just like, Normally anchor tags are for taking you to different pages or different websites altogether. So that hre is just like a u R l that you pass it and that that will take you all righty. Some place Yeah. To whatever page it's going to. Yeah. But okay. We're not worried about that right now.</p>
+<p>Yeah. So now instead of typing, this is something detailed. Yeah. We're just gonna type back, because this is essentially the back button. Okay. Yeah, because it's already like a string. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. Yeah. Might as well have it capitalized. </p>
+<p><strong>Seth Whiting:</strong> Why not? Yeah. And you could even do like a less than symbol before back, just so that it's, it sort of looks like an arrow, you know?</p>
+<p>Yeah. Just for fun. And then space back. And it's, it's complaining at you right now. Yeah. So what you can do is wrap that in the curly braces. Okay. And this is not something that you like, normally need to do. And this is sort of like janky that we are having to do it. Okay. But wrap it in curly braces and then wrap it in quotes just so that it knows like, this is a string, you know?</p>
+<p>Yeah, yeah. Agree. What sense? We, we want this open? Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Usually you don't have to do it because it's because it's in an H one type of a thing. Yeah. Or like a, it's, </p>
+<p><strong>Seth Whiting:</strong> it's an html it's a text element. Yeah. Which is usually just text. Yeah. But because it's a ankle bracket, it's like, are you trying to open some sort of tag here?</p>
+<p>I don't know what you're trying to do here. Yeah. But yeah, so. </p>
+<p><strong>Jake Pacheco:</strong> So now when we go here, Uhhuh, I should be able to hit Thank you. And then it's really dark and it's purple and I like it kind of, but, but it's a thing. Yeah, it's really tiny and dark and purple. </p>
+<p><strong>Seth Whiting:</strong> So if we, if we want to change it it's really easy.</p>
+<p>Just add a style tag or a style prop onto your opening anchor tag. Okay. Onto this. Yeah. So before the unclick or after the unclick, wherever. Yeah. Just do style and then equals, and then two curly braces, because you're passing a, an object, if you remember from the last one. Yeah. Yeah. Yep. I, so another pair of curly braces.</p>
+<p>Oh, oh yeah. Two, yeah. Sorry. Yep. And then color colon. Yeah. And then you could just say like, in quotes, you could say black if you wanted or you could say, You know, turquoise ink or whatever you want. Yeah. Green. I'll just do green. So that might be, that might be kind of hard to see. I might run. Yeah.</p>
+<p>Might still not be able to see. Let's go see. Yeah, let's find out. Yeah, it's even, </p>
+<p><strong>Jake Pacheco:</strong> I, I, I forgot that our whole background </p>
+<p><strong>Seth Whiting:</strong> is Yeah. Basically. So if we wanted to, red would work. Red would work, and we might want to, we could have on that fixed width diviv. Mm-hmm. The opening one, we could put that as a white background if we wanted to.</p>
+<p>Okay. Just so that like things within it could, you know, be easier to see. Yeah. Yeah. So before, with or after the margin, you could just say background color in camel case</p>
+<p>and then color colon. Oh, colon, sorry. Yeah. And then quotes. And you could say white here. Sure. White. And then, yeah. Close quotes. And then comma. And then comma. Yeah. Yeah. Care. So now you know back. Yeah, yeah, yeah. It's something. And also if you wanted to, you could have the that white box take up, you know, like a hundred view height if you wanted, just to have it go all the way to the bottom of the page.</p>
+<p>Or you could have it be like, six 40 so that it's like a square. Yeah. Doesn't really matter. Yeah. Alrighty. Or you that could just have it, you could just leave it so that it takes up whatever space the, the, the contents of that box takes up. Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> So would I go like with, </p>
+<p><strong>Seth Whiting:</strong> So leave, leave the width.</p>
+<p>Okay. So at six 40? Yeah. And then you'd add a height to it. Okay. If you wanted to. Yeah. Why not? And you could have the height be six 40 as well, so that it's a square or you could have it be, you know, whatever. And, and actually what might be better, and what probably would be better is instead of a height, we could give it a min height.</p>
+<p>Okay. Which is minimum height. So that if the contents of the box like of if whatever is inside of this box is larger than whatever height we gave it, it will start growing after that minimum height all. Does that make sense? Yeah, that makes sense. Yeah. So we can give it a minimum height of like 400.</p>
+<p>Okay. And then if, if the description of this reptile or whatever is like really long, it will Yeah. Grow according, grow from there. Yeah. All. </p>
+<p><strong>Jake Pacheco:</strong> Cool. So I changed that to minimum height of 400 and I hit that and then Yeah, we have a little box here. Yeah, because why not? Yeah. All righty. Our website looks so nice.</p>
+<p><strong>Seth Whiting:</strong> No, I'm just joking. It's pretty bad. We're working on, but </p>
+<p><strong>Jake Pacheco:</strong> it's pretty, it's pretty rough, but it's, it's, it's, it's a learner's </p>
+<p><strong>Seth Whiting:</strong> website. Okay. So now we get sort of like into the interesting part. Okay. And this is where we start working with the selected reptile. All righty. So go back to app jsx. Yep. And we're going to pass, not only are we going to pass set selected reptile to the detail component, but now we're gonna pass selected reptile to the detail component.</p>
+<p>Okay. So now we're going to have the value of selected reptile, which is okay. Whatever the index is that we have clicked. On, on the list component. Okay. We're gonna pass that index value into the detail component. Okay. So after set selected reptile or before it doesn't matter, do space and then selected reptile equals selected reptile within the curly braces.</p>
+<p>Yeah. Space </p>
+<p><strong>Jake Pacheco:</strong> or anything with that? Nope. Nope. </p>
+<p><strong>Seth Whiting:</strong> Equals selector reptile. And then you have to yep. And then wrap. So do backspace a couple times. Yep. Just that it gets rid of that extra stuff that it just gave you. Yeah. So, and then you have to wrap selective reptile and curly braces. Okay. So I should </p>
+<p><strong>Jake Pacheco:</strong> have that passing after I write?</p>
+<p>Yeah, yeah, yeah. I got you. Well I'm just gonna go like this 'cause then it'll equals. Come on. You're not gonna reptile. </p>
+<p><strong>Seth Whiting:</strong> There we go. I wonder if people, the, the, it's okay. Dang, robot assistant, right? I don't wanna say her name, but she keeps coming up and really like blocking out your audio and it's like, oh, really, really annoying me.</p>
+<p>Yeah, yeah, yeah.</p>
+<p><strong>Jake Pacheco:</strong> Well, you know, I'm in a I, I'm forever in a disco in here and with the red light and you're, we're killing it. Yeah. And, and you're, there you go. You're, you're playing the remix of your voice </p>
+<p><strong>Seth Whiting:</strong> with, like, skipping. All right, cool. Yeah, you got it. That's it. Sweet. So now we need to go into our detail component and actually like, grab that from the, the props.</p>
+<p><strong>Jake Pacheco:</strong> Hold up real quick though, because right now I have in this, do I need like a comment in between these two or anything like that? </p>
+<p><strong>Seth Whiting:</strong> Nope. Nope. Just a space. Okay. Interesting. Weird. </p>
+<p><strong>Jake Pacheco:</strong> It's just weird because it's like the same thing twice almost. Oh, because there's set selected reptile and then we have, yeah.</p>
+<p>Okay. </p>
+<p><strong>Seth Whiting:</strong> Yeah, exactly. So you've got the, the setter and you've got the, like the variable itself. The thing, yeah. </p>
+<p><strong>Jake Pacheco:</strong> Okay, that makes sense. So now I'm in details and I'm doing what? </p>
+<p><strong>Seth Whiting:</strong> So, if you remember to grab the prop, you need to go to like where you're declaring function detail and before you grab, set selected reptile within those curly braces after function detail.</p>
+<p>Yep. Within the parentheses. Yep. So we're gonna do we're just gonna grab another thing, which is Okay, selected reptile, so at the very top. Yep. After set selected reptile or before it doesn't matter. Mm-hmm. We're just gonna add another prop that we're, that we're grabbing. So, okay. That would be, so you're, you're right after, am I set selected reptile?</p>
+<p>You do Comma, space selected reptile. Okay.</p>
+<p>And you have two T's there. Just f yi. Thank you buddy. Appreciate you. And so now we have access to that prop that we just passed. </p>
+<p><strong>Jake Pacheco:</strong> Yep. And just for clarity's sake, for any audio listeners, if, I mean this is a lot to keep track of through audio stuff. Yeah, for sure. Probably just watch the video. But, but if you are listening we have both of those within the same curly braces.</p>
+<p>Yes. But, but separated by </p>
+<p><strong>Seth Whiting:</strong> a comma. Yep. Yep. Exactly. Cool. Sweet. So now we have access to that and we can use it wherever we want. So, okay. After, after the anchor tag okay. Maybe open a new diviv, probably after the anchor tag. Okay. </p>
+<p><strong>Jake Pacheco:</strong> But within the same, but within the main diviv that we're, we've been </p>
+<p><strong>Seth Whiting:</strong> using, yeah.</p>
+<p>Okay. And I would probably yeah, indent. I was just about to do it. </p>
+<p><strong>Jake Pacheco:</strong> Yeah, I was about to do it because, 'cause you're you and I know you and I think that that's something that you would've liked. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Yeah, that's fine. However, that's good. There you go. All righty. And then I'm doing another Dave here.</p>
+<p>You would do it after the anchor tech? Yeah. After anchor. Okay. Yep, yep. Yeah. So open up a diviv. Yeah, that's what's I div. </p>
+<p><strong>Jake Pacheco:</strong> Ah, what am I doing here? I am </p>
+<p><strong>Seth Whiting:</strong> trying my best. No worries. Open the diviv. And then You can just do the closing angle brace, and then it automatically does it. Yeah. Yeah. And then do enter, and then within that little div sandwich, now you've got the opening one on the top and the closing one on the bottom.</p>
+<p>And we're gonna add a, let's just add a paragraph in here just for fun. Okay. So p, so p Yeah. Yeah. And then do curly brace. And let's just print out the value of selected reptile. So within that curly brace, just type selected reptile. Okay. And it's gonna give us the value. It's gonna like print out the value be because it's in those curly braces.</p>
+<p>All righty. Cool. So, and then save it and then go back to your browser. And we should see. Oh yeah. Zero. Because you zero. That's the first one. Now go back and do the, like the last one. Yeah. There you go. That's cool. Nice. Yeah. The second one has an index of zero. The last one has an index of four, even though it's the fifth one in the list, because it starts with zero.</p>
+<p>Yeah. Like we talked about before, like everything </p>
+<p><strong>Jake Pacheco:</strong> in coding, it just starts at zero and then Yeah. Goes up from there. Other than there's there's another thing that didn't do that though, and annoyed me when I did it figure what it was. But yeah. </p>
+<p><strong>Seth Whiting:</strong> Anyways, regardless. Oh, the length, like the, the length of the array.</p>
+<p>Yeah, yeah, yeah, yeah. </p>
+<p><strong>Jake Pacheco:</strong> Exactly. It annoyed me. I was like, why, why are you, why are you doing this? Everything else? Yeah. Yeah. Everything else, but not this for some reason, just to mess me up. </p>
+<p><strong>Seth Whiting:</strong> So now this, this is, this is the mind blowing part. Mm-hmm. So now, Above the detail, like above, like on line one. Yep.</p>
+<p>You're gonna import data, now you're gonna import reptiles js. All right. </p>
+<p><strong>Jake Pacheco:</strong> Do I want to move the function down and Yeah, create a new line one. Okay, cool. So I am moving my function down, which is at the top of my page right now on, yeah, so the </p>
+<p><strong>Seth Whiting:</strong> previous website, previous line one is now line two. Line two. It could be line three or whatever.</p>
+<p>If you wanted to give it some more space, I'll probably make you do that later, just for my own like sanity. But yeah, so now you're importing and, and I, I, I think we called it reptiles before, so just import reptiles from, and then it'll probably, yeah, it'll probably auto complete like the from, okay.</p>
+<p>Well that's, yeah. It's working great. No, you, I mean, you have it. It just, it just okay. Wait, go down. Can I just click this? Yeah. There you go. Yes. Yeah. Oh, okay. I just click this. Oh, that's what it is. Okay. So we, we exported reptiles as like just one of like any number of things. Okay. From that data that reptiles js Yeah.</p>
+<p>We could have exported default Yeah. Reptiles. And then it would've, like, we wouldn't need it in those curly braces, but, okay. Because we just did export reptiles or like export const, reptiles equals And then the data. Yeah. We need to import it within curly braces. Okay. So if it's, if it's, if we're exporting default, we don't need curly braces.</p>
+<p>If we're exporting like a constant or a function. Yeah. You need the curly, you need the curly braces to, to import it. So that's, that's all that's going on there. </p>
+<p><strong>Jake Pacheco:</strong> Yeah. I vote, I vote for us just to start calling 'em the curlys, </p>
+<p><strong>Seth Whiting:</strong> the curly. All right. Put 'em in the curlys curly fries. Yeah. Yeah. Yeah. What are we, Arby's?</p>
+<p>So, I love Arby's. Me too. So, okay, so here's, here's a cool thing. Now we can say, because we're working with an array of objects that like this, this is like a big thing and I'm excited to like, show this to you. So, okay. We, we have selected reptile is the index of an array. Okay. So we can grab that original array, which is reptiles.</p>
+<p>Okay. That's the data that we're working with everywhere. Yeah. So we can grab that and say, reptiles square bracket, selected reptile. And that will give us the selected reptile like that, like the, the object at index. Selected reptile index, you know, you know what I'm saying? I'm, I, that's probably super, </p>
+<p><strong>Jake Pacheco:</strong> it's super confusing.</p>
+<p>It's, it's a little confusing, but I think that once we write it or whatever, it'll be like, yeah. Oh, it's doing this. Okay. So, and, and I might ask many questions. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Good. Like, I hope that you do. 'cause I'm just like this, this entire like, episode is just me talking and like, nerding out. I'm sorry, but it's, it's good.</p>
+<p>No, it's not your fault. It's me not giving you any like breathing room. No, you're good buddy. So, okay, so right now within our paragraph tag, we are printing out selected reptile, which is just a number. Yeah. It's just the index of whichever one we clicked on. Yeah. But now we're gonna change that. And the way that we're gonna change it is put selected reptile in.</p>
+<p>So double click selected reptile. Yep. Within that paragraph. Yep. And then, Hit the opening square bracket. Yep. Yeah. And at the beginning of that, before the square bracket. Okay. You're gonna put reptiles, and that is our array of objects. That's our data that we're working with because we, we have a whole file that is just data mm-hmm.</p>
+<p>Called reptiles jss. Yep. Instead of working with data from a database or whatever, we just wrote out our own array of objects right there. Yep. Yep. And each of those objects has a name, a species, and an H. Yep. So now if you go back to detail. Yep. We have reptiles, square bracket, selected reptile, and then after that square bracket we can do.name.</p>
+<p>After the square bracket. After the square bracket. Okay. So what that's saying is the, the object at index X mm-hmm. Which is just like the variable in, in our case, X is equal to the value of selected reptile. So we have an array of objects called reptiles and we can grab the, the object at a particular index.</p>
+<p>So like reptile number four is like reptile square bracket three because it starts at zero, you know? Yeah. So now we have access to that object and we can get.name from that object, which is just the name property of that object. Okay. So, We can, we, we now have access to like all of the properties of that, that that object.</p>
+<p>So we could do, we could do that whole like, duplicating line trick Yeah. And say name species and age. Species age. Like we've got all of it. We have access to all of it. Huh. So just to prove that, save this, do that. Go back to your browser. Yep. And then now when you click on one, you should be able to see their name.</p>
+<p>Yeah. Yeah. That's cool. There you go. </p>
+<p><strong>Jake Pacheco:</strong> Huh. Yeah, that makes sense. So basically you could have just, you could just have we could get rid of Aki monitor and stuff and just have their names on here and then click it and then have all their information on another page. Exactly. Yeah. Huh. </p>
+<p><strong>Seth Whiting:</strong> That's pretty sweet.</p>
+<p>Yeah. And in fact, why don't we just go ahead and do that? Yeah, yeah. Let's do it. So why don't you make you can make this into like a H two or like, you could even make it a H one, like the name is like the important thing. So you make that an h whatever. Okay. </p>
+<p><strong>Jake Pacheco:</strong> So </p>
+<p><strong>Seth Whiting:</strong> it within instead of a paragraph? Yeah.</p>
+<p>Oh, instead of the paragraph. Okay. Yeah, yeah, yeah. </p>
+<p><strong>Jake Pacheco:</strong> So I can just change this, right? Mm-hmm. Let's </p>
+<p><strong>Seth Whiting:</strong> do H two, I suppose. Cool. 'cause I think that's a good size. Uhhuh. And then under that can do H two, </p>
+<p><strong>Jake Pacheco:</strong> make another H one or </p>
+<p><strong>Seth Whiting:</strong> something, right? So H one is gonna be bigger than H two. Oh, H three, sorry.</p>
+<p>Yeah. Yeah. You can do H three if you want. Yeah.</p>
+<p>And then I'm gonna go, you can just copy that line above like that. Yeah. That whole within the Curley braces. Yep. Which I could, instead of, which I could a </p>
+<p><strong>Jake Pacheco:</strong> triple </p>
+<p><strong>Seth Whiting:</strong> collect. Yeah, but since you're doing it like sort of on one line, it's better to do it the way that you're doing it now, because if you triple clicked, then you'd have to like, you'd have to put the closing H three on another line.</p>
+<p>But you don't have to do that since you're doing it the way that you're doing it. </p>
+<p><strong>Jake Pacheco:</strong> Trying Yeah. Not mistakenly doing </p>
+<p><strong>Seth Whiting:</strong> things right. And that probably is really confusing to anybody listening. But it is what it's, I, </p>
+<p><strong>Jake Pacheco:</strong> I forget if it's control alt or shift alt, shift </p>
+<p><strong>Seth Whiting:</strong> alt no, no, no. So you're not even gonna do that.</p>
+<p>You're just gonna do control C and paste C just to copy and paste. Yeah. Okay. So you're copying reptiles, square bracket, selected reptile name, and, and then I'm gonna change PAC name. And all you're gonna do is change name to species. Species. Yep. And then you can do this the same thing. And because, because this is on one line, you can do that duplicate.</p>
+<p>If you want, which is Oh yeah. Yep. '</p>
+<p><strong>Jake Pacheco:</strong> cause they're both gonna be </p>
+<p><strong>Seth Whiting:</strong> h threes and or, or you could have the, the h b paragraph or you could have it be, you know, an H five if you want. It doesn't, doesn't matter. Yeah. Might as well. Why not? Paragraph. You're not, you're not doing the duplicate </p>
+<p><strong>Jake Pacheco:</strong> trick. Dude. I know.</p>
+<p>I'm not doing the duplicate </p>
+<p><strong>Seth Whiting:</strong> trick. I'm sorry. But you should still have selected reptile, like reptiles selected reptile name. Yeah. Copied to your clipboard. So you could just do that. Yeah, just do And then change name. Yeah, change name to h Age blink. There you go. Sweet. You got all of it. You can go back to Doss and then we can just remove the, remove ACU monitor and everything.</p>
+<p>Yeah. Hey. Yeah. That's sweet. </p>
+<p><strong>Jake Pacheco:</strong> I's, that's interesting. </p>
+<p><strong>Seth Whiting:</strong> Huh. Neat. Yeah. Look at us. So now you've got, you've got sort of like navigation between the list view and the detail view, and you've got Yeah. All of the details that you currently have in your, your data file. Yeah. Displaying on the detail view. Sweet.</p>
+<p>And, you know, you could totally add like a description, you could totally add, you know, whatever else you want to that data file to that. Yeah. As long as you like, call that within your markup, like as long as you like, sort of like summon that into your markup, it will show up on that page, you know? Yeah.</p>
+<p>Yeah. So. So, yeah. Now you're going back to the, the list view and just delete the line that says paragraph reptile species. Yeah. And just triple click that and hit delete. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> Or, or just highlight it like, </p>
+<p><strong>Seth Whiting:</strong> like a loser. Yeah. So, yeah. Yeah. So </p>
+<p><strong>Jake Pacheco:</strong> now on my main page, I should just have the actual reptile's names.</p>
+<p>Yep. And then I click on them and it has all the some information for 'em. There you go. Yeah. </p>
+<p><strong>Seth Whiting:</strong> And you can, you know, add the photo there too if you want. Yeah, exactly. Maybe do that next week if we wanted to. Yeah, </p>
+<p><strong>Jake Pacheco:</strong> I'd like to 'cause I've already done it when I was like, kind of spit balling and working on my own page a little bit.</p>
+<p>Just adding an htm a photo from an H T M L and then and then adding it from my own path. Um mm-hmm. But yeah, it, it might be cool to like explain how that all works too. Yeah. Actually on the podcast, 'cause I did that a few podcasts ago on, on my own. </p>
+<p><strong>Seth Whiting:</strong> Yeah. Trying is best. Sweet. Yeah. And one, one cool thing.</p>
+<p>Well I mean it's not really that cool, but one thing that might be nice just to kind of like illustrate something is go to your list component real quick. Just like as a last, last little hurrah here. So triple click the currently keeping H one currently. And we're gonna move, yeah, we're gonna move that to so, do Control x Control X, yeah.</p>
+<p>To cut it. Yeah. And then we're gonna paste it onto the app jsx. Okay. So that it stays there no matter whether you're on the list view or the details view. Can I just start in between these divs? Yep. Yep. Exactly right on top of Like the, the list view and the detail view. Yeah. Yeah. So then save that and go back and you, you should be able to see now that the, that currently keeping H one we can center it later.</p>
+<p>Yeah. But that should stay there, whether you're on the list view or the, the detailed view. Oh, </p>
+<p><strong>Jake Pacheco:</strong> cool. Cool. So the currently keeping just sticks around. Yeah. Huh. </p>
+<p><strong>Seth Whiting:</strong> So it's, yeah. Because that's on the parent. Yeah. Yeah. And then all you're doing is like ripping out one child and spitting in another, you know?</p>
+<p>Yeah. Underneath. Yeah. You know, whatever is on top of it. Yeah. Or below it on, on the parents. Yeah. You're, you're just, </p>
+<p><strong>Jake Pacheco:</strong> you're just changing a a part of the page instead of the whole page. </p>
+<p><strong>Seth Whiting:</strong> Yeah. And that, yeah. Just one little section </p>
+<p><strong>Jake Pacheco:</strong> that does lead me to a small question is just is that what they mean when they're talking about virtual dom versus Dom?</p>
+<p><strong>Seth Whiting:</strong> Or no? No, not really. No. But you </p>
+<p><strong>Jake Pacheco:</strong> see why I'm thinking that, right? Kind of </p>
+<p><strong>Seth Whiting:</strong> Maybe. I think so. Yeah. I mean, and like abstractly. Can you, I'm not really like a a thousand percent like positive about this, but like just mm-hmm. A brief overview of what the virtual dom is to my understanding is basically like react just injects your markup into like a single diviv, like your H T M L on a React page is basically just like the, the head with all of like the title and like metadata information and stuff.</p>
+<p>And then within your body you have like a single diviv, and then the JavaScript just appends, which is just means like adds to that div. It's like put. All of your, all of the markup that you're writing within your React code, just inject it into that single div. Mm-hmm. And then, you know, as you're, as you're moving throughout your application, you're ripping out stuff from, from that diviv and adding more stuff into that diviv.</p>
+<p>And so, okay. The virtual dom is sort of like the HT m l that like, is written within JavaScript and is just sort of like there. And all of it is sort of just like temporarily there, if that makes sense. Yeah. It's not part of like the H T M L document that like, you, you kind of like feed into the browser.</p>
+<p>Yeah. Yeah. </p>
+<p><strong>Jake Pacheco:</strong> I just, I, I, I guess I was drawing a line between the two just because from what I understood of the virtual dom was just that it. It doesn't have to reload the entire, uh mm-hmm. Page, I guess it just reloads a portion of the page. Yes. What has changed gets reloaded, but not the whole dang thing.</p>
+<p><strong>Seth Whiting:</strong> Exactly. Exactly. So like what, what you're talking about is like a benefit to using the virtual dom. Yeah. It's not, that's not the, the virtual dom itself. Okay. But that, that is a, a benefit to using the virtual dom is just like the, the ability to rip out little chunks of the page as opposed to reloading the entire page every time.</p>
+<p>The whole thing. Something changes. Yeah. Cool. </p>
+<p><strong>Jake Pacheco:</strong> Good to know. Yeah. Yeah. Sorry. Little sidetracked there. No, you're good. There you go guys. </p>
+<p><strong>Seth Whiting:</strong> And again, I like, I, I, this is me just sort of like postulating or whatever as to like what the virtual dom actually is. Mm-hmm. Like, that's my educated guess. I think it's a pretty good one, but I could be way off.</p>
+<p><strong>Jake Pacheco:</strong> Yeah, yeah, yeah. Give him a little leeway. Okay. Everyone, come on. You guys are always so </p>
+<p><strong>Seth Whiting:</strong> harsh on </p>
+<p><strong>Jake Pacheco:</strong> No, not, not really. We haven't even posted that podcast yet. </p>
+<p><strong>Seth Whiting:</strong> Yeah, we haven't. We're anticipating you being really harsh. Yeah. You should be like, if I'm wrong about stuff and I'm like, asserting it as true, please call me out.</p>
+<p>I don't like, I want to learn still. Yeah. You know, like, I'm here to teach. That's, yeah. But you know, if somebody out there has something to teach me, you know, that's even better. We're </p>
+<p><strong>Jake Pacheco:</strong> we're down for all of us learning something. Yeah. Sweet. Well, yeah, I think that's probably a good spot to stop today anyways.</p>
+<p>Yeah, for sure. And yeah, hopefully, hopefully people were able to follow along and kind of understand what we were doing there. Yeah. I try, I tried to my best even when you were on a, along like talking spree mm-hmm. I was like kind of highlighting what you're talking about a little bit or trying to anyways, Yes.</p>
+<p>From my understanding of what you're talking about. Yeah. So yeah. Hopefully people could follow along and and if people do have any questions for us to answer in the next few of 'em or whatever hopefully we can either, when we post these, put comments on that'll explain what people had questions about or whatever.</p>
+<p>We'll do our best, you know. Yeah. Figure something out. Yeah. We'll figure something out. </p>
+<p><strong>Seth Whiting:</strong> Cool. All right, sweet. Well thanks, thanks for joining us this week and we'll see you next week. Keep swimming. Yeah. If you're you know, hopefully this is like interesting and like useful to you. Like you're probably not building a reptile keeping application, but what we're covering on, you know, the previous episode and this one is totally universal to like anything, you know.</p>
+<p>Yeah. </p>
+<p><strong>Jake Pacheco:</strong> I mean it's, it's, it's a pretty Right, currently it's a pretty simple like keeping track of some kind of scheduling app type of thing. So, </p>
+<p><strong>Seth Whiting:</strong> you know, yeah. We're not even, we haven't even gotten into scheduling part. Yeah, yeah, </p>
+<p><strong>Jake Pacheco:</strong> yeah. Like, put your kids in this and like, how old are they? How old are they?</p>
+<p>What, what, what </p>
+<p><strong>Seth Whiting:</strong> species? No, no, no. </p>
+<p><strong>Jake Pacheco:</strong> You know, people say they're </p>
+<p><strong>Seth Whiting:</strong> dogs, they're kids all the time, so it's fine. Yeah. For me. Yeah. Yeah. But yeah. </p>
+<p><strong>Jake Pacheco:</strong> Sweet. Thanks for listening. Yeah. Again, and yeah, hopefully you </p>
+<p><strong>Seth Whiting:</strong> stick with it. Yep. Catch you next time. </p>
+<p><strong>Jake Pacheco:</strong> Yep. Keep swimming. </p>
+<p><strong>Seth Whiting:</strong> See ya. See ya.</p>
+
+  </main>
+
+  <!-- Add your website's footer, including any copyright or legal information, here -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3KLVQ3NQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-W3KLVQ3NQF');
+  </script>
+  </body>
+</html>

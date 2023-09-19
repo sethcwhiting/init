@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Huge Embarrassing Failures">
+  <title>Huge Embarrassing Failures | Init Podcast Episode 16</title>
+  <meta name="keywords" content="Software development,Education technology,Learning to code,Job interviews,Coding interviews,Coding journey,Coding experiences,Developer anecdotes,Coding mishaps,Error handling,Developer career,Coding humor,Tech industry insights,Coding projects">
+  <meta name="author" content="Jake Pacheco and Seth Whiting">
+  <link rel="canonical" href="https://www.init.show/episode/16" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/icon/site.webmanifest">
+    <!-- Add any other SEO-related meta tags here -->
+
+  <!-- Add any stylesheets, fonts, or other assets here -->
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <!-- Add your website's header, navigation, and any other global elements here -->
+
+  <main>
+    <a href="../../" style="color: white; text-decoration: none;"><h1>INIT</h1></a>
+    
+    <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
+    <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
+    <audio controls>
+      <source src="https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/episode_16.mp3?dest-id=4009908" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h2>Episode 16: Huge Embarrassing Failures</h2>
+    <p>Published: <time datetime='2023-09-14'>Thu, Sep 14, 2023</time></p>
+    
+    <p>Dude, in their latest podcast episode, Jacob Pacheco and Seth Whiting totally ride the coding wave, you know? Seth, who's been in the code game for a solid 10 years, recalls this gnarly design mishap from back in the day. And Jacob, who's kinda new to coding, like around five months, drops some comic gold about "developer months" and how it's sorta like his gig as a barber, man.</p> <p>So, the whole podcast is like, totally about these "mega cringe-worthy wipeouts," you feel me? And, of course, they're dishing on their wild job interview tales in the coding world. Seth's got this crazy story where he totally biffs the language requirements and has to cram-learn a new one and a fresh framework, bro.</p> <p>But wait, there's more, man! They cruise through different topics, like Androids vs. Macs and Seth's interview with Lonely Planet, where he admits to not being fully prepped but had to hustle, ya know? Then it's all about error handling, making sure users don't catch those gnarly blank screens and bogus data.</p> <p>Seth talks about leveling up his confidence in tech interviews, following his passions, and giving a major shoutout to Khan Academy, all about changing the education game with tech, dude.</p> <p>They drop wisdom bombs about getting hands-on with coding projects, even if you're not totally dialed in, and how the journey of learning and growth never stops in the software realm.</p> <p>Lastly, they chat about AI, bro. How it might affect coding gigs but, like, developers will still be the real heroes, checking and improving AI-made code. And hey, they're stoked for you to hit 'em up on Twitter and remind you that they drop fresh episodes every Tuesday, brah!</p> <p>Special thanks to <a href= "https://open.spotify.com/artist/7JxrbI1DZLSJUyzsrBQop2?si=Vt5jO60AR3C4O_wgt9yxkA" target="_blank" rel="noopener">Diarrhea Planet</a> for our intro and outro music and <a href= "https://www.instagram.com/skratchtopo" target="_blank" rel= "noopener">@SkratchTopo</a> for our artwork.</p>
+
+    <h3 style="margin-top: 60px;">(Auto-Generated) Episode Transcript:</h3>
+
+    <p><strong style="color:#6600CC">Seth Whiting:</strong> Hey everyone, I am Seth Whiting. I'm a developer from Portland, Maine, and I've been coding for about 10 years now.</p>
+<p>And </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I'm Jake Pacheco. I am from Augusta, Maine. I'm a barber, and I've been coding for about five months now. What? Really? Right? Five months? 20 weeks. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Well, I guess, yeah, we started in, we started in January sorry, I, I think we started like January 7th.</p>
+<p>Okay. January, February, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> March, April, May, June, June, about five, about five months now. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Wowza. Dag and nabbit. We're so used to talking in weeks. I </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> know I, I pulled the rug out for Monday. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> But I guess, yeah, it's, it's been like 18 weeks or something like that. 19 weeks. I'm like, yeah, that's, that's been a minute.</p>
+<p>That's, that's five months worth of weeks. I guess I, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> it's, it's yeah. Yeah, it's, it's somewhere around there anyways. Yeah, I mean, eventually we're going to be in, you know, yeah, talking like people talk about their babies and stuff like, he's 26 weeks. I mean, 26 months. You know what I meant? . . But they, you don't, you, you, you don't notice that when like people talk about their babies in months where past months.</p>
+<p>I, I have, it's like the kids too. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I have three kids. I, I know . I know what you're talking about. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> You know what I'm talking about. Yeah. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I've known it. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. They're on, they're on their 84th trimester . </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. Cool. So this is, we're, we're not going to do live coding this time. We, we were going to, and then we said we weren't, so we're going to try to do one that's listenable.</p>
+<p>Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. It'll be, it'll, it's a little bit, it's more fun that way sometimes. Hopefully. I mean, I think for the listener, it's certainly more fun. Yeah. Not the watcher. Yeah. Not the one. I </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> don't know if we would I hear that YouTube podcasts are like a thing and I don't know if it's just like people talking like this on camera.</p>
+<p>I mean, I don't know if people would be interested in that or not. Let us know if you're interested in that. Yeah. If you're interested, well, Well, definitely talking to each other. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, yeah, exactly. Yeah. We're, you know, two handsome gentlemen and handsome. Yeah. So, so nice looking. You sure about that?</p>
+<p>Anyways. So this podcast, we wanted to talk about how, how's the, the quote exactly? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Huge embarrassing failures. Huge </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> embarrassing failures. Mainly Seth will be talking about this. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Because I'm the huge embarrassing failure here. Well, you've, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> you just have more experience in, in, in that encoding. I've had it with other things, so you're, you're fine.</p>
+<p>So yeah, we wanted to talk about those things. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> But also get down to just like questions that Jake had. Yeah, yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Further down the line we're going to be talking a bit about just interviews because that's kind of one of my worries is just the huge embarrassing failure interview that I know that I'm going to have at least one of.</p>
+<p>Just, they'll ask me a question and I'll be like, I'll have to... Try to talk my way out of answering the questions succinctly. So, but we'll, we'll get to that. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I have some, scars from interviews that I, that haunt me at night from time to time. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, it's, it's, it's all a part of it. So we're going to be talking about all that stuff.</p>
+<p>And also maybe just, I know we've touched on it before interviewing processes and stuff, but maybe a little bit deeper dive into that. But yeah, yeah. So, what's it, you know, what's one that kind of sticks out to you, Seth, where you were like confident about something and you're just like, Oh, no.</p>
+<p>Nevermind. I shouldn't have been confident about that. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. Yeah. I mean. One that like really sticks out and I feel like I haven't thought about it much since, but I was just thinking about it the other day and I was like, Oh man, that was awful. It's just like a really like cringy moment where I was working on that.</p>
+<p>If, if you have listened to previous episodes, you know, that like, when I was starting out, I started at this is this is my first. Coding job that was like, official it's I think I did one freelance little like HTML and CSS thing right before this, but this is like my first, like actual job.</p>
+<p>And it's. With a music publishing company in Nashville with my friend Kenny, who I've talked about, and we were working with the owner of the publishing company's wife. Who is kind of in charge of like the marketing stuff and we had this client that we were, I think we were like white labeling the, the, the application for her specifically just to use it with like her own branding on it and stuff.</p>
+<p>And if you don't know what white labeling is, it's, it's basically taking all of the functionality that you have. In your application and just quote unquote, like re skinning it. So just like making it look like something else, but it still does all the same stuff. So if somebody wanted your application, but they wanted it to be like, Oh, you, you did this on your, your barbering application.</p>
+<p>Cause basically it's like you have sort of like a pre packaged application. But you make it so that other people can say okay, this is the water street barber shop application, but it's really just an application that somebody made that they made it like customizable and made it so that people could make it look like it's their application that they made.</p>
+<p>Yeah, that's what white labeling is. I think that's what we were doing for this, this woman and her like company, her publishing company and the. The owner's wife she came to me because I was like the front end guy and Kenny was like the back end guy and we didn't have a designer. It was pretty much just do what you think looks good.</p>
+<p>And since I was the front end guy, it was more on me to determine what looked good and stuff, which is not what I went to school for. It's not like what it, buddy.</p>
+<p>But I do, I do, I think have a knack for that more than like, more than like the majority of like back end developers, for sure. And I think I have like somewhat of a knack for it, you know, even in comparison to some front end developers. There are definitely a ton that are way better than me, but I think I'm pretty decent.</p>
+<p>But, at the time... I was very ambitious with this project and basically I, so she, she gave me the, the, my task was to redo the look of this website and that, that was like my, all of my criteria and I was, I was basically like, Oh, I could. I could do this, or I could do this. What should I do?</p>
+<p>It was just like I just kind of, was excited about, like, all the directions that I could potentially take this thing. And so, I went in one very specific particular direction, very far direction. And it was, like, the, the site as it was, was, like, pretty basic. It was just you know, they're, they're like there's like a button over here and there's like a bottom bar with a play button and, and stuff and like a list of, of like songs that are being published and, and whatnot.</p>
+<p>And the color scheme was like black, white, and like accents of red here and there, and I was like, Oh, but I like this entire color scheme. And I was like, really into this 1 design group that made these it's called, I think it's called the Anderson design group and they make these national park posters that are like, sort of like art deco, if you know what that is, and like really like detailed and stuff.</p>
+<p>So I just I had this like thing where it was like, there were like five borders around like the table and like they like curved and like they were this like salmon color on like a blue background is very elaborate, took it like way far in one direction. And I, I brought it back to the owner's wife and she's Oh, what, what's this?</p>
+<p>And I was like, this is. This is like the thing she's what do you mean? It's no, this is the thing that like you asked for. And I was this is like a, the direction that I kind of like came up with and she's no, you can't. No, that's not what I was looking for at all. That's Oh,</p>
+<p>she's basically I wanted you to like, add some more red in some places. It's Oh. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Well, she could have been a lot more clear about this. I mean, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I mean, really. Yeah. But I don't know. I, I, I think I probably should have asked a lot more questions. Yeah. Other than oh, I'm sure this would be fine.</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. Yeah. May, may. Maybe asked a few more questions. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. Yeah. I spent a lot of time on that and I wish I, I wish that I still had it somewhere. I wonder if it's. If it's like just like sitting on my like old computer somewhere, but anyway, probably, I </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> mean, it's, it's funny because that's such a a haircutters problem is yeah, because you have the consultation and then they'll they'll say something and then.</p>
+<p>You, what makes, in my eyes, what makes a good barber is someone who can understand what someone actually means when they say something, you know what I mean? So someone will come in and be like, I want a fade. No shorter than a four. Okay, that's not a fade. There's not there's no fading going on in there.</p>
+<p>Or they'll say I had a guy the other day, actually, that said, a skin fade. And I was like, Okay, so we're gonna start at skin. And he's Yep. And I was like, Okay, I'm like, so because I've run into this before, I'm like, okay, so it's gonna be skin and I pointed to the top of his ear. I'm like, from there down, all the way around is skin.</p>
+<p>I'm like, you know, we're gonna fade. I because I've given this guy haircuts many times before, and he never gets a skin fade. So this is new to him. Yeah, and he's like, he's yeah, yeah, that's what that's why I want. And I was like, okay, so I, I give him like the, you start by just making your skin line, which is a perfectly straight line all the way around the head.</p>
+<p>And I. And he's oh, that's really short. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> It's the skin. I'm like, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> it's a skin fade, man. He goes, he goes yeah, but I didn't know there to be like all the way down the skin. I'm like, I, I pointed to the palm of my hand and said, it's going to feel like this. There's no hair. He's well, just if we could not go any shorter, I'm like, there is no sure </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> if you could not cut into my </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> epidermis, if you knew how many times this happens, that will happen or someone will be like, you know, come in real gung ho about like how, oh, it's all up to you.</p>
+<p>And basically the way that like someone comes to me and says okay, do whatever you want you know, do whatever you want with my hair. Usually I respond to them by saying, okay, I had white and purple hair two years ago down to my shoulders. I'm like, are you sure? My style is aggressive.</p>
+<p>I, I like mohawk fades. I like things that are different. You know, I... So it's definitely a thing though and, but I could also see myself as a younger Barbra, if someone was like, do whatever you want, just go in hand and be like, Oh, I'm going to do this and take my time and take a full hour on someone's hair.</p>
+<p>Because I know I've done this before. I've never had anyone get too grumpy about it or anything like that. I most people are pretty happy with it just because I have kind of like you I have kind of like an eye for yeah. That thing you're like, oh, this will look good. This will work. This makes sense.</p>
+<p>Yeah with their face or personality or something I take all of that into consideration with them so like I, I definitely get how that can be very frustrating too, though, because I don't think that that's on you though, Seth, like really, I mean, I okay, maybe, maybe for going as deep as you did without asking any questions, but, but, I mean, it was an open ended thing.</p>
+<p>It's Hey, do your best. It's okay, you want to see the best, the best I can do. Yeah </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> if somebody asked me to do that now, I'd be like, okay. Well, you know, be practical, do what makes sense. Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> But also maybe here's 30 questions or even like 10 questions to guide me in the direction I might be going.</p>
+<p>But yeah, I mean, you get a little excited. That's, I don't know. They shouldn't have just been like. You know, no, this is crap. I, I would have been like, Hey, let's table that for later. Maybe in the future we can use it or something, you know, even if they never used it. I would have been nicer about it. I think, you know, if you're </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> making that for me, I guess.</p>
+<p>I mean, no, she was super nice. Yeah. Yeah. She was just like confused, rightfully so. That's such a funny </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> situation though. Yeah. Knowing you, it was probably like. An awesome set, like design and everything. So it's what a but like did, did they, so they, they pay you for this already, right?</p>
+<p>Basically, yeah. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. I, I don't know. I don't re I don't remember anything about like the, the payment. I, I think that they still paid me. For the job, but not like the whole like undoing of the job, if that makes sense. Yeah. Yeah. That may have been like what happened. Yeah. But </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> what a bummer, you know, just because how cool would it have been?</p>
+<p>Yes. I was like, pretty proud of it. Yeah. Yeah. Yeah. All right. Any, any other huge oh, nose that you've had? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Oh, yeah, so there's a different one. So I, I used to have this mentor who was awesome in Nashville, and he was trying to like, hook me up with a job through like some, some I guess friends of his, but they, they were more just what is it like professional acquaintances kind of stuff, like they knew of each other and they like respected each other and whatnot, anyway, they had this company that like.</p>
+<p>Made applications for other companies is sort of like a dev shop is, is if you ever hear somebody say Oh, we went with a dev shop, that's basically just a company that makes applications or websites or whatever for other companies. And so he, he was trying to hook me up with a a job with them and they had me do a, take home practice project.</p>
+<p>And it was like a, a week long thing, I think, and they paid me for the week, which has never happened before that or since it was, yeah, it was a kind of cool setup where there will be. Take home, like practice, like interview test things, but usually they're like one, one night they give you and nobody ever pays you for them.</p>
+<p>So anyway, it was kind of cool, but they had this whole like document of like requirements this is what it is. This is what it should do. This is like a it's sort of like. Some general guidelines of you know, not, not how it should look because they, they left that part up to me and I came up with like a, a pretty good design for it, I think.</p>
+<p>But I. I was talking to them and was talking to them about PHP and MySQL, which is the language and a database. And I was like, I, I had worked with my friend Kenny on this music publishing app and we were using PHP and MySQL. I think, you know, it would be cool to, to use that again. And they were like, Oh, okay.</p>
+<p>And we were just talking about that and then they gave me the, the requirements for the, the project and I, I was like, okay, cool. So, I read through the first couple of pages and I was like, okay, I think I got it. And so, I started making it and I had made the whole thing almost.</p>
+<p>I was, like, very close to finishing up and came in 1 day, you know, To the office and it was like, here's like my progress so far. I still have this, this and this to do, but I've done this, this and this and they're like, oh, great. So, and then they asked me something specific to like the language that it was written in and I answered it and I was like, Oh, yeah, I'm just using like PHP, MySQL and they're like, what?</p>
+<p>It's yeah, I'm just using PHP and MySQL and they're like, No, no, this is, this is like this client, like they need it in dot net, which is a completely different language and like framework and everything. I was like, what? I was like, we, like we, I was talking about PHP the other day and they're like, no, no, read the requirements.</p>
+<p>So like I flipped to like the third or fourth page. It was like, it was like very clear, like you need to use. Like c sharp.net for this project. Oh, no. It's oh no. So I had half the time to do the whole thing. The whole thing, yeah. . And also I needed to learn an entire language and framework within that time.</p>
+<p>It's I, I, I'll do my best and like I actually got something done. But it didn't do a lot of what it needed to do and I, I made like a lot of progress and killed myself for days, like just not sleeping, just coding, like just learning, just researching, just doing everything that I could to get this job.</p>
+<p>And I pretty much wasn't even close because. I just didn't know. I didn't know like basically like they were like, I think a. net like shop and I didn't know that. Yeah. And it became apparent. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. Right. I'm sure it did. I mean, so. I, I mean, I, I guess that's a question. Is it reasonable to think that someone can learn a language and framework No.</p>
+<p>That </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> quickly? I mean, definitely not. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Right? So like I'm surprised that didn't go over in like their vetting process on yeah. Oh, so what languages do you know? And you're like, well, PhD, PhD, H P, I know. Yeah. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Framework. Yeah. Yeah. It was, it was a little weird. It's kind weird in that regard. Weird.</p>
+<p>'cause like we were, we had talked about that a little bit and yeah. I guess they just assumed that I could pick it up or something. I'm not sure. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, it seems, seems really quick to pick up a whole new language. I don't know. I, I, I thought they like, you know, on the short end, it takes a month to learn a new yeah, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I think, oh man, I think I even had to buy a PC just for this.</p>
+<p>Because because you can't run. net on a Mac and I had a Mac all the way up until that point. I feel like I did. I don't know. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> That was crazy. I mean, at least you got paid for it. So maybe you ended up with a PC </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> for free. Not for free, no, I mean like, I haven't used some of the money, but Well, that's what I mean </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> it cancels out.</p>
+<p>Yeah, it cancels out. You got a PC out of the deal, buddy. Yeah, I mean, that's the way I look at </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> it. Yeah, and you know how much I love PCs. Yeah, I know </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> that. Yeah, I was The other day I was looking at, There was a a post online and it drove me up a wall because they were like, Talking about android versus iPhones.</p>
+<p>And like the comments were a a Gastophony of all these people saying I just oh yeah, androids and their overheating issues and like things like that don't happen oh yeah, with all of their viruses, I'm like, it doesn't happen. I've never I've only ever yeah, people are, people are funny, loyalists.</p>
+<p>I, I'm not, I mean, you know, you know, my, you know, my feeling about Mac. They're cool. They're fine. It's, it's a different thing. You </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> know what I mean? Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Anywho, well that, that sounds like, that was kind of awful. Was that like, what are your other experiences with interviewing? You said that there was like, I </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> don't know.</p>
+<p>Hold on one sec, sorry, I'll have to start that over. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So I guess that's another question then How are like,</p>
+<p>interviews, were there other times where you went into interviews and felt like completely just like dumb or what was it? Was it always pretty? Are they pretty gentle about it about them about you not knowing anything or something? You </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> know, no, there were definitely times when I felt dumb because I was dumb.</p>
+<p>And certain, certain take home. There was 1 where I was interviewing for. Have you ever heard of lonely planet? Yeah. It's like a travel guidebook thing company. They're based out of Nashville now and have been for like a while, but they, I was interviewing for them like a while ago and I was like, not really like ready for that.</p>
+<p>Like I wasn't really at that level yet. But I, you know, basically had to kind of like. Sell myself as though I was but anyway, they, they, they gave me like a take home test thing and I, I did it and I was like, yeah I, I, I know all of this stuff and I, I made like a working version of what they asked me to, to make, but my code was like, not good.</p>
+<p>It's sort of the thing where I was talking about junior developer versus senior developer. Like you can make a, you can make something work. But if if a senior developer looked at it, they'd be like, Oh, they don't know. They don't really know, you know, they're a baby. Yeah. It would be a parent that like, Oh, they're just kind of like starting out, you know, yeah, yes, this works.</p>
+<p>But there are so many like cases where this won't work, you know, it works this way, but like what about these five other ways that like somebody could come at it and yeah, you know, breaks and all of them. So yeah, that kind of thing. Yeah, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> so that was, I, sorry to interrupt, but was that like confusing to you at the time or were you like a little bit like it works?</p>
+<p>What are you talking about? Yeah, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> kind of. Yeah. Yeah. It was like, he, he, the like developer guy who was like reviewing it. It was like, he didn't handle. Any of the errors, like if anything went wrong, like the, the thing would just like crash, like you, you didn't have anything where it was like, you know, handling things like gracefully or whatever.</p>
+<p>That's just like one thing that he said that I remember. And I was like I don't really even know what that means. What do you mean by that? </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. Yeah. Cause I, cause I wouldn't, I'm like like that? Cause in my brain, I'm like, okay, that's like when you explained like the button and having its own file for the button that appears on every page.</p>
+<p>That way, if you run into the problem on this page, then you can always just go back to. This, and it's probably going to be the same problem on all the pages or whatever. Is that kind of that kind of thing? Or is it, or do you actually have to have like error handling capability within the application or within the code that fixes things or.</p>
+<p>Yeah. So </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I don't really remember, I don't really remember like the exact code that he was talking about or anything like I'm not even completely sure still like what, what he was like referring to, but like error handling basically is like in In your applications, like if you, if you reach out and try to grab some data and it like comes back and says like that, that data is not there, like you hit the wrong end point or something like that, then if you, if you don't handle it well, then your, your app could just show a blank screen or something.</p>
+<p>But what you want to do is pop up like a little window thing and say Hey, something went wrong, you know, try again later or something like that. Or you could just have a little thing in the bottom corner that says like something went wrong, you know, yeah, yeah, yeah, that's sort of like a form of error handling.</p>
+<p>I'm not completely sure what he was talking about in that specific instance, but that is a verse like that is an example of error </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> handling. So it's kind of like the so the end user doesn't just see a blank screen and be like, okay, the whole thing's broken. They just see yeah, oops, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> this page is unavailable right now or something.</p>
+<p>Or it could be like, something goes wrong and it looks like everything's fine, but something is actually wrong. And something didn't save, you know, like I, it </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> doesn't just crash the whole page </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> or something. It could be more like somebody filled out an entire form, hit save, and then just like nothing happened.</p>
+<p>So they're like, I guess it's saved. And then they go away and then come back and they're like, Oh, I thought that saved. You know? Yeah. Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, I've run into that before, and that's quite annoying. Interesting. And I, I guess we'll sandwich that or, or end it with like our, what were some like good experiences with with </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> interviews and stuff?</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Is it, is it always like pretty rigorous and are they always pretty like anal about the code being like really concise and, you know, short form with everything? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> No, no, no. Basically the, the formatting of the code is all personal preference. It's if you, if you're using like long form functions versus arrow functions or using if statements versus like ternary operators, or if you're using like for loops instead of for each or math or whatever, nobody's going to fought you on that, you know?</p>
+<p>that, they'll </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> know that you're more </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> junior versus. Well, no, not necessarily. I mean, like some senior devs, like who have been coding for a long time might still prefer to use that stuff because that's like how they've always done it. And it's always worked for them and they're still really good developers.</p>
+<p>They just, you know, are doing it. A way that, that like new developers don't typically do it, you know, so, so nobody, nobody's going to fault you for that, but some people might secretly judge you for that. But you wouldn't not get a job because of that. I would say. Yeah. Huh. Interesting. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So were there any like experiences that stand out of getting an interview?</p>
+<p>I, and I'm talking more about your younger years into it. Getting an interview and feeling like that went really well or anything, you know what I mean? Yeah. Like when did you start feeling comfortable in interviews and stuff </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> where I was like, Oh, this is fine. I've always been comfortable in like general interviews just because I, I'm, I am okay.</p>
+<p>Like just talking to people and I, even though I'm a super introvert and stuff, I'm, I'm just sort of like confident, like I've got like confidence in myself and whatever, even sometimes like I, like when I shouldn't, you know, like it, the technical parts of those parts of those interviews that I was talking about that went poorly, like the other there's never just a technical interview.</p>
+<p>There's always like a regular interview that has like a technical part later on kind of thing there. Yeah. There's there's never just technical. There's always something else. And sometimes there's not a technical interview. Sometimes it's just regular interviews, but but. The regular interview stuff, like I'm, you know, comfortable with.</p>
+<p>And I guess, ones that have gone well have just been, like, later on in my career where I do actually know what I'm doing. Yeah. Then I can come out of an interview and be like yeah I... I knew exactly what I was doing the whole time, you know, during that, that challenge, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> or whatever.</p>
+<p>Does it feel like, kind of like a a power shift where you're like, at that point you're like, Well, do I want this job? Knowing now what I know about it is this something I actually want? Or are you the type of person to vet the job quite a bit before you even go in for an interview? Because you don't want to waste the time of </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> it.</p>
+<p>No, I mean, so I've never, I've never really had and hopefully nobody that I've ever worked with is like listening to this, but basically I've never had a job that I was like. Fully invested in, because like the stuff that I'm interested in writing code for is like my own ideas, the, the only, and hopefully somebody from this company is listening, but the only job that I like would ever be more interested in working for like the only company that I would ever be more interested in working for than doing my own ideas.</p>
+<p>Is a company called Khan Academy and they, they make like free school curriculum software for, for everyone. And it's a, it's a nonprofit in in San Francisco. And, but they, they hire everywhere 'cause they're remote and modern and whatnot. But they're basically like transforming education completely.</p>
+<p>And that's, that's my number one passion in life is like making people like learn better through technology. That's what I want to do with my life. And I'm, I haven't had the opportunity to do that yet. And like any, any. Any job that like would get me in that direction would be like more, you know, I would be more passionate about than any other job.</p>
+<p>Yeah. But Khan Academy specifically is I would, I would stop trying to do stuff on the side or anything. I would, you know, I would like to be perfectly content with like my career completely. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> That's cool. That's cool. I never knew that about you. That that's like your, so like you really like teaching in general then, or like trying to educate the next Yeah, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> yeah, yeah.</p>
+<p>I, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> yeah, I, I, I never knew that that was a, a passion of yours, I guess. I mean, it makes sense because, you know, but you jumped pretty onto it when I was like, Hey, this , you know, . No, that's, that's really cool though, Seth, like truly. Yeah, I can't, I can't say I've had the same kind of I don't know.</p>
+<p>I love teaching people things if they're willing to learn. I've always told my friends and stuff if they want their car fixed or something, okay, yeah, I'll fix your car for you. But you have to sit there and listen and I'll teach you how to do it. That way. I don't always fix your car for you.</p>
+<p>You know what I mean? Right. But I mean, 99 percent of people don't do that. So they, so they don't get their car fixed. But anyways, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> where are you going to say something? Yeah. So as far as like vetting companies that I'm like interviewing for, like they're, as long as they're not doing like what I would consider.</p>
+<p>In my opinion, to be, like, doing active harm to the general, you know, public. Then they're all kind of on the same playing field, like the same level for me. It's you know, companies that are doing harm in my opinion are like, you know, on the bottom and I would never consider working, working for them.</p>
+<p>And then everybody else and then like education companies and specifically Khan Academy that it's like. Those are like my tiers of, of like companies. And if I'm interviewing for anyone on the middle tier, which is, has been the case for every interview that I've ever had, then I'm, you know, I'm going to be like, You know, interested in, in like getting the job because I need a job and I need to feed my family and stuff.</p>
+<p>And I, you know, some, some companies that I have worked for are doing good, you know, they're, they're doing good for the world. And that's, that's a good feeling. And I, I can fully get behind them and everything. It's just, I'm not going to be like. Completely passionate and have it be of course, like the, the end of my kind of ambitions and whatnot.</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, that makes sense. I mean, it's yeah. And, and the way you described it where it's no, there's the jobs that you like, kind of won't do. And then there's everyone else, which is you're still going to try your best at, because why try to affect anything, if not in a positive way, but then there's like the jobs where like the actual company is trying to affect things in a positive way.</p>
+<p>Yeah. And it's yeah, that's like </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> the goal. Well, specifically for education, because the company that I'm working for now is doing good for the world. And I'm, I'm, I'm good. I'm, I feel good about that. It's just I, I am not. Particularly. Passionate about like senior assisted living communities and stuff.</p>
+<p>I think that they're very important. And I think that the work that my, my, my current company is doing is, is important, you know, in that regard. But it's, that's not my I know what my number one passion is in life. Yeah. And yeah, it's, it's not that. Now, did you </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> find that out through coding? Were you like doing like research one day and you're like, yeah, that's it?</p>
+<p>Or something? Or what, has that always been a thing for you where you're like, I want to be a teacher? You know? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah, no, it was, it was, it was more like I kind of just had an epiphany Kind of like one day where I was like, how can I affect the greatest positive change in the world using what I know how to do?</p>
+<p>And I think the answer to that is education. Cause it kind of like strikes at the root of you know, everything else, you know, like politics and like the assisted living stuff. You know, if you're, if you've got smarter people working on, you know, the, on helping out, you know, with anything, it's going to, it's going to be a better result.</p>
+<p>Yeah. That, that </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> makes sense. I mean, I, I remember I was doing some soul searching for myself at one point and I was like, And this is on kind of a smaller scale to what you're explaining, but it was just kind of a, how you want to be remembered slash basically net positives and net negatives in the world, because there's a lot of there's a lot of neutrals where people will, you know, this group will argue with that group and stuff like that.</p>
+<p>And just kind of, my goal of trying not to be a negative to anyone in my life. Which is hard. It's a big ask, but, but, but that's, it's, it's kind of similar to what it, what you're talking about, except, like I said, it's on a, a more like a smaller scale in the sense that I'm only interacting with my bubble of people and stuff.</p>
+<p>What you're explaining is wow, like you could actually affect like. Everyone that that whole community outreaches to, like that whole like company outreaches to, and that would be pretty incredible. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah, I was thinking though, more recently like about what you were saying, where it's more of like a personal thing.</p>
+<p>And yeah. You can, you can do kind of like, like what I'm talking about is more like qualitative qualitative, and what you're talking about is more no, no, no. What I'm talking about is more quantitative and you're talking about more like qualitative. And that's that reminds me of a mother Teresa quote.</p>
+<p>It was like, how, how can I. Somebody asked Mother Theresa, like, how can I what was it like, how can I make the biggest positive change in the world basically? And I'm totally butchering this, but it is paraphrasing. It's okay. Yeah. Paraphrasing. But her answer was, and I'm pretty sure this is like verbatim, she was like, go home and love your family.</p>
+<p>And it's yeah. Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I mean, that's kind of what my point of view has been. It's yeah. Cause </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> any job that I've ever done, including the one now, and the one now is one that I can possibly positively affect people. I remember when I first started barbering, my goal was to be the happiest person that that person saw that </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> day.</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> That whoever I'm cutting, like that, that I'm kind of like. A little light in the darkness, if they're having some darkness, you know </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> what I mean? Yeah, that's a good goal. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I, it's, I mean, it's gotten me this far, you know, but yeah, and it's not always easier or anything like that. But I try to leave my, my garbage at the door when I come into the shop or whatever, just because I want to, like I said, I want to be like kind of a net positive in people's lives and it's, it's hard sometimes though, because if you're like me, you're, I mean, I'll just, I won't even say if you're like me.</p>
+<p>I'm neurotic. So, sometimes I'll have an interaction with someone, a great conversation it'll go places down a winding road of conversation, and then I'll get to the end of it, and later on that night, I'll be like, oh, I hope that didn't hurt their feelings. I hope that joke I said, or I hope that I didn't.</p>
+<p>You know, and I'll kind of obsess about it, which isn't great, but but that's also why we have counseling sessions, Seth, but, but yeah, no, so it's it's, I think that that's a really that's a, that's a good goal, man. Like really, like that's, that's pretty awesome. Yeah. Thanks. Yeah, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> no, for real.</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> But yeah, anyways, tell me some more embarrassing things. No but yeah, basically this whole, this whole the thought process behind me talking about the you know, actually trying to gain employment and stuff like that is. Basically because, you know, in let's say a year's time or something, I'll be hopefully searching for a job in this or maybe even less.</p>
+<p>I'll be searching for a job in this. And I was watching some YouTube videos on, you know, what interviewers look for and stuff like that. And then what recruiters look for kind of, but apparently the recruiter is on your side a lot of the time and trying to like, Yeah, you know, vouch for you in a way, which is kind of cool.</p>
+<p>I didn't realize that they had that. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I think there's probably some like monetary incentive to just yeah, anybody placed at a job. Yeah, yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So I thought that was kind of interesting. And then they were talking about because I'm kind of like you in the sense where I've never gone into, I won't say I've never gone into an interview, like not confident.</p>
+<p>In the sense of I know my personality and I can usually get along with most people. I think it's just because I'm not very, I don't butt heads with most people. I'm just, you know, I and and so every job I've ever had, I've. Been able to, you know, talk my way into getting there. Hi, but I'm wondering how much it because it definitely seems like that doesn't have the most Paul in this field.</p>
+<p>It has a bit, but not a ton. And also, I don't. I, I guess the question is, I, I don't want to end up getting a job that I'm not ready for. Is that a possibility of a thing that could happen where it like, I, I think I'd be too honest with them and tell them like, Hey, I still need to learn stuff. So there's going to be need to be some handholding, but, but is that like a thing that happens sometimes where people get a job and they just don't, they're lost in the sauce kind of a thing, you know, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I guess it could be.</p>
+<p>But I, I think that that is. I think you actually do want that. Yeah. I'm </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> genuinely curious if that's like a thing that you like try to strive for is getting a job that you're not ready for. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> No. Well, just when you're starting out, cause you're, you're not, you're not going to be ready, you know, you're, you're not going to be ready.</p>
+<p>Yeah. You're going to get like any job that you get is going to be like really hard at first, but you're going to learn a lot and you're going to learn it really quickly. And, you know, you, you will have people there that you can ask, which is great. But you,</p>
+<p>certain things in life, you know, you just have to kind of jump into. Yeah. And I feel like a lot of people would not ever get married you know, if they, if they just didn't say screw it, we're getting married, you know? Yeah, yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. There has to be a slight mentality of, Just jump off the ledge.</p>
+<p>Yeah. You just got to do it. Yeah. Yeah. Pardon the expression, but you get what I mean. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. Or, or, you know, like whatever else, like they, they might not like you know, go for they might not try to like, Start a business that they've been wanting to start or write. Yeah, write a book They've been wanting to write but because they're like waiting for the right time kind of </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> yeah That's that's kind of what I'm I'm worried about and also what like I'm I guess I'm questioning, like, whenever is kind of the right time I know I've seen like one YouTube video the person's if you're asking if you should start applying or when you should start applying, then you've waited too long and you should have started applying a lot.</p>
+<p>And it's like, it's I don't really feel like even close to ready to start applying to anything but it's also I just don't know will I know? You know what I mean? Or will you tell me? I bet you'd tell me. Yeah, I </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> think, I think the answer, the answer for you is and probably a lot of other people in your shoes, is make your first project, like finish, finish a project and like have, have something that you can talk about at interviews and have, have something that you can You know, draw, draw from, for like examples of Oh, I did this.</p>
+<p>I remember when I was working on my project, I had to do this. And that's, this is sort of similar to that. And it's you could even show people what you did and you could show them your code if you wanted to. Yeah. That's if you have, if you have several things, then that's better than one thing.</p>
+<p>But if you, if you have one. Full thing, that's, that's powerful, you know, like that's something, you know? Yeah. Yeah. So for you, you know, it would be the, the keeper app. And if you have a version of that, that like works and has I would say, you know, a good, five or six functions, you know, features built out okay.</p>
+<p>It's got a list of reptiles. It's got a the details page for all the reptiles and it's got like their schedules and like the coolest thing about it is that it like will send me a. It's like a text if I forget to, you know, do something or, you know, Yeah, yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So, so I guess with that, I mean, in my mind, I already made up a goal would be to have the Keeper app done and have it published to probably my phone.</p>
+<p>Or something like have it. So have it so I can use it on my phone as well. Whether that be just like</p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> a web app that is mobilized. Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah. Or whatever. But it would, I think that that would be like, where I'm like, okay I, I think I get most of this and this would be kind of a cool thing to show off if it. Yeah, and also I think that that would also hopefully at that point, I'd get to the point where I'd be like, okay, now I can like, really customize the looks of this thing, the feel of it to make it.</p>
+<p>So it actually feels kind of </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> intuitive. And it isn't just like 4 squares that say the names </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> of reptiles, you know what I mean? But yeah, yeah, I was curious about that just because, yeah, I don't know. It's, it's 1 of those things where when, yeah. You know, when I started this, I said that I felt like I was on...</p>
+<p>Bus on the way to the base camp that's a bit before you start climbing the mountain and I feel like now it's a bit more like I got to the base camp. I got partway up the mountain and realized that it's a whole mountain range. And you can kind of, and, and the mountain isn't as big as you thought it was, but there's a bunch of mountains and you can kind of climb on a bunch of them.</p>
+<p>You know what I mean? It's it's not just like you, you, you're climbing an Everest. And once you climb Everest, it's you know, the model there's there's no, there's K2, there's a bunch of other ones. And it's, you learn as you go and try to like </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> name one as you go, what of the Himalayas.</p>
+<p>Go ahead. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> is Pui. I don't know. I don't know any English. Okay. Come on, . I need to find out. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Oh, you're into the Himalayas. . You're all of them. . </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I know. Rights. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> This </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> is super important. I know. Here we are. The Te Pu'i is found in South America, which is, that's not where the Himalayas are, they're in, they're in Nepal.</p>
+<p>So that's not right. Okay. Well, you know, whatever. But yeah, on that note, no. K3? K3, I don't think K3's there. I think that there is one other mountain there that's supposed to be like super duper deadly though. I bet </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> most of them are. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, I wouldn't climb them. Not, not my value. I could, don't want to.</p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> But I, I choose not to. I choose not </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> to. I, but, but yeah, so I. I mean, in the grand scheme, Seth, you've been doing this for over 10 years now. And that's the, you know, you only have a couple of real embarrassing </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> things. Oh, I mean, I've got, I could go all day. Those are just like, I, I, I want to say those are the worst ones.</p>
+<p>They might not even be, I would need to like really search the depths of my hippocampus here. Was there </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> ever like an interview that like you found really embarrassing not that not that one There was a take home week long thing because that's like a whole thing and it I mean that should have been page number one Hey this you have to know these languages but I in my opinion, but I but was there ever an interview where like you got in and you're like Oh, they're looking for something entirely different and I can try to fudge it my way through it This isn't gonna work </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Well, I remember, I remember one where it was like at the, the interview question that got me was this guy, I was interviewing for.</p>
+<p>I think it was a PHP job, I think, I think they were using like WordPress and stuff. And he asked me what the, the most complicated code that I had written was. And I, I had an answer for that and it was like, I don't know, decent. It was like. A triple like nested loop that I had to write at one time and and then he was like okay, so what, what was like the most complicated class that you've ever written?</p>
+<p>And I hadn't written classes and it's and I didn't even really know, like the difference between there's like classical programming and then there's like functional programming and I. Writing PHP, I don't even really super remember much of what I was writing, but I, I may have been working within classes and just didn't know it, but I didn't know what a class was, like, straight up, I just didn't know what it was.</p>
+<p>And and I was like, I, I was like, you mean what do you mean by that? He's he like, basically gave me a definition of a class and I was like, okay. So then the most complicated class that I've ever written was probably that same one that I was just talking about with the triple nested And he's Okay.</p>
+<p>All right. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> That's not what we were looking for. Yeah. Yeah. I mean, now, I guess, is that explain the difference then, because you don't know now, right? I mean, I should. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> No. So there, there is a difference. You don't, you don't run into it a ton in JavaScript. You used to with React, because. Everything was class based in, in react until 2000, I think 17 ish when they came up with the hooks and all of that stuff, like they use state hook that we used in the live programming one.</p>
+<p>And before that everything was handled in classes and with classes, basically you, you have it works very similarly to how, like the, the functional classes, not classes, functional components work in React, where it's basically like components used to all be encapsulated in classes. And basically classes are just like kind of like containers of code that have to do with a specific thing.</p>
+<p>So it could be like a component. It could be like usually when you do like a tutorial, you'll have like glass dog and then the dog has like attributes associated with the class. Yeah. So it's yeah, I remember learning equals four or whatever. Yeah. Yeah. I remember. And then and then it would be like, There will be like a function within the class that you can call from like outside of the class and that function would be like bark or something like that.</p>
+<p>It would return like woof. And then that would be like your dog class and then you'd have a Fido class, which is like a specific dog and it's like per equals Brown or whatever, but it inherits everything from the dog class and yeah, yeah, it's on top of that. Yeah, yeah, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I remember learning these actually, I heard some of them in in my intro to JavaScript, I think.</p>
+<p>Yeah. So, yeah, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> so you, you don't, you don't really run into them much in JavaScript like you, you used to with React, because that's how they set up components originally. But now they've kind of done away with that. So like they're the, it's pretty rare that you will use classes in the wild, like in real life.</p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Interesting. So do you think at the time he was just giving you a question to ask a question or </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> was really well used? I think it's, it's more more frequently used in PHP probably, I haven't written p h p in a long time, so I, you know, it's, I, I don't super know, but the job that I was interviewing for was a, like a PhD, h p specific job, so it probably was a more relevant, you know, question to ask for Yeah.</p>
+<p>For that job. So, so </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> what happened exactly? You went from front end, which JavaScript basically and then you learned some backend stuff also. Mm-hmm. . You taught yourself PHP in that mix or was it in the future? So because PHP is backend, right? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yes, it is. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, it would have to be because JavaScript's the only thing that can be read in the front end.</p>
+<p>Yes. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Good job. I try. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> But yeah, so, so you, you, did you learn PHP? I, when you. Basically, was that your first delve into doing </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> backend stuff? So, yes, because the music publishing application, the very first job that I had was I was doing, I was doing mostly front end there, but Kenny kind of like introduced me to, to some more of the, the backend stuff, which is all written in PHP and.</p>
+<p>I, I got to know PHP you know, a decent amount and then switch to full stack JavaScript on the next job after that, where I was working basically that was like the one where I learned how to like connect the front end to the backend and all that stuff. If you remember from previous episodes and that one was, was node on the backend.</p>
+<p>But I still, I still remembered PHP and F to apply for PHP jobs after that one makes you a </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> bit more valuable anyways, knowing more than one thing that makes sense. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. And PHP is actually like very syntactically similar to JavaScript, which is pretty cool. So it's, it's not like a huge leap from one to the other.</p>
+<p>I would say it's more similar to PHP than most other languages. I think Swift is supposed to be pretty similar. But anyway, yeah, regardless. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, I, the other day I was talking to a guy </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> it was in my chair and I, he was a Java coder </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> and I was like. I, I thought that that was like not, not used anymore, but I knew it was used a lot less nowadays.</p>
+<p>Is that I guess I didn't realize that there were still, that was still like a really </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> big, I mean, it's, it's not super sought after or whatever, like as far as developers go, but there's so much code written in Java out there that needs to be maintained, like to work on it and stuff.</p>
+<p>Yeah. And I, I think like people who have. Done stuff in Java before like companies who have used Java for stuff in the past who need new stuff made would probably go back for Java, you know, just because that's like what they're it worked. Yeah. Yeah. Yeah. So there's definitely still projects like being started today that.</p>
+<p>Are, you know, requiring Java as, you know, a language, I would say that people are writing less Java now, although I just saw like the thumbnail for a video, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I was going to say, cause I did too, where it's like Java making a big comeback or something, I </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> think. Yeah, I </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> was like, what's this about? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah, I, I, I didn't watch it and they may have been being like facetious or whatever, they may have been like sarcastic because that's.</p>
+<p>Fireships like mo. Yeah. But I don't know. We'd have to watch it. Let's watch it live right now. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So I, I think I brought this up before, but I do have one more question and this has nothing to do with nothing other than </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> job security, I guess. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Do you think the AI is gonna just get rid of coding? I mean, because, first let me just say in my mind, I'm like, well, it will make it a lot easier.</p>
+<p>I don't know how you could get rid of The human, the human interaction with the computer to tell it like what exactly it needs to do and accomplish and what variables it needs to be working with and stuff. So that's my tidbit about it, but I don't know, maybe you have more insight on it just because it seems like kind of like a.</p>
+<p>You know, I </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> don't know. I don't know. No, I think the biggest hurdle still left for, for AI is like the context of the entire application. So like if you're, if you're, if you come to it with a specific problem Hey, I have these inputs that I need you to like. You know, manipulate and whatever, in order to get these outputs, basically, do that, then it will be like, sure, here you go.</p>
+<p>But if it's like, Hey, I need to add a new a new screen to my application that uses the same components as this other screen. But like in a different way and you know, we need like this variation over here and we need like this new thing that hasn't been built. But we need a lot of the old stuff that has been built, you know, it's basically it would need to have read your entire application and kind of know, like the, I guess, like all the different use cases for each like component, which, which might like that particular part of it might not be super challenging for it, but so, I mean, it's, I think it's going to make the job of the developer.</p>
+<p>More of a like once it gets over that hurdle where you can feed it like an entire application and say okay, now build out like this feature, this part, like it, which probably will come at some point. But you would still need at least a developer, you know, to check its work basically and correct anything that like it, it got wrong.</p>
+<p>And. There, there will probably be cases where it just completely misunderstood and, you know, wrote a bunch of code that's basically useless. Yeah, I've tried to </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> have it spit out code at me before that, and I've tried using it, and it's that doesn't work here. Yeah. And I'm like, okay.</p>
+<p>So, well, I mean, never mind. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> It's going to get better and better, you know, and I think we still got like a good, a good several years before it even gets to the point where I was talking about, I think, and we probably have a, at least two years, but but even then, like I said we're still going to need people to like view, pull requests basically from AI and check over the work and make sure that it's make sure that, and those people will need to know it.</p>
+<p>Everything that developers know </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> now, you know, they'll need to be a developer because they need to be able to look at it and be like, this will or won't work and right. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> They can't, they can't just look at it and be like, oh, it looks good to me, even though I don't really know how to code super well and whatever.</p>
+<p>Yeah. Yeah. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> So I guess, I guess scale from one to 10 in the next five years. Like, how nervous are you that it might take over a lot of the development jobs? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I'm not nervous because I, I'm at the point where I could view the PRs, you know? Yeah. Yeah. I'm not super nervous. But as far as like a beginning developer.</p>
+<p>Yeah, this guy. Yeah. I, I don't think that I would be super nervous because not. Like the adoption of any new, like technology is always slow, you know, it's, it's not, it's not immediate not everybody just jumps shit immediately and says Oh, this is going to solve all of our problems and, you know, fire their entire development teams and whatnot.</p>
+<p>Yeah, that makes sense. I mean, I guess it would be scarier because some people will do that and there will be fewer jobs at that point. But I think, I think it's, it's still like</p>
+<p>worth it to at least try to get to the point where you can view the PRs and stuff, you know, get to that point. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> What are the PRs? </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Pull requests. Oh, pull requests. Checking over the The code and </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> making sure that it's all good. Yeah, okay, cool. Thanks for asking. No, I just, yeah, I just. Yeah, I was just curious about that, if that was like a concern of yours, cause I was like, and </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> I could be way off, you know, it could be a lot, lot more better scenario than what I'm talking about, or it could be worse, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I don't know, but in your mind, you're like, this is a realistic.</p>
+<p>Maybe glass half empty kind of outlook on it that it might end up getting rid of some jobs, but you can't get rid of all </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> of them, right? Yeah. Yeah. As far as I know, I mean, I, I'm, I, I've been doing this for 10 years, but I am not on the level of. A lot of other developers who like know way more about this than I do and whatnot.</p>
+<p>So I'm not like an expert on this particular subject. I'm just like some, somebody in the industry. So </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> I don't know. He's, he's just that should be like our tagline. Don't be mad at him. He's just,</p>
+<p>Well, yeah, I mean, I, I think that that covered quite a bit about employment and </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> and, you know, huge </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> embarrassing failures. Yeah. Huge embarrassing failures, man. Yeah. But yeah as always, we appreciate anyone listening to us. I Give us a or a follow or whatever we're on, leave a comment. If you want to hear something about anything, anything else, I'll, I'm happy to ask Seth more questions about whatever.</p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah, and reach out on Twitter. Stuff. And I think we'll have a YouTube channel by, by now, but we're, we're already on Twitter. I know that for sure. Yeah, we are. And if you want us, if you want us to be anywhere else, you know, let us know on Twitter and then we'll just delete our Twitter account.</p>
+<p>Yeah. Yeah. Right. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Go wherever you are. All right. In it show. Right. </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> Yeah. Yeah. On Twitter. We're in it show. Yep. Oh, yeah, said Tuesday in it. Yeah, Tuesday, isn't it? Yeah. And we're releasing these on Tuesdays. Yeah. If you didn't catch on to that yet. Yeah. So, </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> that's going to be our, that's going to be another one of our taglines.</p>
+<p>Yeah. We're going to have multiple </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> taglines. And he's just Seth, and just keep swimming. </p>
+<p><strong style="color:#72B372">Jacob Pacheco:</strong> Yeah, it's going to be just keep swimming he's just and then we're going to switch going way east and saying Tuesday, isn't it? Yep. There you go. Yep. Cultural appropriation. Anyways, but yeah, thanks, thanks everyone for listening and hope you have a good rest of your week.</p>
+<p>Yep. Yeah. See you next time. As always. Thanks Seth. All right, </p>
+<p><strong style="color:#6600CC">Seth Whiting:</strong> thank you. See ya. All right, bye bye.</p>
+
+  </main>
+
+  <!-- Add your website's footer, including any copyright or legal information, here -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3KLVQ3NQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-W3KLVQ3NQF');
+  </script>
+  </body>
+</html>
