@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How 2 Get Ur Code Onto The Interwebs">
+  <title>How 2 Get Ur Code Onto The Interwebs | Init Podcast Episode 18</title>
+  <meta name="keywords" content="Vite,Project Management,Create React App,Web App Development,Publishing Web Sites,Publishing Web Apps,Deploying Web Sites,Deploying Web Apps,How To Publish A Web Site,How To Publish A Web App,Full-Stack Coding,Frontend Deployment,Backend Deployment">
+  <meta name="author" content="Jake Pacheco and Seth Whiting">
+  <link rel="canonical" href="https://www.init.show/episode/18" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/icon/site.webmanifest">
+    <!-- Add any other SEO-related meta tags here -->
+
+  <!-- Add any stylesheets, fonts, or other assets here -->
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <!-- Add your website's header, navigation, and any other global elements here -->
+
+  <main>
+    <a href="../../" style="color: white; text-decoration: none;"><h1>INIT</h1></a>
+    
+    <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
+    <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
+    <audio controls>
+      <source src="https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/Episode-18.mp3?dest-id=4009908" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h2>Episode 18: How 2 Get Ur Code Onto The Interwebs</h2>
+    <p>Published: <time datetime='2023-09-26'>Tue, Sep 26, 2023</time></p>
+    
+    <div class= "group w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-292"> <div class="p-4 justify-center text-base md:gap-6 md:py-6 m-auto"> <div class= "flex flex-1 gap-4 text-base mx-auto md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl }"> <div class= "relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]"> <div class="flex flex-grow flex-col gap-3 max-w-full"> <div class= "min-h-[20px] flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words"> <div class= "markdown prose w-full break-words dark:prose-invert light"> <p>Yo, folks, in this podcast, we got Seth Whiting, the seasoned full-stack coder from Portland, and Jake Pacheco, the six-month coding rookie from Augusta. They're vibing on how to turn nada into a fully-fledged app.</p> <p>First, they're all about setting up shop, like creating folders, using Create React App or Vite for your dev setup, and keeping node modules in check. Surf's up for CSS styling, and if you're feeling bold, they're talking Firebase for backend action. When it's showtime, they're shouting out GitHub Pages.</p> <p>But hold the phone, they're riding the build process wave. Code turns into JavaScript, HTML, CSS bundles, all sleek for production. And there's hosting 101, from the freebies like GitHub Pages to slick CI/CD for that Git-based magic.</p> <p>Now, they're into deployment territory. You need a chill spot like GitHub Pages or Netlify, and maybe even WordPress. They're all about best practices, QA testing, and hot fixes for those minor hiccups. And if things wipe out, no sweat, you can roll back. Lastly, they're diving into tech roles, mentioning their project's Azure-to-AWS move, the DevOps magic, and how Seth's into project management and team leadership. They're even teasing a quiz episode down the line. Backend? Yeah, they touch on hosting, with servers from AWS, Azure, or Google Cloud. Databases, like Postgres and MongoDB, get a nod, and they're feeling the backend vibe with Express for API routes. That's the scoop, amigos! Time to ride that coding wave and keep the stoke alive!</p> <p>Special thanks to <a href= "https://open.spotify.com/artist/7JxrbI1DZLSJUyzsrBQop2?si=Vt5jO60AR3C4O_wgt9yxkA" target="_blank" rel="noopener">Diarrhea Planet</a> for our intro and outro music and <a href= "https://www.instagram.com/skratchtopo" target="_blank" rel= "noopener">@SkratchTopo</a> for our artwork.</p> </div> </div> </div> </div> </div> </div> </div>
+
+    <h3 style="margin-top: 60px;">(Auto-Generated) Episode Transcript:</h3>
+
+    <p><strong style="color:#72B372">Seth Whiting:</strong> Hey everybody, I'm Seth Whiting, and I'm a Fallstack developer from Portland, Maine, and I've been coding for about 10 years now. And I'm Jake Pacheco, I'm </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> a barber from Augusta, Maine, and I've been coding for about, almost six months </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> now five </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> and three quarters months, five months, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> three weeks. Yeah. Nice.</p>
+<p>Yeah. Good stuff. Cool. China's hardest.</p>
+<p>Cool. Well, Jake what, what are we talking about this episode? This </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> episode. We are. I. I. I. I had asked Seth before this episode, I was like, so we've learned a lot of, you know, separate pieces to the puzzle, but we haven't really put the puzzle together to create the whole app when it comes to what you do step by step, what steps go where so we kind of wanted to build it.</p>
+<p>Bye. Bye. Go over that just basically from sitting down at your computer with nothing set up to having a published app or putting it into production like what, what are the exact steps? We're not going to dive too crazy deep into each step, but just to kind of have an idea of what that looks like from point A to point B.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Kind of yeah, yeah, I think so you you I think you can probably take us through the first A little bit of it. I can try. I yeah. So what do you do? Like, what do you do? I get </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> create react app or do create react app and and create a react app. I start that setup, like, make your actual file for that, which I don't know if that would be included in the same as the first step, but, but yeah.</p>
+<p>It would, right? Like the </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> folder? Yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah, yeah, the folder and everything. Yeah, because you'd have to create the folder and then put create React app inside </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> of that folder, right? Well, actually create React app and you, you actually used Vite. Yeah, there are other ones out there, like, like Next does this too, where when you, like, initialize, when you, when you init, Yeah, he had a, he said it, he said it, it's the name of the show, he said my word when you initialize the project, it will take whatever, wherever you are in your, in your, on your computer.</p>
+<p>So like the directory that you're in and create a folder within that directory that you then need to go into to access your project. Yeah, yeah. If you're on your terminal, you would do that by doing cd and then like the name of the folder, which cd means change directory. That's, that's not important at all.</p>
+<p>Like you can, you can just go into your like file explorer and open the new folder, you know, if you want, like you could probably do like right click open with VS code or. Or just open VS code and open, you know, do the open command and find it. But yeah. And yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> so, I suppose you'd do that first. And then I would probably create my different files, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> As far </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> as like, it's going to create my app file for me, but then.</p>
+<p>And then I'll have my file with all of my modules or what's the what's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> the, the node modules. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Yeah. Yeah. So I'll have that, but that's just going to be kind of in the background. I'm not going to think about that one, but I'm going to have my actual app and then I'm going to have probably at least one CSS file to </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> do my styling for, or my like main </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> page dialing.</p>
+<p>And maybe a few, maybe a few more, if I if I feel like doing some other styling stuff for other pages that I want to be able to import into those other pages. And then I, this is where it gets sketchy. So I'm going to say I set up a Firebase if it has a backend, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> which it probably would. So if I have a backend, I'd set up </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Firebase and there's another thing that I would have to set up.</p>
+<p>I've been getting emails about it that mine's gonna get, it might have been firebase. I don't know. I don't know what I've been getting emails from. It's probably Firebase. Yeah, it's gonna expire. And I'm like, I don't, I , yeah. I went into that and like I, and it, it has like a bit of code on Firebase and if that's what it is, then I, it has a bit of code and it's like, expires on this date and I changed the date to the future.</p>
+<p>And I was like, ha ha, . It's not gonna expire on me yet. Anyways. I was proud of myself. Low key proud of myself. Anyways, so I'd create my back end that way. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> And as </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> far as Publishing and stuff. I am completely blanking. So I'm going to pass it on to you and see if I did okay up until then. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> No, that was awful.</p>
+<p>No, it was bad. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Okay, great. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> I'm not a developer. So, you know, no, I'm just kidding. That was, that was good. That was good. One thing that I'll say about it is you, you don't need Firebase in order to, to do this stuff. You don't even need Firebase in order to do, to have a backend. Like that's, that's one of many options.</p>
+<p>That was the one that we were doing on your application because it's, it was like the simplest route, like the quickest and simplest route to getting a backend. Otherwise you could set up your own backend with like your own, like you create your own database and your own like backend logic and everything.</p>
+<p>But Firebase kind of does that stuff for you. So just, just throwing that out there. Yeah. Just throwing that out there. Like that's not necessary. That's not a necessary part of like the application process that that's optional. Okay. But yeah, you totally can. Cool. So if you wanted to put your front end code up into production, basically, Yeah.</p>
+<p>Then. Once you have written your code on the front end and mm-hmm. , when you, when you write your code, you'll run like the, the N P M run dev command. Mm-hmm. and, and that will like check for changes in the files and automatically update, you know, do like the hot reloading of your Yeah. Of your browser window and everything.</p>
+<p>Yeah. All of your files. When you do that, go into. The dist folder I think, I think I'm getting that right, but basically the, the files that you're writing are in your app folder. Usually, I think that's the case for create react app. And VEET but it could also be like the source folder, SRC. Okay.</p>
+<p>Is that what that is in VEET? I don't know. It doesn't matter. Yeah. Yeah. There's a, yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> everything's in my </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> SRC folder. Okay. Yeah. So I think in React Native, you usually put things inside of like the app folder, but with a lot of like React frameworks. Or like, boilerplate stuff. You put it inside the source folder.</p>
+<p>Oh, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I, I need to interrupt. I, I forgot about GitHub. So you have to push things up to Git </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> also. Yeah, again, like that's optional, but it is definitely very, like, I wouldn't ever do, I would never do a project without it. Yeah. Alrighty. Yeah. So when you're, when you're writing your code, you're either doing it in like the app folder or the source folder.</p>
+<p>Basically you usually have like a folder where all of your files that you're actually like manipulating are. And then those once you've written the app and you have it in a place where you feel good about it. Then you can run NPM, run build, usually like that's usually what it's called. In, in, I think it's probably the case in Vite.</p>
+<p>I think it's probably the case in Next. I think it's probably the case in create React app where it takes all of your JavaScript, CSS, HTML, like markup and bundles it up into just. JavaScript, HTML, and CSS without any kind of like reactiness to it. It's just like the, the end product where everything is like compiled down into just the, the, the base languages, if that makes sense.</p>
+<p>Yeah. I didn't know it did that. I didn't know that it like, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> on. Like kind of unknotted everything </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> and separated it. Yeah. Huh. Interesting. So it basically, and it like minifies all the files, which means that everything is on like, everything's kind of just like squished together and it's not like human readable at that point.</p>
+<p>It's just like. It's like compressed. Yeah. But, but not, not in, it's not like zipped or anything. It's not that kind of compressed. Yep. Yeah. Just like. They get rid of all of like the spaces and the the new lines and all of that and it's just like Everything is all, and, and also it renames the variables to just be like A, B, C, you know, we don't need to worry about all of that.</p>
+<p>I'm a computer. I know what I'm like here. So </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> at that point, I'm curious, is that, and this is totally off the side but is that its own language as well? Like, did people ever write things in that </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> language? That's JavaScript. It's just, I'm talking about just JavaScript. Oh, okay. I thought, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I thought you were saying like, it, it brings it down another level to where just a computer reads it as in like, you know, what is, what is it that computers, like most things are like compiled down to being </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> readable.</p>
+<p>Assembly code is probably, I think what you're talking about. Yeah. So I just wasn't sure if that's what you were talking down to binary. Yeah. Yeah. But this is actually just. What I'm talking about is like all of the React part of your application just becomes JavaScript and HTML basically and, and CSS, if you've written your CSS in JS, like, like you do sometimes in, in in React.</p>
+<p>And That, so that all gets compiled into just the HTML, which looks like HTML, the, just the CSS, which looks like CSS. And then the JavaScript is the part that kind of gets like squished and like the kind of like parsed out into like the smallest form of it possible, if that makes sense, while still being able to be like read by the browser, like the browser is the thing reading the JavaScript.</p>
+<p>And, and basically it's, it's, it's all just packaged up and put into the build folder when you, when you run NPM run build or yarn build, if you're using yarn instead of NPM, then.</p>
+<p>It's, it's the, the build command puts everything into the build folder, basically, and that build folder is what you can then put up into the cloud basically. And that's like what the people actually see and interact with on the, on the browser. Yeah. If </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> you, if you look into the, the console or terminal or whatever on the browser, yeah, that's where you're </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> seeing.</p>
+<p>Yeah, and there's also if you're, if you're looking at it in, in production, basically, if you like inspect the script. You may not see like the minified version of it. Like I'm talking about with like the, the, the really short variable names and everything, because, and that's because within the build folder, there will usually be something called the JavaScript map file, which kind of maps the variables back to what they originally were and stuff.</p>
+<p>So humans </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> can look at it and understand what's going on. Huh? Yeah. Interesting. Yeah, that's weird. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Yeah. But anyway so, but in order to like, put it up on the cloud, like basically you just need like a host. And there are a bunch of good hosts out there and there are a bunch of free hosts out there.</p>
+<p>If you're just doing front end code, then you can totally just do it on one of the, one of like the free hosts and GitHub itself. Actually hosts like websites, if, if you, if you want to, you can host it there. And that's via something called GitHub pages. And that starts you out with your, with your websites, like URL being, what is it?</p>
+<p>I think it's like github. io slash like Jake Pacheco slash keeper. I think it's like what it would be. Or maybe it's like jakepacheco. github. io slash keeper, maybe something like that. Then if you want to, you can configure it to use like your own custom domain. Like if you've bought Sweet on like GoDaddy or Yeah.</p>
+<p>Or one of those. Yeah. There's like GoDaddy and then name cheap, and then one in one, which is iOS, I think is who like owns it. Mm-hmm. , that one. You can usually get a domain for $1. Mm-hmm. . For a year and then it goes up to like the regular price, which is like 12 usually usually domain names are around like 12 or 13 per year on average.</p>
+<p>Yes. Yeah. Interesting. But then on like Namecheap, sometimes you can get them for like eight bucks. It, it just depends. I, I would just like recommend if you have a domain in mind and you know it's available, then it's going to be available on all the other ones. And I would just recommend looking at all of the other ones and seeing where it's cheapest, basically.</p>
+<p>Yeah. Interesting. Because it, it doesn't matter where you get it. It's, it's not like the quality of one is going to be better than another. Well, I remember </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> GoDaddy used to have like really, really vulgar commercials. So I'd really, I'd probably go with </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> them. Totally based on their commercials. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Yeah. Yep.</p>
+<p>Aging myself a little bit saying that, but not </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> that much. I mean, it was only like, I don't know, it was like, what, 15 years ago. Maybe, I don't know. Was it that long? I it was about like 10. Yeah, maybe. I don't know. That was super dumb. I always hated their commercials. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Right. It annoyed the heck outta me.</p>
+<p>Necessary. I was like, what you doing? Like this is Yeah, yeah. Yeah. It's, it's if, if you p, if everyone does know what I'm talking about, you'll know like they're wild commercials that you're like, why is this? Right. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Like, was this on YouTube? Like, like Yeah. A GoDaddy commercial. , </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> like a, yeah, it's like a late night TV kind of commercial.</p>
+<p>Like it's, yeah. Yeah. It's wild. They, they went hard for no reason. No reason. It's, it's, you're buying URLs like . Yeah. It's kind of a hilarious thing. Yeah. Okay, so, so basically step by step then we are. On step like five. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, there's like, there's not too many, too many steps basically. Once you've like built the, the application, then you can just take that build folder and put it.</p>
+<p>On a host. Yep. Yeah. And so, yeah, that's basically it, but there's, you know, a lot more that I can talk about, so I will, but there's the</p>
+<p>GitHub pages one, which like, if you're, if you're hosting your code on GitHub. To begin with, it's like super easy to just, you basically like click a button and say like, okay, so like host, host, like the actual site now, like you have the code already, just make it available, you know, as a, as a site. Yeah, but all of the other ones.</p>
+<p>If you if you configure like all of the other ones allow you to configure it so that they just kind of like point to your GitHub repository, they pretty much do the same thing. It's just like, they, they, they aren't hosting the code as well as your site. They're just hosting the site and GitHub is hosting your code, if that makes sense.</p>
+<p>Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah, that makes sense. I, can you. Yeah, I mean, so does every website pretty much go through like a GitHub or GitHub type thing, or can you just like write all your code, never use GitHub, and then just post it onto a site and that's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it? Yeah, you can certainly do that. Yeah, you can just put like your build folder someplace.</p>
+<p>And it will still work, you know, like that's how they used to do it. Like, that's how it always kind of used to be done. Okay. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I was just curious if </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> that's like a thing. Yeah. And usually, usually when you did that, you would like update your files. Like this, this is like back in the day, you would basically put your site up and then every time you have like a file to update, you would do something called.</p>
+<p>Shoot, I can't even remember what it's called. I know that you could do SSH into a server. And that's like through your terminal and that's called secure shell, which is basically like you're, you're hacking into your own like server that you have set up someplace and like uploading files from your computer that way.</p>
+<p>But there's another one, which is like, I think it's SMTP. Am I totally off base here, man? I'm giving it a Google SMTP. Yeah. Or FTP. FTP is what I'm talking about. Yeah. Yeah. FTP. All right. The other </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> one was simple mail transfer protocol. So, Hey, you did. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Okay. Yeah. So that's, that's more for like email. So FTP is for file transfer protocol is what that stands for.</p>
+<p>And that's basically just like you, you would usually do it through like a, a GUI interface, you know, like, like where it's just like, yeah. Yeah. So you can basically, you kind of like log into your server up, up in the cloud and. See all of your folders that are there and you can just like, use it as like your, your file Explorer or whatever.</p>
+<p>We're like, okay, I'm selecting this file and I want to like delete the old version and upload a new version kind of thing. Yeah. Okay. That's kind of how you used to do it. And that's, that's how I started out doing things. But now there's something, there's sort of like a new standard. Where it's called it's called CICD, which stands for Continuous Integration and Continuous Deployment, which basically just means things are kind of like smart enough in the cloud now, like with like hosts where you can set it up to every time you make a Git.</p>
+<p>Push to like you commit your code and then push it up to get your like web host can look at your your like post repository, like your, your GitHub, basically. Or if you're hosting on Bitbucket or if you're hosting on, you know, GitLab or any of the other ones that aren't GitHub, but for the, for the sake of this like example, we're just going to say GitHub, but wherever your, your files are hosted for like saving.</p>
+<p>So it will, it will look at your GitHub and once you push it to a certain branch, so like your master branch or your actually they changed master to main recently and so like your main branch, or you could have a branch called like deploy or a branch called like, production, you know? And it'll like, once you push it to that branch.</p>
+<p>It will then trigger something that makes your like file host automatically grab the files and then like build it'll run like a build process and then make the file the new files available. So that's. That's what all of that is. Yeah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So it kind of like, it's almost like a, instead of an auto save feature, it's like an auto pull feature or auto build feature.</p>
+<p>Like it grabs, rebuilds it, and then push that up. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Once you push it, like technically it's more of like an auto deploy feature. Yeah. Yeah. Whenever you, like you make the new code available, that's called deploying. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Then it's, then it's like. Oh, look, new stuff. And it takes it and applies it. Yeah. That's cool.</p>
+<p>Okay. I didn't, I didn't know that. That's that's that makes sense why everyone would do it that way </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> though. Like it's right. It's it's like, if you're using it already, which you should be using Git already, then you don't really need to do anything else. You just need to set it up the first time and then just like works from then on, which is cool.</p>
+<p>Way better than how we used to do it. So that's the, the like hosts that you could use for this are GitHub pages. It is one of them. And then there's one called Netlify. Which is a great one, and then that one's also free, or at least they have a free tier. That's like huge, like you, you shouldn't really need to be paying for stuff.</p>
+<p>And then, what are some of the other ones? </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I, I have a question, and this is not, this is not an assumption that it is one, but It's a question as far as like, would you, would you call WordPress in a sense a host because they're hosting your website, but it's not </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> really an app, but it kind of </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> is, you know what I mean?</p>
+<p>Yeah, do you know what I mean? Like it's, it's kind of a host for something, but it's not really the same thing. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So the answer is, is. Kind of basically no but if you're talking about wordpress. com, the like no code version of it, where like you're, you have like templates and like you can customize stuff and you're just kind of like using it as like a blogging platform.</p>
+<p>That is like your host and everything else. Yeah, that's what I mean. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. So, so it's, it's kind of like, it's, it's its own separate thing entirely where it's like, it's, it's it. Cause like, even like whoever at wordpress. com like that whole, like. You know, I've seen so many URLs </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> like that. I like </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> they're kind of hosting, but kind of doing everything else for you.</p>
+<p>So it's not really the same. It's not anything close to the </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> same thing, really. Right. They it's yeah, because they do so much other stuff. It's not really in the same like category as what we're talking about. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> You've, you've stepped into a whole different way of applying yourself onto the internet </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> when you, and what we're talking about, like.</p>
+<p>So far, at least in this episode, like we're talking about specifically like React apps. Yeah. And like how you go about like deploying them and, and whatnot. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> And creating things from scratch </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> really. Like actual, like just code. But you know, there, there's plenty of other ways to write like front end code.</p>
+<p>That has nothing to do with react you know, and like WordPress would be one of them. Like, technically it's like sort of backend code because you're writing it in PHP and that gets like run on the server. But for all intents and purposes, it's, it's front end code. Like it's, you're writing markup and you're writing like CSS.</p>
+<p>That goes with the markup, but WordPress WordPress sites are hosted on other places. No, not, not on WordPress. So the WordPress sites that you build from scratch, you need to get your own host and, and then you, you push all of your like WordPress files up to that host. And there's like one called Bluehost, which I know is like on the cheaper end, but they do not quite as much for you.</p>
+<p>And then there's one that we used a lot called Pantheon, which is like a full service, like they did a bunch of stuff and it was like awesome. And you can run like a bunch of different WordPress sites on like one server or just on like one like admin, like. Portal or whatever and it was like parse out the servers for you probably I think is what they did Anyway, that's, that's all.</p>
+<p>That's cool. Yeah. Yeah. Yeah. I didn't, and there's like, yeah. Hosts that are specifically for like WordPress sites because they're so, yeah. So common and whatnot, huh? Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I I, I never knew that. I, I didn't know that it was, I figured WordPress just did everything for you. Kinda like how I don't have to create a host for my Facebook profile, you know what I mean?</p>
+<p>I, I, mm-hmm. figure. There's just like, All under one umbrella of WordPress and they're just posting these things. Well, it's for </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> wordpress.com. Yeah. Yeah. But what we're talking, like, what I'm talking about is . Now what we're talking about is the're building actual hardcoded. Yeah. When you're building the WordPress stuff from scratch.</p>
+<p>Okay. Basically like WordPress at that point, what you're talking about is like a, like a big package of P H P code that you download. Yeah. And, and you like write your code on top of. What you have downloaded, basically, and then you can take that whole chunk and put it somewhere to be, you know, hosted.</p>
+<p>It's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> funny because it almost, it almost sounds slightly similar to writing React code. . Whereas it doesn't, it, it doesn't use it as Yeah. React code. It doesn't use it as it compiles </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it down. Yeah, for sure. It, it is, you know what I mean? Pretty similar. What, yeah. In a way. I know. Yeah. No, I mean, in, in a lot of ways it, it, it is, it's, it's sort of like a, it's, it's like a P H P framework.</p>
+<p>I mean, yeah. Essentially. You could call it that. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Huh? Yeah, I thought, hey, there, there you go, people. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> I think, I mean, like, I don't know if I'm like way off base here, but yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I mean. If anyone knows any better than let us know why it can't be looked </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> at that way. Yeah, sure. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Cause I'm curious. Cool. Okay. So we have it all set up through our hosts now and that's, that's pretty much it.</p>
+<p>Once it's hosted and it's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> posted, it's there, right? Like posted and posted. You like that? I rhymed, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> but once that's done, that's, that's, that's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> pretty much it. Right. Yeah. I mean, like the, for all intents and purposes, like you, you now have a site that is live and, and, you know, available for people to, to see and interact with, but there are other things like good practices to put into place that I can, I can go into that, like, would be good to know.</p>
+<p>Yeah, yeah. So one of the things that you, one of, one of like the main, like, best practices that I'm talking about there is the concept of Having like kind of like staged releases so like you, you wouldn't normally, if you're at, especially if you're working like for a company or working on like a big project with, with a bunch of other people that, you know, you want to be seen by like a lot of people, or like the, at least that's the like intention is getting it out to like a big audience.</p>
+<p>And you want to make sure that you're. Pushing code that works and like, isn't going to be like embarrassing, you know, for, for people to see . And of course, course in order to do that safely you'll normally have a, it basically, it's different environments is what they're called. So you'll usually have something called a QA environment.</p>
+<p>Mm-hmm. . And then a lot of times you'll have another intermediate. Between QA and production, which is called like test or staging. And so basically QA is where you push it up and it's going to be tested by. Basically there is a whole there's a whole like profession out there called the QA engineer and you, you could totally take that route if you wanted to.</p>
+<p>I don't, I don't think you, I don't think you do want to. But you know, if you hear about it and it like, it sounds good to you, then you do that good, but QA stands for quality assurance. Yeah, and basically you're trying to like poke holes in what the developer, like the, the main, like the regular day to day developers have, have been writing.</p>
+<p>So you're, they push up their code and then the QA guys come in and test it all. And. What that means is they open it up on their browser and they go through it as though they were like a user of the thing and just like, press all the buttons and you know, view all the pages and enter all of the data that they can and see if the number fields, like the phone number field accepts letters or not.</p>
+<p>And if it does, they need to like flag it and point it out to them. So it's, it's, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it's like, it's a QC or, you know, in other fields of work, like in in machining, we had, you know, quality control to make sure that everything was done properly and everything was exactly what we said it was going to be. Right.</p>
+<p>So, but this, they're literally looking for any bugs whatsoever in the code or anything that would mess anyone up. Any, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> any normie. Yeah. Yeah. Yeah. Right. So not, and not only that, but the QA engineers, like at least the like better ones will be able to write test code. And it's sort of like a gray area, whether like the developer should be writing test code, or the QA engineer should be writing the test code, or if anybody writes test code, like a lot of the times it's just like, we don't have time, like, you know, we need to get this out and like, let's just test it manually, quote unquote, where like, We have the QA guy go and just like mess with everything and try to break things.</p>
+<p>But it's a lot, like, smarter and a lot faster to write automated tests that will do that kind of stuff for you, basically. So. That's a whole, that's a whole different like can of worms. But anyway, so there's the QA environment, which is like, that's the purpose of it is like, just test everything, you know, catch anything before it even goes into the next environment, which is staging, which is, it's supposed to be like an exact mirror image of the production environment.</p>
+<p>So like, These are the same exact servers that we're going to be using, or like types of servers and whatever, like with the same specifications and all of that kind of thing, usually on the QA environment, you'll, you won't pay as much for it. So you'll be using kind of like the lower tier servers and whatever, but like, the code will all be the same.</p>
+<p>So with staging and production, you want them to be like as exactly identical as possible, just so that you know, like. Okay. With these like upgraded servers, we're getting these weird things that we weren't getting with our like QA. That makes sense. Yeah. Yeah. Yeah. You're, you're </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> testing it on the actual machine that it's going to be running on.</p>
+<p>Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> When it's out in the, in the wild. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. That makes sense. Yeah. And then after that, then it goes into production. Like once everything has been like. Looked over and approved and finalized and whatnot then it goes into production because like you really want to be like sure That you're not just like pushing something crappy out and like yeah Embarrassing your whole company or </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> whatever.</p>
+<p>Well, yeah, cuz like if someone hears about something And they want to try it out and they go to try it out and it's, doesn't work well, then odds are, they're not going to come back to the something right. I was like, no, I tried that and it was awful. And it's like, like you're never going to fix it.</p>
+<p>Yeah. Yeah. They're never going to fix it. They just gave up. Yeah. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Interesting. Yeah, it's, it's, I mean, I guess it makes sense that there's like, like kind of a QA Like personnel for all this stuff, I guess, I guess you just don't think about those jobs as much, you know what I mean? Like, and, and yeah that's, it probably, like you said, like, it's not really something that I'd be interested in.</p>
+<p>I, I, I </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> want to create the thing, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> you know, but, but that is, that's a good option for someone who wants to, you know. I mean, if anybody is </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> like listening to this and think like, I mean, honestly, if you want to get into development and, but don't want to like put in all of the work to get into development, you know, like the, like kind of, like just a front end or backend developer position, like you can totally get your foot in the door with QA.</p>
+<p>And yeah, you would be learning a lot about front end or back end, whatever you're testing or both. But you, you wouldn't be like writing the code. But you can. Like I said, have your foot in the door and then like, start like learning outside of like your work hours or whatever, like learning the front end or backend code.</p>
+<p>And you know, then like you could just talk to somebody at your company at that point and be like, Hey, I'm already on the project. I would like to start, you know, taking on like tasks. Are you cool with that? You know, it's like an easier sell than. Saying like hey company. I've I've never I'm </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Jake. I've never done </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> anything.</p>
+<p>Yeah I don't have any experience yet, but I want to you know, yeah. Yeah, and some some Like I know that some of my friends started out as QA guys and at least one of them But maybe more than that. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> That's cool though. Yeah. And also, I mean, it's a way to get, it's another, you know, of many options to get into tech without having to necessarily be a coder.</p>
+<p>You can just get into tech, but there's other options of that. Yeah. Okay. So it would go to QA after you've written all the code, all the base, your first, you know, Your first run, let's say, of code it would go in, go and get like kind of reviewed over before actually getting published. So after it goes through them, everyone says it's okay, then it just gets published on to like the, well, it's already on the actual servers because you tried it out on that, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> so </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> then it's just published for the public to see. Now what happens if there's like something, something happens and you're like, ah, we missed something. Like, is it just fix it as quickly as possible? Is it shut it all down or is it like, how's that? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. So there's, there's sort of two options there, I guess.</p>
+<p>Or, or you could use both options. So one would be to. To do what's called a hot fix, which is like basically just fix it as quickly as possible, get it through QA as quickly as possible, get it through staging as quickly as possible, and then get it onto production. Yeah. Another option. And this is more, this is so with that one, like you could, you could get away with that if it's like, what's called like an edge case where it's like.</p>
+<p>This is not how people would normally use the app, but if somebody were to like, like use it in a specific way where like, we don't, we don't think that many people would stumble upon this, but it's possible that somebody will. So we, we want to fix it, you know? Yeah. But if it's something where it's like, Oh, this is like a very obvious thing that we missed and like, people are going to come in to.</p>
+<p>Contact with this like pretty quickly. Yeah. Yeah, then you can roll back to like a previous version and then fix stuff up and then be like, okay, then bring it to the future. Yeah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Okay. Huh? Interesting. So is this pretty much how most apps that you've done or worked on have been published? Like, pretty much those are the steps that you've taken </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> close to everything.</p>
+<p>Yeah, the, the, the, like, professional ones. But like, if I'm working on, like, a personal project or whatever, I... I'm not gonna go through like QA or anything. I don't have a QA person. Yeah. So, yeah. Yeah. I </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it do, do you like ? Like you like finish writing it and then you're like, okay, time to make sure it's right.</p>
+<p>like, like , like send it to email it to yourself. Like, oh, right. Yeah. Ah, Seth is writing. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Typical. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Typical stuff. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. And, the judgmental one </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> wears glasses. It's just you and glasses. Judging yourself. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> It's like, have you seen I think it was on like Toy Story, the original, like, three.</p>
+<p>Pre show to Toy Story was this old guy who is playing chess against himself. Yeah, like you didn't know that it was him. You thought it was like his twin or something, but he was like put on glasses and take off the glasses. This </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> goes to the other side of the chair. That's Seth. Yeah, working on his own app.</p>
+<p>Yeah, judging the heck out of himself. That's me. Yeah. Anyways, anyway, sorry, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> everybody. So, yeah, we're really into like Pixar, like the just keep swimming and then like the, yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah. I mean, I love those movies. Yeah, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it's good stuff. So if you're working on a project that has like QA and Staging and production environments.</p>
+<p>Or even just QA and production. I mean, maybe, but what I'm trying to say is if you're working on something, that's like that kind of like intense. And if it's like a professional project, you are usually not going to be using like GitHub pages or. Netlify, like, usually you're going to be using something like AWS.</p>
+<p>Do you know of AWS? I </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> think I've heard of it. What's it stand for and what's it do, Seth? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> It's Amazon Web Services. Yep, I have heard of it. Yep. So... They're basically like the kings of the internet, where like everything goes through them. And even if you're working on some of the other, like services, a lot of them just use AWS under the hood.</p>
+<p>They just kind of like make it easier to work with because AWS is kind of has a reputation of like, yes, they're awesome and they do everything. But... They're not easy to work with it's there's like, because they do so much, you need to like, really know what you're doing and they have like whole like certification courses out there that people take.</p>
+<p>And and, and whatever, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> but is this, is this just if I can interject is, is this Amazon? Like I'm thinking, yeah, because I know that I know that like Walmart has a massive servers, like set up like that, it's like. It's like the backup to the military's internet or something like that. Like, cause they have such a massive, like setup that like the U S can go onto their servers if they need to for their military or whatever.</p>
+<p>So I wasn't sure if like, yeah, I wasn't sure if we were talking about the same Amazon. I know they used to anyways, probably now it's AWS probably. Just because if Amazon's massive </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> like that, then yeah, yeah, so yeah, it is like amazon. com. Basically, they, they have a whole sort of like other company under, under them that is just like servers.</p>
+<p>Yeah, basically, and like a million different ways to use servers. And like, they have like Uh, services for like email and services for like front end code services for backend code services for like what's called serverless functions. And yeah, just like anything, anything you could think of, they've got it covered basically, but then there are other people like Microsoft Azure is another like alternative to AWS.</p>
+<p>Which is they do the same thing, but they're a bit clearer and like more straightforward to work with which is great. And they do, you know, they do. I, they don't do everything that Amazon does. I don't think, I mean, I don't know, but basically they, they're just a bit easier to work with. And then there's Google cloud does the same thing.</p>
+<p>And I, I. I don't know which of them, I think Google has like their actual legit own servers and stuff. I'm not sure about like Microsoft Azure, I, and I'm not even sure about Google, but like, I know that some of these, like, like I said, use Amazon under the hood, but, and then there's like, there's a bunch of other ones, but those are kind of like three big ones, I would say.</p>
+<p>So the project that I'm working on now, we were on Azure, but we migrated to AWS recently. The project that I was, the two projects I was working on prior to that, I was just on Azure, Microsoft Azure and had like, you know, a whole team and I, I was never the guy to set up that stuff. That's that's that particular role is called DevOps.</p>
+<p>So you can be a DevOps engineer, which is like developer operations. I've heard of those. Yeah. I've heard of those. Yeah. Yeah. So usually like on a project, you'll have a guy who's just like in charge of setting up the servers in a way where like, once, once the application gets like a certain number of users, it will like automatically scale up and everything.</p>
+<p>Yeah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Does whatever it needs to do so it can kind of support all of it. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Huh. Yeah. Cool. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. So, so you'd, you'd be using one of those probably if you're again, with one of these bigger making </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> a bigger application or whatever. Yeah. Like if you've got like a whole team, you know, and, and like a company backing it and everything, you're usually going to be using one of those like big, big three.</p>
+<p>Yeah. I would say. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Side, side thought, just because you had mentioned DevOps. And I knew that that was another option of getting, like, when you get into coding and stuff. And and then I, I see a lot of people talking also about like project management and stuff. Did you ever think of doing anything like that?</p>
+<p>I mean, just because like you're good with people and stuff and you seem pretty well informed and stuff. So like, was that ever an option for you? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. I mean, that's, that's kind of like where I eventually want to like end up is, is. Like engineering team management. Yeah. And I did a bit of that previously on like, when I was like lead developer, it kind of came with.</p>
+<p>Some project management type stuff is basically acting as a, what's called a scrum master which is just like the guy who sets up all the tasks for all of the developers and like assigns them to people. And that sounds </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> like you're managing the whole </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> project. Yeah. There's also along with the scrum master, you work with a product owner, which is like the guy who interfaces with the client.</p>
+<p>Right. So like the person paying you, it's like, what, what do you, what do you want this thing to do? And like, what is the highest priority for you and all of that kind of stuff. Yeah. And then the product owner will come to the scrum master and say like, Hey, here's what they want now, like make the tasks for it, split it all up and assign it to the right people.</p>
+<p>And you like, do you enjoy doing that? Yeah. Yeah. Yeah. And I, the, the. So I was technically lead developer and then my friend, Charles shout out to Charles, who's an awesome project manager that, that was his title. But he, he, he did a lot of scrum master stuff. Like that wasn't necessarily part of like my job description or whatever, but like he let me do some of it.</p>
+<p>Like he, and I was like wanting to, and so he kind of took on more of like the product owner role. And I was, took on more of the, the spread master. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So he was more client facing and you were more programmer facing in a </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> way. Like, yeah, like development team facing. Cool. Yeah. And we, we came up with this system and just like.</p>
+<p>Organized the crap out of that project. Nice. And like got so much done because like we were just like so on top of it. It was, it was really cool. That's awesome. . Yeah. Yeah. It's, it's, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it's cool when it's like when it flows well, you know, like when you're, when you're working with someone who works well with you, Yeah.</p>
+<p>You're like, ah, this is great. Like . Yeah. Yeah. Nice. That's cool. Yeah, I was just curious if you had ever thought about getting into that at all? Just 'cause it seems. I don't know, seems like that might be </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> the, like guiding people seems like a thing that you enjoy. So yeah. Yeah, for sure. Like I, I really liked that part of it.</p>
+<p>Like I, I know what needs to be done and I know who's good at what and I like, you know, giving people stuff that they will like it, like, Thrive in, you know, like giving them tests that they will like be able to like show off their skills and whatnot. So, yeah </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it's funny at some point I want to do, and I should stop talking about episodes during other episodes, but at some point I want to do an episode where I, where, I don't know if you'd be interested in doing it, but like, kind of like have like a slight, maybe like quiz type of thing.</p>
+<p>See if I'd see if certain things are actually sticking, you </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> know, like me quizzing you </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> in a way. Yeah. Yeah. I think, I think that might be kind of interesting. Cause also like I noticed when, when I'm listening to someone talk about something or if someone says like, so this question is this like, or whatever then I try to like answer it before like the person explains what it is and then, you know, that's just how my brain, like, it, it helps me remember things.</p>
+<p>So maybe that might be helpful at some point to like, not, not even just for me, but for other people listening to be able to be like. Like try to answer before me before I can stumble out my answer. Yeah But yeah, I was just thinking about like I've been trying to think of like ways to better remember things and really commit to memory certain things and also the, you know, the, I think that that's a big part of this podcast is us like saying, Hey, these are the fundamentals that kind of are pretty important because you're going to learn a lot of stuff.</p>
+<p>Not that it isn't important, but it. When you're touching on so many different things, you don't know what things you're running into every day and what things you're going to run into once a year, you know? So like, I think that that's kind of a big part of this podcast is like us kind of being like, Hey, these are the things that you're really going to run into quite a bit.</p>
+<p>And I think it might be interesting to be like, Hey Jake, do you know these things that are, that you're going to run into quite a bit? I don't know, at some point, and that might even be like way in the future when I'm talking, when we're talking about like interviewing and when they start like, you know, because in interviews they give you a bunch </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> of like quizzes sometimes and stuff like that.</p>
+<p>So that might be like a mock interview episode. Yeah. Yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah, yeah. And my hands will get sweaty and it'll be fun. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> It'll be sweaty. My spaghetti, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> knees weak, arms are heavy. It's okay. I'll get my climbing chalk. I'm good. I'll sweat right through it. It's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> crazy how much better you program when you have </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> climbing chalk, climbing chalk all over your fingers, gunking up your keyboard.</p>
+<p>Yeah. But yeah, at some point I was thinking of doing something like that. I think that would be kind of cool. I... As if I don't take enough quizzes with Codecademy already, but I think, but I, I think it would be cool coming from you. Just like the things that you value as like, this is something that I run into quite a bit.</p>
+<p>Just because coming from, you know, me, like, I, I don't know what I run into ever. You know what I mean? Like, I, I know a few things, but I don't. You know, I, I, I'm just not sure what I'm going to run into so much, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> you know? </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yes. I don't know, just </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> thoughts. Yeah. Yeah. Good thoughts. Oh Firebase has a I was just thinking through like other stuff.</p>
+<p>Cause like we haven't touched on like backend stuff yet. Yeah. But </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> what's not the Firebase stuff that </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> we did live coding. Yeah. So Firebase. Is something that you can use as your backend, basically it's, it's a backend as a service is what they call it. Okay. And they have like a, a bunch of different, like, kind of like sub products within the, like under the umbrella of Firebase.</p>
+<p>And I just I just remembered when I was talking about like. Posts for your front end code, Firebase also has posting that you could choose to do. So like if you're, if you're using Firebase for anything else, you could just go ahead and use it for hosting as well. And they, they will look at your Git repository and do all of that CICD stuff that I was talking about, or like they automatically built it on when you do the code pushes and whatnot.</p>
+<p>So, so yeah, there's like Netlify, GitHub Pages, Firebase. Those are all free and they're all good enough, you know, for sure, for, for like your front end code. I, question. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Because I'm not sure that we've gone over this much. Actually writing JavaScript in the back end. . Yeah. I don't think we've actually like done it yet or anything.</p>
+<p>Have we? Yeah, no. I, yeah. Okay. So that's another task for another day. But yeah, , that is something that I do want to come back to just because it's I think it's important. Yeah. And it's important to me. And what's important to me is important to Seth . No, I don't know. To everyone. There should be. No, there shouldn't be.</p>
+<p>But the </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> utmost importance, it's for me, . So yeah, so just like for the front end code, like you'll usually bundle everything up and just like put that bundle up in the, in the cloud for your backend code. You don't really do that. And like, I don't even really know if it's like worth talking about, but just for the sake of this episode, like, how do you take an application from nothing and, and put it into production?</p>
+<p>Like applications are. Usually going to have a backend. It's pretty rare that you won't have a backend. Any application that you sign into is going to have a backend. Yeah. And that's sort of like a whole, whole other thing. Like you will also put that on like AWS or Azure or Google cloud. And. It's basically like you at the like root of your project, you'll have a script file basically that just like kicks off a node process and looks at all of your, all of your files and listens for like the front end kind of like pinging the backend and all of that kind of stuff.</p>
+<p>So that's, that's all just like your backend code and that's hosted, you know, some place. It's not going to be like the same folder as your front end code or anything because your front end code is going to be delivered to everybody's browser, but the backend code is just gonna stay on some on a </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> server somewhere.</p>
+<p>Wait, waiting to be called upon? Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Via a V P N a p i a p n </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> a p i. Yeah. Too many things. , but an a p i. Okay. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So that could be one of your interview questions. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Right. I mean, yeah. I mean, dude, there's so many whatever you call those API, VPN scrum, like there's so many </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Well,</p>
+<p>scrum is not an acronym. If you recall from one of the other episodes, scrum is a term that comes from rugby. And it's just like, it's like a play in rugby and they, they kind of like took that and it seems like it would be an acronym though, because it's just a bunch of letters. It's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> not a word. No offense, everyone who uses it, it's not a word.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Not to </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> me. Yeah. Bleak. Not a word. Anyways, I.</p>
+<p>Yeah, so yeah, I do want to touch on that a little bit more eventually just because I also think like, like, okay, so with Firebase, then could I host my back end code in Firebase and like separate from the normal, like what Firebase gives you for writing in your back end </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> stuff? You know what I mean? I don't think so.</p>
+<p>So like, no. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So how do you host it? How do you host </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it in a backend? Where are you putting it? Right. So you put it on Firebase. That's, that's kind of the thing that makes it like a backend as a service is like, okay, everything stays on Firebase. And Firebase is like, basically just like a, a hosted API, like pre made already for you to just start using whenever you want </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> to.</p>
+<p>So, and, and where a backend is mostly going to be data is it's, that's, that's pretty much all you ever need. Is that what you're </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> saying? A traditional backend is basically your backend. Code like your, your node code and for our purposes, we're using JavaScript on the full stack. So it would be node code for somebody else.</p>
+<p>It might be Python code or C sharp or whatever, but for our purposes, it would be node code. And then you would also need a database of some type for our purposes. It would most likely be like postgres. A lot of people also like Like MongoDB, which is an I've heard of that. Yeah. It's like a very different database.</p>
+<p>That one's actually more similar to Firebase than Postgres is. Just not, not that it matters, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> but I'm just I'm just wondering where your node code gets put. Yeah. So that, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> thats gets put on the equivalent of a host, but it's just sort of like a, a backend host. So, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> okay. Yeah. That, that was my question. I was like, do, do you have to like, go through a pathway of like talking to, like going through fire base to put it somewhere?</p>
+<p>Or is it just like you hit up a server farm and throw it on a server somewhere? Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. You put it in a server somewhere and you, you can do that on Amazon servers or Microsoft servers or Google's servers. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> That makes sense. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Or, you know, any of the hundred other server providers that will most likely just end up on Amazon anyway.</p>
+<p>Yeah. So yeah, that's, that's like where your backend code goes and, and the difference with that and Firebase is Firebase is like, you don't need to worry about anything DevOps related because it's. It's already hosted and already configured for you to just start pinging it as an API, as though it were an API and </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it's automatically going to size up </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> and size down as it needs to, right?</p>
+<p>Yeah. Yeah. Although like the the kind of like the scalability of it, like what sizing up and sizing down as part of like, what's. Quote unquote scalability of your application like that's part of it, but another part is like how efficiently like you can write code to. To talk to it and stuff. And there are certain things about Firebase that make it like not as scalable.</p>
+<p>Okay. Which is like the way that you need to work with certain things, especially like relational data like this thing is related to this other stuff. And like, you can have like a one to many relationship or like a many to many relationship between data. So like all of the people can have pets. And that kind of thing.</p>
+<p>And if you want to grab the people and the pets in Firebase, you need to grab them separately and then kind of like map them together once you get them in Postgres or another relational database, you, you can grab both of them at the same time with like one API call. So that's like one of the, yeah, major, like </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> make some more streamlined.</p>
+<p>So basically if I'm understanding correctly, I minimum amount of work, it's very like easy to use and it's very straightforward. Great beginning. A great way to begin an app is use Firebase. Yeah. But then if you want to really get in the nitty gritty then you can do it with, what would you call it?</p>
+<p>Postgres? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, it was so Postgres is one of the many options there's a SQL database or, or MongoDB. I think with like a traditional no SQL database and this like you, this may be over your head, but I think you can still do relational stuff. I haven't written a MongoDB code in a while. I used to write it a lot, but I, I can't remember if you could like grab.</p>
+<p>Like sub data or like relational data, basically, you're, you're saying good. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> You had said you do a lot of stuff in SQL, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> right? Yes. Yeah. I thought, I thought </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> that was like a </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> thing that you had mentioned. Okay. Yeah. So that's what you, that's what you made. Yeah. Okay. Yeah. And Postgres is SQL. So Postgres is so Postgres.</p>
+<p>What you've been using? Yes. Yeah. Yeah. And Postgres is sort of short for Postgres. SQL, or PostgreSQL, I don't know how you pronounce it, but PostgreSQL, yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah. It's just your gressicles. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. And then there's like, a bunch of other SQL databases that you could use. There's like SQL light and then there's MySQL and then there's you know, a few others, and then there's a few other no SQL databases like couch DB and Dynamo DB and Mongo DB are all no SQL databases.</p>
+<p>Which just means that you store things differently. You store them as like objects, basically. It's all like JavaScript objects, which is an interesting concept. Well, that kind of sounds </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> like I don't know. When, when we store data in Firebase, that's almost how I would explain it. Yeah. You know what I mean?</p>
+<p>Like you're storing it as an object and each object has like different things </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> that have to do with it or whatever. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So, huh, it kind of makes sense, I think, if I'm thinking about it the same way you are, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> huh? Yeah. So, I mean, your, your front end code gets bundled up and hosted someplace. Your back end code doesn't get bundled up, but it's also hosted someplace.</p>
+<p>And your, your back end code will also go through QA and staging and production, usually if you're on a big project and Yeah, it's all kind of like treated similarly, but the code is like pretty different, you know, from the front end to the back end. Yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> so yeah, more things to learn. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. So, but spinning up a backend project is like you wouldn't use V for that.</p>
+<p>You wouldn't use create react app for that. Those are just for your front </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> end stuff. Are you pretty much just writing all in vanilla JavaScript for the most part? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> No. So usually you'll use a framework called express, which is just like helps you. Set up like your API routes. Yeah, it's like, it makes writing APIs specifically easier.</p>
+<p>And that's most of what you'll be doing on the backend is just setting up an API. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I didn't know that. Yeah, no. Yeah. Yeah. I'm excited to learn more about backend and stuff too. Yeah. It's because we've, yeah, we've really only like dipped our toe in it. You know what I mean? Yeah. Sweet. Well, yeah, I say we probably wrap it here and and yeah, I hope this was helpful to anyone or someone.</p>
+<p>I, I know I learned a few more things, so if we all just keep learning a few more things </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> as always, I appreciate it. So, and, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> And yeah, I'm just going to keep swimming and I hope everyone else does too, along with us. Keep </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> at it, keep swimming. Thanks for talking. Thanks for listening, everyone. Yeah, thank you.</p>
+<p>Until next time. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Have a good one. </p>
+
+  </main>
+
+  <!-- Add your website's footer, including any copyright or legal information, here -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3KLVQ3NQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-W3KLVQ3NQF');
+  </script>
+  </body>
+</html>
