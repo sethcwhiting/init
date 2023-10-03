@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="React Fundamentals (Over)Simplified">
+  <title>React Fundamentals (Over)Simplified | Init Podcast Episode 19</title>
+  <meta name="keywords" content="JSX,Web development,Side effects,State management,Learning React,React hooks,React components,React fundamentals,JavaScript extension,Functional components,useState,useEffect,useContext,Code organization,Reusable code,Web framework,Web development basics">
+  <meta name="author" content="Jake Pacheco and Seth Whiting">
+  <link rel="canonical" href="https://www.init.show/episode/19" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/icon/site.webmanifest">
+    <!-- Add any other SEO-related meta tags here -->
+
+  <!-- Add any stylesheets, fonts, or other assets here -->
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <!-- Add your website's header, navigation, and any other global elements here -->
+
+  <main>
+    <a href="../../" style="color: white; text-decoration: none;"><h1>INIT</h1></a>
+    
+    <!-- Add your podcast's episodes here, along with any relevant metadata such as title, description, date, etc. -->
+    <!-- Add audio element below with /assets/audio/episode-1.mp3 as the source -->
+    <audio controls>
+      <source src="https://traffic.libsyn.com/secure/e0e5bdc6-239a-413b-b772-c951e46ceba9/episode-19.mp3?dest-id=4009908" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h2>Episode 19: React Fundamentals (Over)Simplified</h2>
+    <p>Published: <time datetime='2023-10-03'>Tue, Oct 3, 2023</time></p>
+    
+    <div class= "group w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-320"> <div class="p-4 justify-center text-base md:gap-6 md:py-6 m-auto"> <div class= "flex flex-1 gap-4 text-base mx-auto md:gap-6 gizmo:gap-3 gizmo:md:px-5 gizmo:lg:px-1 gizmo:xl:px-5 md:max-w-2xl lg:max-w-[38rem] gizmo:md:max-w-3xl gizmo:lg:max-w-[40rem] gizmo:xl:max-w-[48rem] xl:max-w-3xl }"> <div class= "relative flex w-[calc(100%-50px)] flex-col gap-1 gizmo:w-full md:gap-3 lg:w-[calc(100%-115px)] agent-turn"> <div class="flex flex-grow flex-col gap-3 max-w-full"> <div class= "min-h-[20px] flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words"> <div class= "markdown prose w-full break-words dark:prose-invert light"> <p>In this rad podcast episode, Seth Whiting and Jake Pacheco totally dive into the gnarly basics of React. They're like, "Dude, React is the bomb in web development right now!" They chat about how React components rock, helping you keep your code organized and reusable. And, man, React's JSX is the raddest thing, letting you mix HTML right into your JavaScript.</p> <p>They also drop the idea of this epic tool that could one day translate code between different frameworks, making devs' lives way easier, although it's not around yet.</p> <p>Seth gets into the nitty-gritty, talking about functional components, which are like the new hotness. No more bulky class components, dude! Then they hit you with React hooks, especially the useEffect one, for managing side effects.</p> <p>They shift gears to how you can actually use React hooks, focusing on the useState hook for keeping track of your state variables. Seth breaks it down, showing how to set up and use state with useState. Think of it like catching a wave with a loading state, and when the data's all set, you switch it up.</p> <p>Later, they get all stoked about the core React hooks: useState, useEffect, and useContext. These hooks are like the heart of React, helping you with state, side effects, and sharing data, man. They mention some other hooks like useCallback and useMemo, which are handy in special situations, but not as rad as the big three.</p> <p>And remember, dudes, keep riding that learning wave. Even when it feels repetitive, it's all about getting that muscle memory for React. Practice makes perfect, so keep shredding the code, bro!</p> <p>Special thanks to <a href= "https://open.spotify.com/artist/7JxrbI1DZLSJUyzsrBQop2?si=Vt5jO60AR3C4O_wgt9yxkA" target="_blank" rel="noopener">Diarrhea Planet</a> for our intro and outro music and <a href= "https://www.instagram.com/skratchtopo" target="_blank" rel= "noopener">@SkratchTopo</a> for our artwork.</p> </div> </div> </div> </div> </div> </div> </div>
+
+    <h3 style="margin-top: 60px;">(Auto-Generated) Episode Transcript:</h3>
+
+    <p><strong style="color:#72B372">Seth Whiting:</strong> Sup y'all, this is Seth Whiting coming straight at you from my microphone here in Portland, Maine, and my computer. And I'm a developer from Portland, Maine, like I said, and I've been coding for about 10 years. I wish I could start over.</p>
+<p>Yo! </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Just coming in hot. This is Jake Pacheco.</p>
+<p>I am a barber from Augusta, Maine. And I've been coding for, oh, we just went over this, seven months? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Seven months. Officially, yeah, the big 07. Yeah, buddy. Yeah. Getting there. Getting there. So today we are going to attempt to go over the fundamentals of React, which we've gone over the fundamentals of web development in general, and then we kind of drilled down to JavaScript.</p>
+<p>Now we're kind of drilling down more specifically just to react. Cause that's what we're going to be using whenever we're like getting Jake to work on stuff, he's going to be working within the framework of react. And that's kind of, I guess like what I'm advising him to do and what I would probably advise other people to do for reasons that I've already gone over.</p>
+<p>Like the fact that. It seems to be the most popular framework out there, JavaScript framework, and a lot of companies are using it. A lot of companies know about it, even like non technical people have heard about it if they're, you know, trying to get a Software product off the ground, they've probably talked to developers and developers have probably said Oh, you'd probably want to use react because you can find people like you can hire people pretty easily for that.</p>
+<p>There's a lot of react developers out there and there's a lot of react developers out there because there's a lot of react jobs out there. And it's kind of like, and also vice versa. There's a lot of react jobs because people know that a lot of people. No react right that makes sense. Yeah. Yeah. Yep.</p>
+<p>So </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah, we thought it would be good to kind of go through the fundamentals. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> I And, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> you know, this might be a slightly Seth talking heavy episode. So if that just bothers you, then you're welcome to leave. No, but, but it just in general I'll probably do my, you know, Jake Pacheco big swing and a miss with explaining, explaining things.</p>
+<p>And he'll say, no, Jake, tiny swing and a hit is more powerful and explain the proper way. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> To explain something. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> But yeah, we think it's definitely, I mean, the whole premise of the story of me learning coding is </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> for It basically to get me to </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> learn React and and write in React. Mm hmm. So we figured it'd probably be good to have an episode all about the fundamentals and kind of the basics and the things that you're gonna probably </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> be using in your daily life.</p>
+<p>Yeah, like the most common stuff. Yep. Yeah. Yeah, I'm going to try to, I'm going to try to remember to like, ask you like stuff that you might remember from, from React because we, we have if you have watched any of the videos that we are soon to be putting out that we will have put out by now, we're, we've already worked with React a little bit.</p>
+<p>So I'm going to be Quizzing your, your memory and your knowledge and stuff, but I'll, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I'll try my best. Yeah, because, because the way that my brain works is he said all of that. And I just was like the companion videos. And then I was like the companion tapes. Oh my word. We need to make these in a VHS.</p>
+<p>And yeah, so my brain is like all over the place. It's been a long day, but this is going to be great. Yeah, it'd be, it would be great. I think I've remembered quite a bit of stuff, so I think, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> I think we'll be all right. Yeah, I'll try my best. Do you remember, so first of all what is your understanding of what is React?</p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> It's, well, we call it a framework. My way of saying it would be, it is a organ, it's, it's, okay, so it's, again, so my way of saying it would be, it's a way that organizes or a way that you organize. Your code, like your JavaScript C Ss s </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> c s s. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> And then and your H T M L. And it's organized in such a way that you write it all on one page for the most part.</p>
+<p>Mm-hmm. . And that's how I would describe it. What it actually is, is a bunch of different things that I like to call modules . And it's basically. All of these built, all of this built in code is already accessible by the code that you're currently writing. And therefore, when you write it, it's a lot easier to write it in a way that feels more intuitive to us.</p>
+<p>So you don't have a CSS folder and a... HTML folder and, er, file, is what I mean when I say folder and a JavaScript file, and you don't have to make those all constantly kind of in a convoluted way. Work together, instead you just write it all as one thing, here's my new headline, and it's in this color, and it does this, if it has a function </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> to it.</p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So yeah, it's basically just a, a different way of... It's, it's a dark way to say it, but skinning the same cat. Oh, why would you say that? Ah, no. No, but it's, it's, it's, it's a yeah. It's, it's a bunch of modules that make it so it's a bit easier to, to get the job done. And, and, again, for me, when I started writing any of it, I was like, Ah, this is so much more intuitive than writing all of my JavaScript in one thing, And then all my </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> CSS in another, and all that stuff.</p>
+<p>Yeah. Yeah, so I think what you were kind of um, hitting on... But didn't say explicitly, but basically like you were talking about kind of the concept of componentization like more or less, basically like the, the way that you write React code is within the, like the boundaries of a component, usually that's.</p>
+<p>Sort of it's bread and butter, if that, if that makes sense. Like you'll have a component for a button or a component for a form or a component for an entire page that imports those components and organizes them, you know, however you want them to show up. It, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it, it can import the button that you've already created in another component and can import.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Other things. Yeah, the form and the form can import like specific form fields that you've made. That, that are like, I want my, all of my text fields to look this specific way and behave this specific way. And it's not like the default way that they give me out of the box. So I'm going to make a component for this that does everything the way that I want it to and looks the way that I want it to.</p>
+<p>And I'm just going to use that instead of the default one throughout my entire application. And it makes it really easy to... To do that, and also if you ever want to make a change to that specific field, that specific text field, you can just change it in one file and it... Updates everywhere throughout, throughout your application, which is, which is great.</p>
+<p>Other JavaScript frameworks can do that. They, they do it in sort of a different way. Do you remember what sort of makes React unique, at least unique to like the other. Most popular frameworks out there. There, there are other ones that have come up since then that do the same thing in a similar way.</p>
+<p>But the, the other ones, so basically like react versus view versus angular versus felt, those are sort of like the big ones out there. And all of those other ones. Handle HTML in a certain way. Do you remember how react is like different from that? I mean, did </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I, if it isn't what I already went over kind of with the being able to write your HTML, your style and your JavaScript all in one thing, and your HTML technically is in a.</p>
+<p>In kind of its own component as well, right? Like a JavaScript component or something. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So basically go ahead. The computer, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> the computer is like understanding it as a JavaScript </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> command. Yeah. Yes. You're like, you're, you're right there. I'm close. I'm </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> anyways, explain it, explain it properly. Big swing and a miss.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> No, no, no. That was like a big swing. And like you, you, you chipped it. I chipped it. Yeah. So it. It's the, basically the fact that you write your HTML within your JavaScript. Yeah, it's, it's using a type of markup code called JSX instead of HTML, which is JavaScript X. I don't, I don't know what the X is really, it's, it, it's, I'm pretty sure it's just taking the X from something called XML, which is a way to.</p>
+<p>Present data in a way that sort of looks like HTML, but it's more just like for presenting data instead of using JavaScript objects like JSON, which is JavaScript object notation. Anyway, all of that is to say it looks like HTML, but it's actually JavaScript. Yeah, yeah. And then. So I </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> was close to it.</p>
+<p>That's cool. Yeah. I was like, I think that's all written in JavaScript. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Anyways, so then the compiler knows to make sense of that and turn it into JavaScript during the build process. Yeah. We'll turn it into JavaScript and separate out the HTML. Yeah, yeah, yeah, my bad. I meant HTML. Nah, nah, yeah, I get it.</p>
+<p>I knew </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> what you </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> were saying. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Yeah. So, so I guess that's something that I didn't know then that React is the only thing that you write. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> JSX in, I, I, I didn't realize that that was the only, the only like big framework that, yeah, there's also another framework called Preact, which is like very, very, very similar to React, but I think it's focuses on server side rendering and also is like smaller, like the, there's not as much to it.</p>
+<p>I, if I, I, I've never written anything in Preact, obviously because I can't even, you know, give you a straight definition or differentiation. It's okay to have a tenuous grasp on some things, you know, that's fine. Yeah. So that one does it. And then there are like a, like a good handful of other ones, which have sprung up since React gained popularity.</p>
+<p>But they are not on the same level as React. Not all the, the other ones that I mentioned are sort of close, but the react is, is still the most popular angular is still pretty popular for like big, like enterprise. Applications. Yeah. I feel </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> like I've, I've heard that brought up quite a few times, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Angular.</p>
+<p>Yeah. Yeah. And that, that one is sort of owned and maintained by Google. And then they kind of like partnered with Microsoft in a way because they're using TypeScript and Microsoft is the one who made TypeScript. And then. View is not owned by any big company which I, which is interesting now that I think of it because it's like very popular, but like bugs.</p>
+<p>I like it. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I respect you so much when people are like that, like they did their own. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> It was made by this, this one dude </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Jonathan Vu. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> No, I think it's like Wu or something. I think he's Chinese Vu creator. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> On the next episode, have we been mispronouncing Vu this whole time? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Evan Yu. Why are you yeah, and yeah, like I said, I don't think it's owned by any like big company like the other like react is owned by Facebook or meta I guess now and Angular is owned by Google, and then there's one called Svelte, which is getting really popular.</p>
+<p>I've heard of that one too. Yeah. That was made by a guy named Rich, Richard Harris, who works for the New York Times. And now he, he works for himself or sort of, he, that Vue, not, sorry, not, not Vue. Svelte was bought by a company called Vercel, which made Next. js. So, they, they, they bought Svelte and now they're doing some Next.</p>
+<p>js y type stuff to Svelte. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I have a quick question, and it's off topic, 100%, but... What do you get out of writing a new language? Do you get any kind of so you sell it to a company, why would a company even buy it? What's the, what's even the purpose? They can just use it, so why would they buy the </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> language?</p>
+<p>Yeah, so, well, it's, it's Just, just to be clear, it's a framework, not a language. No, I'm sorry. No, yeah, I know what you mean. But yeah, why, why would they buy it? That's a good question. I'm sure that they have some incentive, but I think it's just for brand recognition for Vercel maybe? Yeah.</p>
+<p>Because they've got the Svelte has the, the brand recognition for being like, basically it has the reputation for being the, JavaScript framework that developers like to use the most, like even above react, like react is still the most popular because there are the most jobs out there basically.</p>
+<p>Yeah. But Svelte is very popular for developers because it's. Just apparently like delightful to work with. Interesting. As you're coding it, you're like, ah, I really like, you know, the way that they did this, you know? Yeah. I like the way that they set this up. It makes me like more productive. It makes me feel like this is easier to grasp and things make sense a lot.</p>
+<p>I, I have </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> a question. No. Yeah. I, I mean, yeah, I kind of do. I, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> how isn't there a. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Not a framework, but like a a translator, where like I could write something in Svelte and translate it to react with a click of a button. How is that not a thing? Is that not a thing? Is that a thing? I feel like that should be a thing.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> It would take a lot. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah? But you know what I mean, like that way it's like... Like you could get a React job because you know that and you could get a Svelte job </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> also. So I feel like you could probably do that with ChatGPT. Yeah. If you just have a component written in Svelte and give it to ChatGPT and be like, okay, write the same thing, but in React.</p>
+<p>Yeah. Then it might be able to do that. But it, it would take that kind of Yeah, that kind of intelligence, knowledge of it intelligence, yeah. Yeah, yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. A it would take a learning program kind of a thing, right? To be able to like actually translate it because it would be able to find out what everything you're writing means and what it is, how it is written </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> and that.</p>
+<p>Yeah. Alright. Huh. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Now I was just curious if that was like e ever a thing? I don't </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> know. Yeah. I mean, not that I know of. I like if, if somebody built it, it would be like, A lot of code that they would have to write, and it would have to be pretty specialized they would have to spend a lot of time translating from one framework to the other, so they probably would spend all their time on just those two languages.</p>
+<p>And not, not open it up to other, other, other frameworks. I mean, I probably said languages. No, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I go through, yeah. I'm </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> sorry. I know. I got, I got them all mixed up. Anyways. Yeah. So yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I'm sorry for the sidetrack everyone. I was just like, I don't know. In my brain, I'm like, why don't they do that? Yeah.</p>
+<p>Now it makes, it makes sense though. It's, it's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> a lot of work. Yeah. So React though, getting back to React because that is like what we're focusing on. That's the whole goal here. Yeah. So there's basically, like I said, there's like the componentization thing of it, which it's done since its conception. And the, the like logo for React is an atom, basically, it looks like an atom.</p>
+<p>And. One of the, one of the golden gods of React is this guy named Dan Abramov, who, who wrote a state management system called Redux and it was so like amazing that the team at Facebook, I think it was still Facebook back then, took notice and said, Oh, we want to hire this guy to write React with us, you know, so he wrote this like state management system for React.</p>
+<p>And then I think it opened it up to two other frameworks eventually. But anyway, he started working on, on. React and made a lot of like big changes in it. I'm sure it wasn't just him. It was like him and this this woman Sophie Alpert and some other people anyway, totally unnecessary to know but they they came up with and I don't know if he had any Part of conceptualizing this, but he presented it.</p>
+<p>He was the one who like presented it at its like inauguration or whatever, but the, the concept of functional components, like they went before, before that you had to write everything in classes. And I have talked about that before, or like when I started out with React, we, I, I was writing everything in classes.</p>
+<p>And then like a year after I started, I think they, they announced these functional components, but we were already like pretty deep into class components. So we, we stayed with it for a while. And then the next project that I got onto, I made sure to start writing things in functional components. Cause it seemed like everything was.</p>
+<p>Shifting that like they, they weren't going to basically it was recommended that you start writing everything as functional components. Yeah. That all just means that you used to write it in, in classes, which were set up in like their own whole way. It was like a very specific way that you wrote React code.</p>
+<p>And then that entire thing kind of just shifted and became, I think it became quite a bit easier or like more straightforward, I guess, when they shifted to functional components. And when I am talking about the fundamentals of React, I'm not going to talk about class stuff. I'm just going to be talking about functional components because it's been the kind of standard.</p>
+<p>Since 2017 or something like that, 17, 18, somewhere around there. So basically the way that you write a react component now is just, you, you set it up as a function, you just say function and then the function name, and then. Equals, wait, hold on a second, why this? And then, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> An arrow. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Well, so that, yeah, so you can, you can do the arrow function.</p>
+<p>So you would just say const function name equals parentheses. And then an arrow, and when we say arrow, we mean an equal sign and then a greater than symbol and then open the curly braces and then you write all of your component code within that function that you just wrote before you had to say like class, whatever the class name or whatever the component name.</p>
+<p>Extends react class. And then you, you know, you set it up like that. Yeah, I had to, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I had to write one of those, at least one of those, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> In </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> the learning to do react from code academy. And then, but they quickly swept us over to, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Functional </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> components which like you said, it makes more sense.</p>
+<p>And it felt like a lot less writing. Writing the same thing over and over again in the class components </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> was a little bit leaner. Yeah, yeah. You write a little bit less. Yeah. So along with functional components. They introduced something called hooks because they, before the way that you, the way that you set stuff up at the beginning when you're, when your component renders, you did it all within the man, what was it even called?</p>
+<p>I'm totally blanking on, on what it was called, but basically there was like a block of code at the top of your component where you just set everything up, like when this loads, do this stuff and then, then you just work with it after that, you know, like a like it's like everything that's already there in functional components, you can do the same thing, but you do it within a hook.</p>
+<p>Called use effect and do you remember at all, like what, what hooks are, like give a good definition, but yeah, I mean, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> the only, I mean, just your use effect thing, it would like, when you said that it made me think it was like a, when this happens, do this. But I don't know if that's what it is, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> you know? Yeah, no, that, that is actually pretty much exactly like how you would use a use effect.</p>
+<p>Yeah, so it's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> like a if then kind of </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> a thing, or is it? Sort of, sort of. It's more of I don't know if we have talked about event listeners before. Yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah, a little bit. Yeah, yeah, because I, because I I misunderstood it as like the on, on mouse over thing. All right. I, I mistook it as that, but we had talked a bit about event listeners, I think not in the last episode, but the episode before that, maybe the last </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> episode, yeah, so essentially event listeners are like you, you set up something so that your, your JavaScript code.</p>
+<p>Listens for a click or a mouse down event or like a key down or key up event, just like any, anything that any kind of like interaction that the, yeah, that the user has with their like hardware, essentially. Yeah. Use effect is different in that it's listening for changes in data, basically on your, in your computer, your component.</p>
+<p>And so that's saying like, whenever, whenever, like the username, like if you're typing in a username or something, like whenever it changes, then do something like, yeah, save it to the database or whatever, like that would be terrible, a terrible thing to do. Don't do that. Like I. I feel like I've run into that before where every time you, you type something, it sends off an API request and, and saves the data where there'd be a lot of </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> API requests.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, exactly. I feel like I've seen that happen before. Don't don't do that. There, there are ways around that. Like you can still do it so that like when you finish typing, then you can, then you can send an API request or you hit login or you hit </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> create user. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> And then it's sending an API request. Yeah.</p>
+<p>Or you can separate the saving completely from that text field and just have it be like a button that like whenever you press that and take the value of the text field, blah, blah, blah. All of that. Is unimportant. What I'm, what I'm getting at is the, the concept of hooks and react. So basically react kind of</p>
+<p>not necessarily boils down to, but the, the, the really common things that you'll be doing in, in react are setting up components, exporting those components to be used elsewhere, importing those components. In like larger components, basically passing down data from the bigger components to the smaller components.</p>
+<p>And just, just if you're curious, it's set up so that you can pass down data to the smaller components. Those are called child components. Basically you have a parent component and then a bunch of child components. You can pass down data from the parent to the child easily. It's hard, not necessarily hard, but it's like more difficult.</p>
+<p>It's it's not hard, but more difficult. No, it's just, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> there's plenty of things that aren't hard, but it's more </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> difficult. It gets really messy. Okay. So it's to pass data from the child component to the parent component. Technically it is possible, but it's. You don't want to do </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> that, really. You might call it almost bordering on unprofessional.</p>
+<p>It's like, that's not how you do that. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Sort of, sort of. Don't do that. There, so there, there are ways to do it, like if you absolutely need to, there are ways to do it. So it's like </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> using, it's like using class components or whatever classes </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> instead. Well, no, not really. It's, it's more of what's called like an anti pattern, which is just like a bad practice.</p>
+<p>Yeah. Basically. That's what an anti pattern is. Like if you, if you look up questions on stack overflow is it an anti pattern to do this this way? And people will be like, yeah, pretty much like you should do it this way instead. And they'd be like, oh, I never thought of it that way. Okay. I'm going to do that instead.</p>
+<p>Interesting. Yeah, so pass the data, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I'm just curious, is it, is it only kind of, frowned upon because someone else who might work on your code might be confused by it and is like, why, why are you doing this? Or, or, or it doesn't actually make the system run solar or something. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> No, it's just not really set up to do it that way.</p>
+<p>So there, there are way, there's something that you can do that I can get into in a bit, basically there's a hook called use context, which allows you to share data back and forth from child component to. Parent component, parent component to child component, two completely separated components that have nothing to do with each other, that kind of thing.</p>
+<p>It's like a universal, more universal data store kind of thing. But you can accomplish pretty much, you know, 99. 9 percent of the stuff that you need to, by just passing down data from the parent to the child and having, you can manipulate the data in the child component. Via the child component, but the data itself is actually being manipulated all the way up in the parent component.</p>
+<p>If that, and that might not make sense yet, but I think it should by the end of this. Yeah. So, so like I was saying, you, you create components, export them, import them into larger components, AKA parent components. You can share data from the parent down to the child components. And that's, that's sort of like structurally kind of like what, what React allows you to do.</p>
+<p>And then the, the hooks are kind of like the added bits of functionality that React, the framework gives you to do the stuff that you need to do within your app, like to, to make it reactive, basically when a user does something, here's how you kind of manage it. This is. This is its reaction to this, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> or to, to the, to the user input.</p>
+<p>And that's not, that's not just like text in a field. That's like literally them interacting with the page, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> what the code actually reacts like. Yeah. And we're saying. React in like the Yeah, the, the verb, like actionable, like Yeah, the verb. Yeah. And that doesn't really have anything to do with React. It more has to do with like JavaScript.</p>
+<p>Yeah, you could totally achieve the same step with just JavaScript and, and when it's all compiled, it is just HT m l and JavaScript and c s s. But this, this allows you to set up those interactions in a. Uniform and kind of, streamlined and easy to work with kind of way. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So I'd like to ask one question then just so we're a hundred percent clear.</p>
+<p>I, when you say a hook, are you talking directly about pretty much event listeners? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> And. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> If so, can we get a, just a example of either just a hook or an event listener? Just so we can kind of have a really like 100 percent definition on either one. You know what I mean? Yeah. Just, and I'm sure you already have.</p>
+<p>But, it a bit, but I'm just, I'm just wondering, I guess, I guess, yeah, when we're talking about hooks, are we talking about, kind of, the ability to do </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> event listeners? No, no. Okay. I got lost in the sauce. No, you're good. So the, the only, the only thing that I like, the only reason I brought up event listeners is that basically you're listening for, for interactions on your webpage with event listeners in just vanilla JavaScript, no, no framework or whatever.</p>
+<p>You can set up event listeners in just JavaScript and that's just listening for those interactions. The, the parallel that I was drawing is specifically with the use effect hook that use effect is only one of a good handful of hooks that react gives you right out of the box that are like the, the kind of like core fundamental.</p>
+<p>React hooks and the hooks, like I said, are just like the, the pre packaged functional bits that React gives you as a framework to, to handle things within your application in a uniform and easy way. Use effects specifically is the one where it's going to be like, when, when this happens, like when this changes.</p>
+<p>Perform this action, basically. Yeah, that's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> okay. And that's why, that's reason why I brought the event listeners. Event listeners. Okay. That makes sense. Okay. I, I just got a little bit. Yeah, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> no, you're good. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So are hooks then, kind of what we were talking about when I was talking about modules, or would those be a completely different thing?</p>
+<p>Are they found in the same source folder That is, is in the React </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> when you create a React app. No, so the hooks are part of the react framework and you import them from react itself, which is going to be one of your node modules when, when you set up like your react project, it's going to be, it's going to download basically the whole framework of react into.</p>
+<p>A node module in your, in your node modules folder, like </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> kind of a packet of a bunch of different modules, right? Yeah. I think, I think we're talking about the same things, but I was using the wrong terminology with things. I think that what you're saying is what I meant. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Okay. Yeah. So you're. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I said the source folder.</p>
+<p>I don't know what folder I was talking about, but I just mean like it, my, my folder that has all of my, what I always call modules would that be where all my hooks are as well, I guess, are the things that make react react pretty much all made up of. A mixture of modules and hooks or just </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> hooks. So, so let me, let me clarify some things.</p>
+<p>So your, your source folder is where you're going to be writing your code. The note, the node modules, node underscore modules folder is where you're going to be downloading all of the third party code that you didn't write and will never touch. Basically, and yeah, those, that folder is for all of those packages that you're using within your code that you now have access to, to just call upon give me this bit of code that they wrote for anyone to use.</p>
+<p>Like I'm going to start using it. Yeah. So yeah, I'm going to start using react as a whole. To interpret like my modules or sorry, not my modules to interpret my components as components. And, you know, to, and then I'm going to grab the use effect hook and put that into my component. Okay. And I'm grabbing that from react.</p>
+<p>And then I might grab the like Firebase package and say, okay, I'm going to start using Firebase now within my project. It's like the, the code for it is in my node modules, it's there for me to use if I want to, and I do in this particular instance, so I'm going to import Firebase and start using it, or I'm going to import this like date package that makes dates work, you know, much more efficiently and easily to just say, basically Get today's date and add five days to it.</p>
+<p>And that's like when I want to send an alert to someone or whatever you doing that specific thing in JavaScript is like harder than you would think, but there are a bunch of like packages out there that make. Working with dates way easier. So basically just like any, any code that somebody else wrote for free use for anybody else, that's, that's all going to live in your node modules.</p>
+<p>Yeah. React itself is one of those node modules. Node modules. And within that big. Package of react, they have basically like the baseline react stuff, which just knows how to read your components and work with them. But then there are like individual files for each of these hooks. Yeah. They're just like bits of functionality for you.</p>
+<p>Yeah. So, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> so I, yeah, I guess that this whole, like what you just said, it. made me go, Oh, they're all in a node module folder. But then also, I was, I was close, but no cigar again, with my big swing. Because it because I was like, No, like I mean, it's all it's, you have all of your folders and make everything function and stuff.</p>
+<p>And that's all They're all different modules. And I remember you describing to me like, Oh, it's, it's actually like just a bunch of different modules that create react, not just, it's not its own thing. It's really just a bunch of modules that are it. So that's what I was thinking about, but I didn't realize that it was that all of it was again in another thing, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> which is node.</p>
+<p>Well, so it's node modules. Yeah. Node modules is what I, yeah. And node modules, like they, they really don't have. A ton to do with node basically it's the, they're all of your node modules are kind of like hosted by a service called NPM, which is node package manager, and that's just a big kind of like storage kind of like host place for all of these. You know, super useful packages that people have created and made available for anyone to download. It's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> if you, if everyone's followed along or if anyone's followed along with our live coding thing as well, you'll see me write NPM. What is it?</p>
+<p>Execute NPM. What </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> run dev run dev. Yeah. Yeah. And is that </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> me running one of those packages or something, or </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> is that. Actually, that's, that's you like running like a server process. So </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> if I was going to say, if I were to run one of the packages, how would that be written just so in the future, if I do that, then we know, Oh, he's talking to the package manager or </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> whatever, you know?</p>
+<p>Yes. The, the, you, you wouldn't really interact with the, the packages. So the, the, the NPM run dev thing is basically you, you have downloaded NPM as a command line interface, the CLI. And that is sort of different than the kind of hosting thing that I'm talking about. Okay. Like NPM, they kind of like.</p>
+<p>Hosting organization thing is just like where all of the packages live in the cloud. It's sort of like a github, kind of like that you could draw parallels between it and github, where it's just like hosting a bunch of other people's code, but the way that you pull it down and stuff is, is different than you do in github.</p>
+<p>Okay. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> All right. So, so when I was Working anything with NPM, like in the terminal on VS code, that's not the same thing as talking to the packages. Sorry for the confusion, everyone, but I, but yeah, so that is </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> confusing, but </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I just, I was like, I know NPM, right? Yes, I don't. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So if you, if you run like NPM install.</p>
+<p>And then the name of a package, it's going to install that into your node modules folder. So that's, that's one of the main functions of the npm command line interface, you know, it's like install or uninstall packages. Okay. But they can also basically kick off node, node processes, like server processes.</p>
+<p>Like the npm run dev thing, basically just like calling, calling to node and saying start running this, this process that we've set up. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So can you, so then in that case, you would install a package into your node modules and then you still have to bring it up in your code to use that, that that </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> package.</p>
+<p>In order to use the package in your node modules. Yeah, you, you would just say like import react from react. Oh, okay. And when you say that from react, it brings that one too. Yes. So if you, if you just say so one of the, like the, the date date node modules that's available for people is called day JS.</p>
+<p>There's another one called moment. So you could just say import basically day JS from day JS. And if you don't say like dot dot slash day JS, like if you just say day JS, then it knows that's a, a node module. Like if you, if you don't give it like a relative path, kind of path, like you would just know it's like image or something like that.</p>
+<p>Yeah. Like images you need to import via like a path. But if you don't give it a path, if you just give it a name, it's Oh, that must be a node module. Let me look in the node modules folder. That's cool. Yeah. Huh. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I didn't know. Alrighty. Yeah. Yeah. So, sorry again for sidetracking all </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> of us. Yeah. I mean, nobody else knows it.</p>
+<p>If you don't know it, nobody else does. Maybe I mean, yeah, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it could be smarter. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Senior Davis listening to this. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah, but but yeah, good to know. Okay. So that gives me a Pretty solid grasp on hooks, even though I'm sure there's a thousand more things I can do with hooks that I don't know about, but it gives me an idea </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> of that.</p>
+<p>Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So is that pretty much what you're using or what the usefulness of React is most of the time </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> is the, the ability to use all these different hooks? Yeah, so it's the ability to set up your, your. Your code in components. Mm-hmm. and the ability to write your H T M L as J S X. Mm-hmm. And the ability to write like the c s s and JSS kind of stuff, to, to kind of like encapsulate all of your individual, like small components and then import them into your larger components and that kinda stuff.</p>
+<p>Yeah. That's all stuff that is. Facilitated by react, the framework, kind of the rest of the fundamentals of react nowadays boils down to hooks and the specific hooks that you use every day, the, the number one, most used hook by far, I would say is use state. And that's basically just setting up bits of data in your component that are going to change at some point.</p>
+<p>So the way that you set it up is you say const, and then square bracket, data, comma, set data, and then close square bracket, equals, use state. And then whatever, whatever you want to have it be. So if it's a Boolean, you would set it to like false and then you could set it to true later. So, a common thing for this is like a loading state, let's say.</p>
+<p>Okay. If you're, if you're opening up a component, that's like a table, let's say, and you want to populate that table with some data. You, you would say</p>
+<p>you would set up a, a use state at the top of the component that's called loading. Or is, or you could say is loading. Sometimes you, you just say is something or it's not, it's like just a clear way of saying like it is, or it isn't true or false, and so that's going to be a Boolean value. So loading or not loading.</p>
+<p>So if you set up this, useState thing and give the, basically, useState allows you to set up kind of like two variables within the square brackets. One is going to be the value, and then the other one is going to be basically like the setter for that value. So you have a loading and then you have a set loading.</p>
+<p>And, and you can, this, this is not something that is like defined by React. Basically, these are variables that you're declaring, so you can call them whatever you want. You, you could say Ready and then set ready, you know, so and when you say </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> set Do you mean like you're setting ready when it's at whatever you know what I </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> mean?</p>
+<p>Yeah, so so yeah When you set ready </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> a hundred percent loaded kind of a thing like once it's on two percent you're </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> yeah so basically like the the use case for this is you have this this loading state Variable and then the set loading, the set loading setter kind of variable. And when you load the component, you will have a use effect in there that fetches the data for that table.</p>
+<p>And the data fetching is going to be an asynchronous function. So you're going to set up like an async await. So basically. You await the, the fetch there. So once you get that data, once you're done awaiting that, that fetch call, then you would set loading to false. So at the, at the, when you declare const loading.</p>
+<p>Comma set loading equals use state within the parentheses after you state that. And I, I kind of glossed over that when you say you state, you have to open and close parentheses after that in order for it to work because it's a function basically, and you pass it a parameter that the parameter that you pass is the initial value of, of that that variable that you're setting.</p>
+<p>So in this case, Loading is going to initially be set as true though, within those parentheses, you pass true. Yeah. So it's true until you fetch the data and then you set it to false. And within your JSX, you'll write a conditional statement and say, if loading show, just like a little spinny wheel. Yeah.</p>
+<p>And then else show the actual tada Show the data. Yeah. Table tada Tada. Yeah. Show the actual table populated with the data that you just fetched. Yeah. Yeah. That makes sense. Does that sense? Yeah, that makes perfect sense. Yeah. Yeah. So that's one of a Brazilian different use cases. Yeah. For set state, or sorry, use state.</p>
+<p>Yeah. So yeah, it's, it's basically just a </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it can be like a pl placeholder in a way. Or it's like, Hey, do this until this happens. And then this happens and, or, or kind of, actually functions at that point. Because if you just do an FL statement, it's it's not going to really know what the heck you're talking about.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Right. Like within your JSX, when you're saying like, if it's loading, show this, if not. Yeah. Yeah. It's, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> it, it does something, but it's not really getting any information from anywhere. So then it's like, in order for it to get the information, you </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> need a use state. Right. And everybody gets that information.</p>
+<p>You need the, like that fetch, basically that, that like asynchronous fetch call. That's going to ping your server, grab the data. And then, then when you have the data, you'll probably have a use state for the data, like I was saying, so like you'd have a const loading set loading equals use state. And then you could also have a const data set data equals use state and just set that to like an empty array basically at the beginning.</p>
+<p>And then once you fetch the data, you would do set data equals. Then like the return value of that fetch call. Yeah. Okay. All right. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. I still feel like I probably almost definitely have a tenuous grasp on it. Yeah. Just because it just because it's, I think my brain right now is having a hard time.</p>
+<p>Visualizing like the, the usefulness of the use state thing. Because it's like, because if it's the asynchronous. That's actually waiting for the information and then it's if I'll statement or whatever that's going to print out my information, then the use state </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> is that what, what's that </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> doing?</p>
+<p>What's that? Is it, is it holding, is it just placeholding? So it waits or something kind </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> of a thing. No, no. So basically I think I know what you're getting at. So like basically it's.</p>
+<p>So instead of using just like a let data equals empty array, and then updating that, let that updating data equals. Like fetched data, basically. Yeah. And then using that within your component it's, it's, that's not going to work in react. And I think the reason for that, and I could be wrong here, but I think the reason for that is just because of whenever anything changes in your component, the code for that is going to re render.</p>
+<p>So it's going to be like ripped out and then replaced. Like in the not even the blink of an eye, it's going to be like less than a millisecond kind of thing. So in order for it to like persist between the re renders. You need to use this use state thing. So like, whenever this data is going to change, use it, use state.</p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Okay. I I'm thinking, so I think where I got mixed up here is I was just thinking of it as a function. I, in, in the sense of I'm like, well, I feel like in JavaScript, I could write a function that's different than that. And it would be the same thing when, when it's no, it's because we're in React is why we're using this </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> thing.</p>
+<p>Yeah. And so like the, the parallel that you need to understand here and that anybody listening to this needs to understand is basically you're doing the same thing as declaring a let variable and updating it. That's, that's what a whole, that's the whole point of like the, the, the use state thing is like you're declaring a variable and then you're declaring, declaring a, like a setter for that variable.</p>
+<p>Yeah, and it will change. So that's hence why it's a let versus a const. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> All right. Huh. Well, that makes sense now. Hey, thanks. Thanks for going extra. Yeah. I was just like, ah, there's something sticking and that's what it was. It was just that I was thinking of it in JavaScript and not thinking of it being react kind of a thing.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Huh? So that's useState. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Are there other ones that we're going to Well, let me just give you one more example of the useState. So if you have It can </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> only help. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So let's say you have a component and that component has, we can say that it has, well, let's just keep everything in this component. So basically that component has an h1 tag at the top of it.</p>
+<p>And then it has a text field underneath that H1. Tag, and when you, when you initialize, so at the top of this component, you have a use state and that the, like you set it up as const square bracket name, comma set name, close square bracket equals use state, and then you can give it an initial string value of James.</p>
+<p>And then so, and that's within the parentheses after the use state. And then you can grab that name variable that you set up within the use state. So it's a, it's a state variable that you have called name, and then you can put that within your H one at the top of the component. So when you initially render that.</p>
+<p>Component on your page, it's going to look like a big, you know, big and big letters is going to say James. And then underneath that, there's going to be a little text field and then you can set it up so that whenever you type into the text field, you can say on change, like that text field has like an on change event handler, and you can say.</p>
+<p>On change and then do basically like the, within the on change, you have a function and it gives you the value, like basically the, the on change handler gives you the value of the, the text field, like whatever you have typed in there, it's going to give you whatever you've typed in there and you can take that value.</p>
+<p>It's, it's, it's just kind of, you can do whatever you want with it. Okay. Yeah. So on, in the unchanged thing, you can say like value and then arrow function and then set name. And then within the parentheses after set name value. Yeah. Like the value of that. Is now the value that you wrote in the text field, right?</p>
+<p>Yeah. Right. You can write whatever you want in that text field. And then that H one, like that big James text will, you can either overwrite it to be the value of the text field, or you can like. Put it after James, say and the giant peach, you know, that kind of thing, whatever you want. And, and so that's basically you're setting it somewhere and using it elsewhere within the component, like changing it somewhere.</p>
+<p>Yeah. Viewing, viewing the results of that change elsewhere. Yeah. Yeah. It's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> kind of letting the code know, Hey, we're about to do some stuff. We're going to do some stuff. That's kind of, that might be a little confusing to you in a way. It's kind of like that just because it's not, it doesn't really have another way of just writing a </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> variable like that.</p>
+<p>So to where it just prints it or whatever, you </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> know? Yeah. All right. Cool. Yeah. I think, I think I get used to it, which is exciting. Cause. Five minutes ago, I did not, I was like, and I felt bad because I was like, man, he just said so much stuff. But then once you, once you describe it the way you did, I was like.</p>
+<p>Yeah. Oh, and all the stuff made sense. So that is </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> the goal of the podcast. I should have started with that for sure. So that's essentially what you're doing. It's like just setting up a variable and then changing the value of that variable. That's, that's all you state is. Yeah, no, I </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> mean, but it, all of it needed to be explained.</p>
+<p>It's just because now I understand the, how it all works versus just understanding. Hey, sometimes you use, use state to do this variable instead, you know what I mean? Like it's like, if it was just that basic, then it's like, well, no, I want to kind of know like how one would write that also, you know what I mean?</p>
+<p>And how, how that's actually interacting with what you're doing and you did a good </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> job with that. So thank you. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah, so that's, so that's you state </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> then. Yeah. So you state is like the The most common one that you write and and it's it's not</p>
+<p>uncommon to have A good, like four or five or six different use states at the top of your component. If there's like sort of a lot going on in your component, you know, you're going to be using use state multiple times within the same component. Yeah. Well, you just said </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> something pretty simple, like the that text field thing.</p>
+<p>And we were using two use states on that. So it's like, and that's a pretty </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> straightforward thing. Well, that was the the table one. We were using the, the, the use state for the loading state and then the use state for the data. Yeah. Getting, like setting the data. But yeah, the, the text field one really is just like that name and then set name that.</p>
+<p>Yeah. Yeah. Okay. Yeah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> But yeah, either way, both of them are relatively simple and the first one did use more than one. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Yeah. So good to know. Yeah. And the, I would say second most commonly used hook, if you're ready for that. I'm ready. Here </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I am. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Is the one that we already talked about, which is use effect.</p>
+<p>Okay. And one of the most useful things about useEffect is you can set it up in a way so that it just runs once when your component loads and then is never run again, basically the way that you set up a useEffect. Is you, you use the words use effect and you don't say anything equals use effect like you do with a used state.</p>
+<p>Okay, you state you're, you're setting up like the value and then the center of that value equals use state. Yeah. With use effect. So, so you, so you can then </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> call back to the used </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> state? Yeah. Or like the state variable. Yeah, yeah. In the future for, yeah. Yeah. With use effect. You just write use effect within your, within your code.</p>
+<p>Okay? And it needs to be within your component. A all hooks need to be within the boundaries of a React component. Okay. Just fyi, Uhhuh, like they won't work if you write them like above your like component declaration? Yeah. Basically, yeah. Use effect. You'll, you'll put above your J Ss X and everything.</p>
+<p>But you can it's most common to see it below any use states that you might have. It's, it's totally possible to not have a use state in your React component. Like you'll, you'll run into that. And, but basically like whenever you, whenever you have both, the use effect is usually below the use state.</p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Okay, is that just something that you should probably do organization wise? </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> I think there's probably... So... Is there probably an efficiency </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> reason </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> to do it, but it's also... If you're using a if you're using a useState and a useEffect, it's very common to use the state variable within the useEffect. Yeah, if that makes sense.</p>
+<p>So if you're, if you're calling to something, it's a good practice to have that thing that you're calling above the. The, the place where you're calling it. Okay. All right. And I don't know, I don't know if that's essential, but but it might, it might actually be, and I just don't know, so, so good practice.</p>
+<p>Just do it and stop and stop asking questions. Exactly. So anyway, you write it as use effect and then you open up some parentheses and then within those parentheses, you put a function like a, a full function, so with a return and everything. Yeah. So, okay. Well, not, not always. So, okay. So you say, use effect, open some parentheses.</p>
+<p>And then open more parentheses and do an arrow and then do your curly braces. Yeah. If, if you're writing it, the arrow function way, you could write it where like you use the keyword function and then do it that way, but most common you'll see arrow functions. So, so use effect, open parentheses. Arrow function, curly braces, and then hit enter so that like you're within the boundaries of those curly braces.</p>
+<p>And then the thing about useEffect is you have to then after those curly braces, after the closing curly braces, you need to put an array. So that's going to be like closing curly brace, comma, and then open and close square brackets. So that's how you know that you're working with an array. Yeah. And, and then you close the, the parentheses from your, from original, the original, the just right after use effect, you open the parentheses and then at the very bottom after that array.</p>
+<p>You close the parentheses and then and then do a semi colon if you, if you use semi colons. So, and then you're, you know, that's your whole use effect block. That array that I was talking about after those curly braces is called your dependency array. And that's where you listen for things. So if you're listening for loading, say, and then when, when the value of my loading state variable changes to false, then I want to execute whatever is within those curly braces.</p>
+<p>Does that make sense? Yeah. Yeah. Curly braces. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So when we say use effect, are we actually like talking about a graphical effect or some kind of </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> effect? It can be anything. So, so the, the, there's a lot of like debate over whether or not the, the words use effect were like the best words to use there, but it's talking about the concept of side effects, which is basically Things that are kind of like kicked off by other things, if that, if that makes sense.</p>
+<p>Yeah, that makes </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> sense. Like it's, it's, it's, it's almost like something that is affecting </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> something else. Yeah, yeah. Okay. Yeah. Or as an effect of this thing changing, I'm going to do this. Yeah. Yeah. Yeah. So, so within your use effect, you'll, you'll do, you know, whatever, whatever you want. But even, even back in my original, like use state example, you can.</p>
+<p>You can fetch data within your use effects. That's the, the use effect is going to run</p>
+<p>on your initial page load always. And then anytime after that, anything within your dependency array changes. Okay. Like I was saying before, you can set it up so that it just runs on your initial page load or initial component load, I should say. And then never runs again, if you don't put in, don't put anything in the variance array.</p>
+<p>Okay. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Array, not variables. Yeah. Array. Yeah. If you don't put anything there, then it's just going to run when you first set up your page and that's it. Yeah. Okay. All right. Well, that makes sense. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, I'm surprised at how you, how well you seem to be understanding this, like how quickly you caught on to that.</p>
+<p>Like you, you answered that like thing before I even said it. I don't know if everybody else will. That makes sense. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> I don't know. It makes sense. It's, it's, yeah. Yeah, that, that, that, this is coming to me a little bit better than the other one. Just because it's it's, it's, it's a. It's like a web page event listener kind of a thing.</p>
+<p>It's just like listening for something to happen and then it's doing the thing that it's, that you're telling it to do, which seems pretty, that makes it makes sense. That makes sense. So, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Hey, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Hey, Jake got it. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. And just as sort of like a side note, if you, if you're doing the use effect thing and you're setting like the loading state, like in the original example, You set it up so that it loads when the, sorry, it executes when the component loads.</p>
+<p>And after, so within the execution of that, you run that fetch command to grab your data and then set the data and then set the loading state. You can include the set data and set. Loading things within the dependency array. And it will still only run once because those set functions don't change. Huh?</p>
+<p>Does that make sense? </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Yeah. I think that makes sense. So because those set functions don't change. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> So that last. Bit of information where like you can include things in the dependency array that don't change and therefore it won't run if you include them is probably like unnecessary for you to know.</p>
+<p>And probably just, it's just like more confusing than, than like helpful. So don't, don't worry if you didn't get that. It's not a </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> fundamental of job of our reaction. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Yeah. This is more just Oh, this is a little like nerdy information that I know. So I enjoy that stuff too, but yeah. So basically there, there is like a reason why you would include those just because your code editor will basically tell you like, Hey, if you're using something within the use effect.</p>
+<p>You need to include it in your dependency array like that. That's just like best practices and there are actual reasons for why you want to do that. But really, if you're, if you're just like learning about this for the first time, do not pay any attention to that. Don't, it's, it's not, it's not super helpful.</p>
+<p>So we've gone over use state, we've gone over use effects. There are other ones like. Use callback and use memo, which like you should probably, you know, when you, when you get into writing react, those are helpful and useful hooks for sure. But they're kind of doing like very similar things to use effect and use state.</p>
+<p>But you just kind of like set them up in different ways and you should basically. You should look into them once you're, you're like in it, like when you're into reacts and like you're, you're in the, you know, in the thick of it and stuff, you should look them up and figure out how to use them and make use of them and, and and they will be helpful and useful, blah, blah, blah.</p>
+<p>But they're not necessarily like the fundamentals. If you're talking about like the fundamentals of React, you're, you're basically, it kind of boils down to like when I was talking about JavaScript, it's basically all loops and conditionals. Mm hmm. When you're working with react hooks, it, it, it's basically it kind of boils down to use state, use effect.</p>
+<p>Yeah. There are other ones that are very useful. I would say the third most useful hook. That you will, I, I, I would say, well, not, not necessarily. It's just like ones that, that don't necessarily do the same thing as you state and use effect. It's, it's very similar to use state. And I touched on it before where if you're working with data that you kind of want to be sort of like.</p>
+<p>Globally available to your components elsewhere, if you're working with like data and this component over here, but you also want at least like part of it to be available to you in another component over, over there somewhere, then you can. Basically wrap your entire application in what's called a context provider, and then you can set up sort of like a use state in that kind of like wrapper that is kind of like Available everywhere within your application after that, you don't have to do it at the application level.</p>
+<p>Like you don't have to do it at the very top level if you don't want to. And it's like helpful or you can do some cool things with it if you don't do it that way, but that's sort of like how you'll see it used. The most is like at the very top of the application that's available everywhere. But </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> this is when you were talking about parent and child components talking to each other.</p>
+<p>Yes. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, it's, it's similar. It's similar because it's sort of like you're wrapping it in the parent of the parents of the parents. Yeah. Yeah. Yeah. You're, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> you're giving them all ownership to one thing, which is </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> the thing that you're, yeah. One parent to rule them all. Yeah. One parent to rule them all.</p>
+<p>Yeah. So like an example of that, that I've seen used in the react documentation and stuff is if you have a. Light theme and a dark theme in your application. And you want to be able to somewhere way down, like in your like settings component, you want to be able to set the theme to be either light or dark.</p>
+<p>You can set it in that one component that's sort of like nested deep down within your application and then have it kind of like. Propagate throughout the rest of your application. Like I, I switched the switch here, but I want it to affect. All of it, all of these components, you know, at least all of the ones that care about it.</p>
+<p>Yeah, you know, this one, this one looks different, you know, whether, whether you're looking at it, depending on whether you're looking at it in the light theme or the dark. Being basically but it has nothing to do with that, like settings component. That's just like one kind of one, one very basic example of how you could use it, but you can use it for if you log into the application, you can have a user context and say okay.</p>
+<p>I've logged in as Jake Pacheco and I want to, basically, yeah, the developer says like I want Jake Pacheco to be able to see his name on his like profile and also his like main like feed or whatever. Yeah, yeah. You know, just like anywhere. I want it available everywhere. Yeah, yeah. It's adjusting it on </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> multiple different places across the </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> whole thing.</p>
+<p>Mm hmm. Yeah, but just fetched it in that, that, that one place and doesn't need to fetch it again after that all over the </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> place to just fetch it right there and applies it everywhere. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Yeah. Cool. Yeah. Interesting. Another useful one. Yeah. You definitely don't use that nearly as often as you state or use effect because you don't need to, you know, it's just for one off little things like that, where like you just want.</p>
+<p>Some little bit of data available everywhere. You don't want, you don't want all of your data available everywhere. No. Yeah. So getting back to Dan Abramov, who works, you know, with Meta now on React, like the React core team that Redux. Framework or state management system that he wrote like for react that got him noticed and everything.</p>
+<p>That was basically what I was just saying. You don't want, so like he, he made it so that you could set up like one unified state. Storage for your entire application where every bit of state in your whole application is available everywhere that you want it. And that's still like commonly used, like semi commonly used, but then he came onto the react core team.</p>
+<p>And I, again, I don't know how much involvement he had in this. But he basically made his whole state management system obsolete by creating this, the, the idea of use context where he's like, okay, you could do it that way, or you could just do the stuff that you actually want available everywhere. You don't need everything everywhere.</p>
+<p>Yeah. Yeah. Cause that's, that's a bit overreaching </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> versus being like, no, I want this here. I want it so I can grab this from here if I, if I need </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it or grab it for anywhere. Yeah. And if you use Redux. It's like, basically like you're, you're sort of like over engineering your application. That was sort of like the, the the kind of like stuff that he, I guess was like trying to avoid when using the, the use context thing.</p>
+<p>And I keep saying it as though like he was the one who did all of this stuff. It was a whole team working on it, but let's go say, oh, I didn't say gay. Yeah. So, So, but if you use Redux yes, it's sort of like over engineered, but like that sort of has the, the kind of like benefit of okay, yes, it's over engineered, but it works super well.</p>
+<p>And it's you know, it's super easy to grab any data that you want whenever you want it, but. In order to store it and retrieve it and stuff, you, you do end up needing to write more code and stuff. So it's, there's, it's a flex, it's </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> a flex, but it's also like, ah, that's a little overkill, but it's, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> it's a flex.</p>
+<p>Yeah, yes. So I, I used it on the first react project that I ever. Worked on but I didn't even know, you know, I didn't know, </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> yeah, yeah. Yeah. This makes </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> sense. Yeah. Also like use context. Wasn't a thing back then, you know, that this was like for functional components. So like I, it was either I use that or I just use like locally scoped.</p>
+<p>State variables in the old way that they set up state variables, which, which is which worked pretty much just like the, the use state, but you wrote it differently. But anyway, all that is to say use context is. Very useful, you will probably use it pretty sparsely, but, you know, when you need to use it, you're pretty stoked.</p>
+<p>It's there. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah. Nice. Use state and use effect, you'll use all the time. And yeah, that along with the way that you set up components and stuff, that's sort of like the, the fundamentals of react, I would say. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah, that makes sense. I mean, all of that makes sense. And also the I think that it was good to give a baseline knowledge of what react also actually is comprised of.</p>
+<p>And I feel like we went pretty thorough through here through it on this and also. I know me personally, because I, I listened to these episodes again, just to kind of jog my memory on things anyways, I'll probably relisten to this one again, just because it, I don't know, I find it helpful to, to hear these things more than, more than once for some of it.</p>
+<p>Sometimes you'll, yeah, well, sometimes you'll notice I'll like. I'll hear you like earlier with the use state thing. I was like, okay, can you short short describe a little bit more time? And then it makes the rest of it makes sense. And sometimes I just need things more than once kind of a thing.</p>
+<p>Yeah. For the old brain box to work with the I wanted to say for the use effect thing. It was funny because while you were describing it, I was like thinking back to the idea that I had had with. You know, getting reptile enclosure information from chat GPT by having chat GPT, describe us an enclosure for a ball Python, if you sent it a ball Python and then log in and taking the information and logging it and putting it into your into your database.</p>
+<p>And when you were describing the use effect thing, I was like, Oh, so that's kind of what you would use for something like that anyways. So you could like grab information if this wasn't available. Or something, so that's I think why I picked that up because I was like, I was like, immediately thinking of ways I could use that kind of thing.</p>
+<p>But yeah, yeah, no, I, yeah, as, as always, I appreciate you describing all of these things in great detail, and then redescribing them in slightly gentler detail so I actually appreciate it a bunch. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, yeah, I mean, definitely when you, when you write more react, you know, which you're, you're doing and you're working on and all of that kind of stuff, like after you've written it a bit, you could come back and listen to this episode and probably it would click, you know, a lot easier and like you, you would probably have more of Oh, that's what that means, you know?</p>
+<p>And Yeah, that kind of thing. Oh, that's familiar. Blah, blah, blah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Well, that's what's happened with every other episode. Like I listened to the old ones. I'm like, I'll do my big swing and I miss like explanations or something. And I'm like, and I like shake my head. I'm like, that wasn't right.</p>
+<p>Oh, silly Jake. Yeah, but that but that's cool. That means I'm figuring stuff out. And that's, that's exciting. Yeah, that's </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, super exciting. Actually. Yeah. Cool. Cool. Awesome. Oh, thanks. Thanks to everyone for listening. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yeah. Thanks so much as always. Yeah. </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> And If you yeah, hopefully, hopefully you're, you're sticking with it and everything.</p>
+<p>If you're, if you're this far in, I don't know if you have listened to everything in, in sequential order. Like we have hope. Yeah. Like we hope we, we kind of like stopped telling people to go back and listen to the first episode and whatever, but if you just listened to this episode. Don't and go back and listen to the first one.</p>
+<p>Yeah. Yeah. Well </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> also yeah. And also if you did just listen to this episode and you are following along with the program, kind of a thing, do yourself a favor and go and listen to like episode, like one through four and, and Yo. Listen to it and you'll be like, yeah, I know exactly everything that they're talking about if you've been following along and if you've been doing the work, then it's like, oh, man whereas if you were just starting with us on the first episode and just starting to learn, then it's pretty it's pretty.</p>
+<p>Rad. Just like the, the, the, the difference of listening to it for the first time and then like doing work and then listening to it and going, wow, I did not know any of this stuff. And now I know all of this stuff and it's such a. Like base knowledge thing to know any of this stuff now, which is, it's just a really cool feeling.</p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, I know every day go back and listen to the same every Over. Yeah, because we know </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> our voices are sultry and just so nice to listen to Probably not But yeah, thanks so much for listening everyone </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Yeah, keep at it, fight the good fight, keep going, especially when it's like monotonous and boring and it feels like you're not getting anywhere and not retaining things.</p>
+<p>Like I was just talking to somebody the other day where he was like, I'm like a mid level developer and like getting to the senior level seems like such a huge. Undertaking and, and I don't, I don't understand like how I'm going to get there and I basically just told him. Kind of what I tell you every week is just like.</p>
+<p>Everything comes with repetition and like muscle memory. So even on the days where you feel like you're just doing the same thing that you've already done, you're like that in itself is just like honing some, like honing your skill if, if you're not like improving it, if you're not, if you're not feeling like you're improving, if you're doing the same thing.</p>
+<p>You are improving it like basically just like the more you do something, the easier it's going to get for you and the more natural it's going to come for you. Yeah. Yeah. So just keep at it. That's the main thing. It's just like repetition and consistency. That's yeah. Yeah. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> So yeah, I definitely see that being a thing, especially on my weeks where I haven't been repeating and I've been lazy.</p>
+<p>It's a thing. But yeah, so yeah, I, I always appreciate the the encouragement too, </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> Seth. Thanks. Just keep swimming. Yep. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> All right. Just keep on </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> swimming. Cool. Well, thanks for listening. We'll talk to you next week. </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> Yep. We'll talk then. I actually might be in Vegas. I'm gonna be in Vegas next week, so we'll, we'll see.</p>
+<p>It </p>
+<p><strong style="color:#72B372">Seth Whiting:</strong> might be a couple weeks, but we'll do a special Vegas episode. Yeah, a special Vegas episode. , </p>
+<p><strong style="color:#6600CC">Jake Pacheco:</strong> you're just gonna hear like bass and me like screaming about something. I want a hundred dollars . But but yeah. We'll, we'll talk again soon. Everyone have a good one, . All right. See ya. Yep.</p>
+
+  </main>
+
+  <!-- Add your website's footer, including any copyright or legal information, here -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3KLVQ3NQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-W3KLVQ3NQF');
+  </script>
+  </body>
+</html>
